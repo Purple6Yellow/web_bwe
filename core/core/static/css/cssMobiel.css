@@ -1,0 +1,98 @@
+@media only screen and (min-device-width: 150px){
+/* --- ALGEMEEN */
+.sectionblock0{background-color:inherit;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
+.bannerblock{background-color: #4F6978;width:100%;width:100%; height:300px;clip-path: inset(0% 0% round 20px);}
+.banner_txtblock{color:#f5f5dc;width:40%;position:relative;opacity: 50%;top:0px;transform:translate(140%,-200%);z-index:20;font-size:22px;text-align: center;}
+.menublock{width:100%; height:100px;position:absolute;top:0%;right:0px;}
+
+
+.sectionblock1{background-color:#425B6F;color:#D6BB80;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.sectionblock2{background-color:#D6BB80;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.sectionblock3{background-color:#182A3A;color:#A08348; width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.sectionblock4{background-color:#A08348; width:100%;height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.sectionblock5{background-color:#7A7E74;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.footerblock{background-color:#f5f5dc;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.headerblock{background-color: inherit;border: 0px solid #182A3A;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
+.headerveld {width:90%;text-align:center;padding:2% 2% 2% 2%;}
+.bannerblock img{width: 100%; height: 100%;}
+/* KLEUREN */
+body{color:#182A3A;background-color:#f5f5dc; font-family: "Gill Sans", "Gill Sans MT", "Calibri", Arial, "Helvetica", sans-serif;}
+.font-20B{color:#182A3A;}
+a{color:#2B3E4F;text-decoration:none;}
+button a{color:#2B3E4F;text-decoration: none;}
+.button_formulier{color:white;background-color:#A87544;}
+.menu a {color:#f5f5dc;}
+ol, ul, li{color:inherit;}
+.vorigeP, .volgendeP {color:#A08348; font-size: 5em;}
+.vorigeP:hover, .volgendeP:hover {color:#7A7E74;}
+
+a:hover, button a:hover{color:#A87544;}
+.menu a:hover{color:#2B3E4F;}
+/* KLEUREN */
+.TxtCenter{text-align: center;}
+.menuMobiel{display:none;}
+/*LETTER */
+[class*="font-"]{font-family: "Roboto", sans-serif,"Gill Sans", "Gill Sans MT", "Calibri", Arial, "Helvetica", serif;
+    font-optical-sizing: auto;font-style: normal;font-variation-settings:"wdth" 100;color:yellow;}
+body{font-size:28px;line-height: 1.4;}
+.font-20B{font-size: 36px; font-weight: 600;} 
+.pand_Htitel{font-size: 36px;font-weight:600;}
+
+.font-9 {font-size:16px;color:green;}
+.font-10{font-size:28px;color:pink;}
+.pand_tekst{font-size: 28px;}
+.menu-container li{font-size:36px;}
+ol,ul,li{font-size:20px;}
+/* // LETTER */
+/* // --- ALGEMEEN */
+
+/*------------------------------ALGEMEEN VERSCHILLEND -------mobiel----------------------------------------------------*/
+.verbergenLap{display: flex;} 
+.verbergenMob{display:none;} /*Als scherm mobiel is, dan display niet zichtbaar */
+/*-----------------------------//-ALGEMEEN VERSCHILLEND --------------------------------------------------------------*/
+
+/*---BASIS-------mobiel-------------------------------------------------------------------------------------------------*/
+*{box-sizing: border-box;}
+    .menuboven {background-color:inherit;}
+    .menu-container{background-color:inherit;width:50%;margin: 2% 0 0 50%;}
+    .menu-container li{list-style-type: none;}
+    .menu-container a{text-decoration: none;}
+    .menu{background-color: inherit;margin: 2% 2% 2% 2%;}
+    #menu-container{background-color:inherit;display:flex;overflow:auto;flex-direction: row; width:100%;margin: 0 0 0 0%;}   
+    
+.menu-container img{width:7%;margin: 0 0 0 70%;} /*hamburger menu-icoon */
+
+/*---// BASIS-------------------------------------------------------------------------------------------------------------*/
+
+/*---MENU-------mobiel (geen andere)--------------------------------------------------------------------------------------*/
+
+li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0%;}
+.menuMobiel{background-color:#eff4f8; width: 100%; margin: 10% 0 0 0;}
+
+
+/*--//-MENU-------mobiel-------------------------------------------------------------------------------------------------*/
+
+/*--INDEX----------------------mobiel------------------------------------------------------------------------------------------------------*/
+.ind-container{background-attachment: fixed; background-size: cover;opacity: 80%; position:absolute;top: 0%;left:0%;transform:translate(0,0);}
+.ind-container img{width: 100%;}
+.img-txt-home{display:none;}
+
+/*--// INDEX--------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*--UITLEG---------------------------------------------------------------------------------------------------------------*/
+/* 
+translate(0%, -20%); horizontaal versus verticaal
+relative: vanaf linkerhoek in zijn rij. 
+absolute, vanaf rechterbovenhoek van beeldscherm
+margin:0% 0% 0% 0%; boven, rechts, onder, links
+padding:0 0 0 0%; 
+border:solid 0px rgb(7, 1, 31); lijn, dikte lijn, kleur lijn
+border-radius: 0%; ronding van de lijn
+*/
+
+/*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
+/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS */
+
+}

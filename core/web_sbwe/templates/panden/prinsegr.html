@@ -1,0 +1,70 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+</style>
+{% endblock %}
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+<!--------BANNER----->
+{% block banner %}
+<div><img src="{% static 'img/headers/header_prins.jpg' %}" alt="Header Prins"></div> 
+{% endblock %}
+<!-----//---BANNER--->
+<!----------SECTION10----->
+<!--leeg format-->
+{% block section10 %}
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Prinsegracht </div>
+        <a href="/panden/lepelstr.html" class="vorigeP">&#8882;</a>
+        <a href="/panden/tuinhuis.html" class="volgendeP">&#8883;</a>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class ="pand_tekst">
+        Dit markante pand aan een van de belangrijkste grachten van Den Haag, kwam in 2011 in bezit van SBWE. 
+        Tot dat jaar zat elektronicawinkel Stuut & Bruin op het adres, een begrip in en buiten Den Haag. In 1948 openden de voorouders van de laatste 
+        eigenaren hun winkel op nummer 34, die later uitgebreid werd naar nummer 32, 40 en nummer 23 aan de overkant.
+        Toen firma Stuut & Bruin haar deuren definitief sloot, nam SBWE ook nummer 32 en 34 over, maar die zijn kort daarna weer doorverkocht. 
+        Nummer 40 kent een multifunctionele invulling, met een kookschool, woning en verschillende kantoren. De achterkant van het pand grenst aan het terrein 
+        van de Barthkapel. 
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Een impressie</div>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-4 pand-container">   
+       <img src="{% static 'img/panden/pand_prins1.jpg' %}" alt=""> 
+    </div>
+    <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_prins2.jpg' %}" alt=""> 
+     </div>
+     <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_prins3.jpg' %}" alt=""> 
+     </div>
+</div>
+<!---->
+<div class="row pand_adres">
+    <div class="col-6">     
+        <ol> <strong> Adres </strong></ol>
+        <ol> Prinsegracht 40</ol>
+        <ol> 2512 GA Den Haag</ol>
+        <ol> <a href = "/panden/panden.html"> Terug naar alle panden</a> </ol>  
+    </div>
+    <div class="col-6">  
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.306470981514!2d4.303477876163907!3d52.07415066914389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7289836ad19%3A0xf115f9d327b0d66a!2sPrinsegracht%2040%2C%202512%20GA%20Den%20Haag!5e0!3m2!1snl!2snl!4v1718699600394!5m2!1snl!2snl" 
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!---->
+{% endblock %}
+<!-----//---SECTION----->   

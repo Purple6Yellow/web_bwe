@@ -1,0 +1,112 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEADER----->
+{% block styles %}
+<style>
+
+
+</style>
+{% endblock %}
+<!--------HEADER----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+<!--------BANNER----->
+{% block banner %}
+<div class="row">
+    <div class="col-12"> 
+        <div>   
+            <img src="{% static 'img/headers/header_bkverhuur.jpg'  %}" alt="header_bkverhuur">       
+        </div> 
+    </div>
+</div>
+{% endblock %}
+<!-----//---BANNER--->
+
+<!----------HEADER----->
+{% block header %}
+<div class="row">
+    <div class="col-12"> 
+        <div  class=""> <a href="{% url 'Reservering' %}"> Verversen </a> </div>
+        <div  class=""> <a href="{% url 'Reservering' %}"> Barthkapel inrichting</a> </div>
+    </div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
+
+
+<!----------SECTION1----->
+{% block section1 %}
+<!----> 
+{% if submitted %}
+    <div class = "TxtCenter"> <br> <br> Bedankt voor de aanvraag! <br><br>
+        We laten zo spoedig mogelijk weten of uw aanvraag mogelijk is.<br><br><br>
+        Met vriendelijke groet,<br>     
+        Team SBWE<br><br> 
+    </div>
+{% else %}  
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Bedrijfsnaam: </div>
+    <div class = "col-4 form_box">{{ res_form.bedrijfsnaam }} </div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Voor & Achternaam: </div>
+    <div class = "col-4 form_box">{{ res_form.naam }}</div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Emailadres: </div>
+    <div class = "col-4 form_box">{{ res_form.email }}</div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">datum: </div>
+    <div class = "col-4 form_box">{{ res_form.datum }}</div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Aanvangtijd:</div>
+    <div class = "col-4 form_box">{{ res_form.starttijd }}</div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Eindtijd: </div>
+    <div class = "col-4 form_box">{{ res_form.eindtijd }}</div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Aantal genodigen: </div>
+    <div class = "col-4 form_box">{{ res_form.gasten}}</div>
+</div> 
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Activiteit:  </div>
+    <div class = "col-4 form_box">{{ res_form.activiteit}}</div>
+</div>
+<!----> 
+<div class= "row">
+    <div class = "col-12 form"> {{ res_form.message}}</div>
+</div>  
+<!----> 
+<div class ="row">
+    <div class = "col-6 form">{{ res_form.Nawnodig}} Ik heb een specifiek factuuradres  </div>
+</div>  
+<!----> 
+<div class ="row">
+    <div class = "col-12 form">{{ res_form.akkoord }} Hierbij verklaar ik de voorwaarden 
+        <a style ="color: #A87544" href="/cc/voorwaarden.html" >"Barthkapel Verhuur" </a>
+        gelezen te hebben en ga ik akkoord.  </div>
+</div> 
+<!---->
+<div class="row">
+    <button type ="submit" name = "submitted" class = "button_formulier" value = "true"> Verstuur  </button>
+</div>
+<!-------sluiting formulier----> 
+</form>
+{% endif %}
+<!-------sluiting formulier----> 
+{% endblock %}
+<!-----//---SECTION----->
+

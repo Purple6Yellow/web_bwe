@@ -1,0 +1,71 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+
+
+
+</style>
+{% endblock %}
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+<!--------BANNER TXT------->
+{% block banner_txt %} <em>Het verhaal achter Stichting Behoud Waardevol Erfgoed</em>{% endblock %}  
+<!--------// BANNER TXT----->
+
+<!--------BANNER----->
+{% block banner %}
+<div> <img src="{% static 'img/headers/header_bkbuiten.jpg' %}" alt="header-bkbuiten">  </div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+
+
+
+<!----------SECTION1----->
+{% block section1 %}
+<div class="row">
+    <div class="col-6">   
+        <img class="foto1-sbwe" src="{% static 'img/paginas/simon.jpg' %}" alt="fotosimon">
+    </div>
+
+    <div class="col-6">     
+        <div class = "font-12 opmaak-sbwe">
+            <p class="TxtCenter"> <strong>Oprichting </strong> </p>
+
+            Begin jaren 90 was een aantal betrokken buurtbewoners bezorgd over het verdwijnen van oude karakteristieke panden in het oude centrum van Den Haag. 
+            Een van hen was Simon Kamper, actief in het buurtoverleg en de krakersbeweging. <br> 
+            Hij richtte in op 18 juni 1992 Stichting Behoud Ongeregeld Goed op, een aantal 
+            maanden later, op 30 oktober 1992, werd de naam, op aanraden van de toenmalige wethouder Peter Noordanus, veranderd in Stichting Behoud Waardevol Erfgoed. 
+            Het huidige bestuurslid Kees Doornenbal is al vanaf het begin betrokken bij de stichting.
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION2----->
+{% block section2 %}
+<div class="row">
+    <div class="col-6">
+        <div class = "font-12 opmaak-sbwe">
+            <p class="TxtCenter"> <strong>Team </strong> </p>
+            SBWE kent een platte organisatiestructuur. Het bestuur bestaat uit vier leden waarvan drie ook uitvoerende werkzaamheden verrichten, zoals onderhoud, 
+            beheer en financiën. 
+        </div>
+    </div>
+    <div class = "col-6">
+        <div class = "font-12 opmaak-sbwe">
+            <p class="TxtCenter"> <strong> Doelstelling </strong> </p>
+            De doelstelling van de stichting is het instandhouden en waarborgen van de oorspronkelijke stedelijke bebouwing te Den Haag en het stimuleren 
+            van de diversiteit van het gebruik van die stedelijke bebouwing. De stichting probeert haar doel onder meer te realiseren door het verwerven, 
+            verbeteren en beheren van erfgoed in de binnenstad.
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<!-----//---SECTION----->
+

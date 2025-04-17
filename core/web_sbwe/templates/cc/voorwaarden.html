@@ -1,0 +1,114 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEADER----->
+{% block styles %}
+<style>
+
+
+
+
+
+
+</style>
+{% endblock %}
+<!--------HEADER----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+
+<!--------BANNER----->
+{% block banner %}
+<div> <img src="{% static 'img/headers/header_bkbuiten.jpg' %}" alt="header-home"> </div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+<!--------BANNER TXT------->
+{% block banner_txt %} <em>Activiteiten moeten passen binnen de culturele doelstellingen van het Cultureel Centrum Barthkapel. </em>{% endblock %}  
+<!--------// BANNER TXT----->
+
+<!----------HEADER----->
+{% block header %}
+<div class="row">
+    <div class="col-12"> 
+        <div> <a href="{% url 'Reservering' %}"> ← retour</a> </div>
+    </div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
+
+<!----------SECTION1----->
+{% block section1 %}
+<div class="row">
+    <div class="col-12 font-20B TxtCenter">
+        <p> We verhuren onder een aantal voorwaarden: </p> 
+    </div>
+</div>
+<!---->
+
+<div class="row">
+    <div class="col-12 an-container"> 
+        <ul>   
+            <li>  Het huren van de Barthkapel is mogelijk tot uiterlijk 23:00 uur.</li>
+            <li>  Versterkte muziek is niet toegestaan.</li>
+            <li>  15 minuten voor aanvangstijd is de ruimte beschikbaar.</li>
+            <li>  De zaal dient na gebruik opgeruimd te zijn en netjes te zijn achtergelaten. 
+                <ul>
+                    <li>  Ruimtes moeten veegschoon worden achtergelaten.             </li>
+                    <li>  Stoelen terug op hun vaste plek.            </li>
+                    <li>  Vaatwerk en keuken moeten schoon worden achtergelaten.          </li>
+                    <li>  Aanrechtblad leeg en alle spullen terug in de kast.         </li>
+                    <li>  Vuilniszakken graag in de desbetreffende containers op de brouwersgracht plaatsen.       </li>
+                </ul>  
+            </li> 
+            <li>  Roken is niet toegestaan.    </li>
+            <li>  Bij schade of het aantreffen van een niet opgeruimde/nette ruimte wordt er verwacht dat u dit meldt
+                <ul>
+                    <ol>vooraf (bij constatering) of achteraf</ol>
+                </ul>  </li>
+            <li>  Houdt de nooduitgangen/vluchtroutes vrij voor doorgang   </li>
+            <li>  De ruimte en de voordeur goed afsluiten 
+                <ul>
+                    <li>Wij zijn niet aansprakelijk voor diefstal of verlies van goederen. </li>
+                </ul> </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION2----->
+{% block section2 %}
+<div class="row">
+    <div class="col-12 font-20B TxtCenter">
+        <p>  Annuleringsvoorwaarden. </p> 
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-12 an-container"> 
+        <ul>   
+            <li>  Annuleren tot 7 dagen voor de reservering of eerste verhuurdag: 
+                <ul>
+                    <ol>kosteloos </ol>
+                </ul></li>
+            <li>  Annuleren vanaf 7 dagen tot en met 3 dagen voor de reservering of eerste verhuurdag:
+                <ul>
+                    <ol>50% van de verhuurprijs.</ol>
+                </ul></li> </li>
+            <li>  Annuleren op de 2e of de 1e dag voor de reservering of eerste verhuurdag of op de dag zelf:
+                <ul>
+                    <ol>het volledige verhuurbedrag.</ol>
+                </ul></li> </li></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION3----->
+{% block section3 %}
+
+<div class="row">
+    <div class="col-12 TxtCenter"> <strong> <em> Stichting Behoud Waardevol Erfgoed is niet aansprakelijk voor diefstal of schade aan eigendommen van huurders of bezoekers. </em></strong> </div>
+</div>
+
+{% endblock %}
+<!-----//---SECTION----->

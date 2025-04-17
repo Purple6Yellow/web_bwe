@@ -1,0 +1,135 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="nl">
+<!------------------------------------>
+<head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Stichting Behoud Waardevol Erfgoed {% block title %}{% endblock title %}</title>   
+    <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssMobiel.css' %}">     
+    <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssLaptop.css' %}"> 
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--// fonts-->
+    <style>
+    .logo_foot{padding: 0 0 0 15%;background-color:inherit;}
+    .logo_foot img{width:10%;margin:0% 5% 0% 5%;} /*logo footer */
+
+    .col-40{width:40%;}
+    .col-30{width:30%;}
+    </style>
+      {% block styles %}
+      {% endblock %}
+    <script src = "{% static 'js/derden/jquery.js' %}" type= "text/javascript"></script>
+</head>
+<!------------------------------------>
+<body>
+<!---->
+<div class = "sectionblock0">
+    <div class = "menuMobiel" id = "menuMobiel">
+        <ul> 
+            <li> <a href = "/algemeen/index.html"> Home </a></li>
+            <li> <a href = "/kunst_overzicht.html"> Reserveren</a></li>
+            <li> <a href = "/panden/panden.html"> Panden </a></li>
+            <li> <a href = "/formulier/ateliers.html"> Ateliers </a></li>
+            <li> <a href = "/divers/oversbwe.html"> SBWE </a></li>
+            <li> <a href = "/divers/contact.html"> Contact </a></li>
+        </ul>
+    </div>
+</div>
+    {% block section0 %}{% endblock %}
+</div>
+<!---->
+<!---->
+    <div class = "bannerblock">{% block banner %} {% endblock %}</div>
+<!---->
+    <div class = "banner_txtblock verbergenMob">{% block banner_txt %}{% endblock %} </div>
+<!---->
+    <div class = "menublock">{% block menu %}
+        <header class = "row">
+            <div class="col-12 menuboven">   
+                    <div class= "menu-container">
+                    <ul id = "menu-container" class="menu">
+                            <li id="menu"  class = "verbergenLap"> <a><img src="{% static 'img/menulogo.png' %}" alt="logo">  </a> </li>
+
+                            <li class = "menu verbergenMob"> <a href="/algemeen/index.html">Home</a></li>
+                            <li class = "menu verbergenMob"> <a href="/Barthkapel.html">Barthkapel</a> </li>
+                            <li class = "menu verbergenMob"> <a href= "/panden/panden.html" > Panden</a></li> 
+                            <li class = "menu verbergenMob"> <a href="/formulier/ateliers.html" > Ateliers</a></li> 
+                            <li class = "menu verbergenMob"> <a href="/divers/oversbwe.html" > SBWE </a></li> 
+                            <li class = "menu verbergenMob"> <a href="/divers/contact.html">Contact</a></li>
+                    </ul>
+                    </div>
+            </div>
+        </header>
+    {% endblock %}</div>
+<!---->
+<!---->
+<div class = "headerblock">
+    {% block header %}{% endblock header %}
+</div>
+<!---->
+<!---->
+<div class = "sectionblock1">
+    {% block section1 %}{% endblock %}
+</div>
+<!---->
+<div class = "sectionblock2">
+    {% block section2 %}{% endblock %}
+</div>
+
+<!---->
+<div class = "sectionblock3">
+    {% block section3 %}{% endblock %}
+</div>
+<!---->
+<div class = "sectionblock4">
+    {% block section4 %}{% endblock %}
+</div>
+<!---->
+<div class = "sectionblock5">
+    {% block section5 %}{% endblock %}
+</div>
+<!---->
+<div class = "scripts">
+<script src = "{% static 'js/eigenontwerp/menuMobiel.js' %}" type= "text/javascript"></script>  
+<script>
+
+</script>
+
+<!---->
+<div class = "sectionblock10">
+    {% block section10 %}{% endblock %}
+</div>
+<!---->
+
+<!---->
+<div class = "sectionblock11">
+    {% block section11 %}{% endblock %}
+</div>
+<!---->
+
+{% block footer_scripts %}{% endblock %}
+</div>
+<!---->
+<div class = "footerblock font-9">
+<div class="row">
+    
+    <div class = "col-30" style="padding: 1% 0% 0 2%;background-color:inherit;">@ Stichting Behoud Waardevol Erfgoed 2025</div>
+
+    <div class="col-40 logo_foot"> 
+        <a href="https://www.instagram.com/barthkapeldenhaag/" 
+            target = "_blank"> <img src = "{% static 'img/basis/insta_logo.jpg' %}" alt="Logo Insta"></a> 
+        <a href=" https://www.facebook.com/people/Stichting-Behoud-Waardevol-Erfgoed/pfbid02tbaStwzTmWWQCTicdaWtw7jdGhUpNs272FaWMwrKKBeWToeX99mbSN8xDBMLSkAkl/" 
+            target = "_blank"> <img src = "{% static 'img/basis/face_logo.jpg' %}" alt="Logo Facebook"></a> 
+    </div>
+
+    <div class = "col-30" style="padding: 1% 0% 0 2%;background-color:inherit;">email: stichtingbwe@gmail.com</div>
+</div>
+    {% block footer %}{% endblock %}
+</div>
+<!---->
+</body>
+</html>

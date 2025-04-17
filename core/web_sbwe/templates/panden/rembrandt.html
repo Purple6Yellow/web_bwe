@@ -1,0 +1,73 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+
+
+
+</style>
+{% endblock %}  
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+
+<!--------BANNER----->
+{% block banner %}
+<div><img src="{% static 'img/headers/header_rem.jpg' %}" alt="Header Rembrandt"></div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+
+<!----------SECTION10----->
+<!--leeg format-->
+{% block section10 %}
+<div class="row">
+        <div class ="pand_Htitel"> Pakhuis Rembrandt </div>
+        <a href="/panden/tuinhuis.html" class="vorigeP">&#8882;</a>
+        <a href="/panden/looijerstr.html" class="volgendeP">&#8883;</a>
+</div>
+<!---->
+<div class="row">
+    <div class ="pand_tekst">
+        Het pakhuis aan de Looijerstraat is niet het enige pakhuis dat in bezit van de stichting is. 
+        In de Rembrandtstraat staat, midden in een straat vol nieuwbouw, het pakhuis van de gebroeders Dijkgraaf, handelaren in lompen, 
+        oud papier en oude metalen. De stichting heeft dit pakhuis kunnen redden, pogingen om het pand ernaast ook te redden zijn mislukt.
+        In het pand hebben momenteel drie kunstenaars een atelier. In 1996 opende de bekende Haagse kunstenares Ingrid Rollema het pand door het 
+        onthullen van een door haar gemaakt kunstwerk boven de ingang van het pakhuis. Zij had een bijzondere connectie met het pakhuis: 
+        het transportbedrijf van haar vader was voormalig eigenaar.  
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Een impressie</div>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_rem1.jpg' %}" alt="foto1">
+    </div>
+    <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_rem2.jpg' %}" alt="foto2">
+    </div>
+    <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_rem3.jpg' %}" alt="foto3">
+    </div>
+</div>
+<!---->
+<div class="row pand_adres">
+    <div class="col-6"> 
+        <ol> <strong> Adres </strong></ol>
+        <ol>  Rembrandtstraat 2B</ol>
+        <ol>  2526 PZ Den Haag</ol>
+        <ol> <a href = "/panden/panden.html"> Terug naar alle panden</a> </ol>  
+    </div>
+    <div class="col-6">  
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.450814616611!2d4.299100687817255!3d52.071522797014616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b72837c33783%3A0x8c724e14837f7586!2sRembrandtstraat%202b%2C%202526%20PZ%20Den%20Haag!5e0!3m2!1snl!2snl!4v1718634890751!5m2!1snl!2snl" 
+        style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+{% endblock %}
+<!-----//---SECTION----->   

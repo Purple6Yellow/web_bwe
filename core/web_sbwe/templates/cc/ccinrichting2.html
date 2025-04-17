@@ -1,0 +1,121 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEADER----->
+{% block styles %}
+<style>
+/*--VOORWAARDEN----------------------------Laptop-----------------------------------------------------------------*/
+.an-container li{list-style: disc outside;display: list-item;padding:0.5% 0 0.5% 5%;margin:0 0 0 10%; text-align: left;}
+.an-container li ul li {list-style: circle outside;display: list-item;padding:0.5% 0 0.5% 1%;margin:0 0 0 5%; text-align: left;}
+/*--// VOORWAARDEN----------------------------Laptop--------------------------------------------------------------*/
+
+.sectionfoto-container img{width:100%;margin: -1% 0 -3% 0}
+
+</style>
+{% endblock %}
+<!--------HEADER----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+
+<!--------BANNER----->
+{% block banner %}
+<div> <img src="{% static 'img/headers/header_bkbuiten.jpg' %}" alt="header-home"> </div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+<!--------BANNER TXT------->
+{% block banner_txt %} <em>Activiteiten moeten passen binnen de culturele doelstellingen van het Cultureel Centrum Barthkapel. </em>{% endblock %}  
+<!--------// BANNER TXT----->
+
+<!-----HEADER-------->
+{% block header %}
+<div class="row">
+    <div class="col-12"> 
+        <div class ="font-20B TxtCenter"> Inrichting van de Barthkapel</div>
+    </div>
+</div>
+{% endblock %}
+<!----// -HEADER----->
+
+<!----------SECTION1----->
+{% block section1 %}
+<!---->
+<div class="row">
+    <div class="col-6 sectionfoto-container"> <img src="{% static 'img/paginas/bk_piano.jpg' %}" alt="piano"></div>
+    <div class="col-6 an-container"> 
+        <ul>  
+            <li>  Afmeting van de zaal is ongeveer <em>100 m2</em>.</li>
+            <li>  Er zijn <em>80 stoelen </em> beschikbaar.</li>
+            <li>  Er zijn <em>2 lange tafels</em> en <em> 2 statafels </em>beschikbaar.</li>
+            <li>  De piano is te huur (Blüthner). </li>
+            <li>  Er is een ruime keuken aanwezig met inventatirs en een koelkast (inclusief vriesvak ) </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION2----->
+{% block section2 %}
+<!---->
+<div class="row">
+    <div class="col-6 an-container"> 
+        <ul>   
+            <li>  Het huren van de Barthkapel is mogelijk tot uiterlijk 23:00 uur. </li>
+            <li>  Versterkte muziek is niet toegestaan. </li>
+            <li>  Factuur wordt achteraf per e-mail verstuurd.</li>
+        </ul>
+    </div>
+    <div class="col-6 sectionfoto-container"> <img src="{% static 'img/paginas/bk_plattegrond.png' %}" alt="plattegrond"></div> 
+    
+</div>
+{% endblock %}
+<!-----//---SECTION----->   
+
+<!----------SECTION3----->
+{% block section3 %}
+<div class="row">
+    <div class="col-12 an-container"> 
+        <ul>  
+            <li>  Ruimte moet veegschoon worden achtergelaten.</li>
+            <li>  Stoelen terug op hun vaste plek.</li>
+            <li>  Vaatwerk en keuken moeten schoon worden achtergelaten.</li>
+            <li>  Aanrechtblad leeg en alle spullen terug in de kast </li>
+            <li>  Vuilniszakken graag in de desbetreffende container 
+                <ul><ol>op de brouwersgracht </ol></ul></li>  
+        </ul>
+    </div>
+</div>
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION11----->
+{% block section11 %}
+<div class="row">
+    <div class="col-12">  
+        <div class="TxtCenter font-20B" style="background-color:inherit"> <strong> Bezetting kapel </strong> <br> </div>
+        <div class="TxtCenter font-12"> <strong> Vaste wekelijkse bezetting </strong> <br> </div>
+    </div>  
+</div>
+<!---->
+<div class = "row">
+    <div class="col-6"><img src="{% static 'img/paginas/bk_weekschema.jpg' %}" alt="Weekschema"></div>
+    <div class="col-6 TxtCenter" style="background-color: inherit">
+        <a href="/cc/impressie.html"> <em> Geluidsfragement </em>  </a> <br>
+        <a href="/cc/voorwaarden.html"> <em> Annuleringsvoorwaarden </em>  </a> </div>
+
+</div>
+<!---->
+<div class = "row">
+    <table>
+        <tr>
+            <td><div style="background-color:#033a49;width:50px; height:20px;"></div></td>
+            <td> Aanvraag mogelijk, wellicht beschikbaar</td>
+        </tr>
+        <tr>
+            <td><div style="background-color: #c7a11b; width:50px; height:20px;"> </div></td>
+            <td> Verhuurd, niet beschikbaar</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}
+<!-----//---SECTION----->

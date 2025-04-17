@@ -1,0 +1,96 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+</style>
+{% endblock %}
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+<!--------BANNER----->
+{% block banner %}
+<div><img src="{% static 'img/headers/header_barth.jpg' %}" alt="Header Barthkapel"></div> 
+{% endblock %}
+<!-----//---BANNER--->
+<!----------SECTION10----->
+<!--leeg format-->
+{% block section10 %}
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Barthkapel </div>
+        <a href = "/panden/looijerstr.html" class="vorigeP">&#8882;</a>
+        <a href = "/panden/lepelstr.html" class="volgendeP">&#8883;</a>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class ="pand_tekst">
+        De Liefdezusters van de Heilige Carolus Borromeus, ook wel Zusters Onder de Bogen of Bogenzusters genoemd, is een rooms-katholieke zustercongregatie 
+        die in 1837 in Maastricht werd gesticht. Ook buiten Maastricht waren de zusters actief, onder andere in Den Haag. In 1894 verhuisden 
+        zij naar de Prinsengracht 36. Later werd ook de Prinsengracht 38 erbij gevoegd. 
+        <br><br>
+        Aan de achterzijde van het nonnenklooster werd in 1906 een kapel gebouwd in neogotische stijl, de Carolus Borromeus kapel, nu bekend onder de naam Barthkapel.
+        Vanaf dat moment hadden de nonnen een volwaardig klooster. Toen ze eind jaren 60 het klooster wilden verbouwen, kregen ze daarvoor geen toestemming omdat 
+        de gemeente het voornemen had een verbindingsweg aan te leggen door het oude centrum, van het Prins Bernhardviaduct naar de Prinsegracht. 
+        Hiervoor zou onder andere de kapel moeten worden afgebroken. Deze tegenslag en de vergrijzing van de zusterorde zorgden ervoor dat de nonnen in 1970 
+        het klooster verlieten.
+        <br><br>
+        In 1976 waren de panden zodanig vervallen dat de gemeente een vergunning tot sloop afgaf. Toen ook nog een gedeelte van Prinsegracht 36 afbrandde, 
+        werd het er niet beter op.
+        Na enige tijd van leegstand werd in 1978 het voormalige klooster aan de Prinsegracht in gebruik genomen door Emmaus 
+        welvaartsresten. 
+
+        Sindsdien wordt de kapel verhuurd aan culturele en maatschappelijke organisaties. De oudste huurders zijn   <a href= "https://www.ekklesiadenhaag.nl/" TARGET="_blank">  Ekklesia Den Haag, </a>  
+        een oecumenische basisgemeenschap, die sinds 1981 haar tweewekelijkse diensten op zondag in de kapel houdt en <a href= "https://koorjanenalleman.nl/" TARGET="_blank"> het koor Jan en Alleman, </a>  die sinds 1995 
+        wekelijks repeteert.
+        Op dit moment wordt de kapel gebruikt voor dans- en yogalessen, concerten, muziekopnamen, repetities van conservatoriumstudenten, workshops en zelfs 
+        huwelijksinzegeningen.
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Een impressie</div>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-4 pand-container">   
+       <img src="{% static 'img/panden/pand_barthkapel1.jpg' %}" alt=""> 
+    </div>
+    <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_barthkapel2.jpg' %}" alt=""> 
+     </div>
+     <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_barthkapel3.jpg' %}" alt=""> 
+     </div>
+</div>
+<!---->
+<div class="row pand_adres">
+    <div class="col-6">     
+        <ol> <strong> Adres </strong></ol>
+        <ol> Brouwersgracht 2K, 2N, 2L</ol>
+        <ol> 2512 ER Den Haag</ol>
+        <ol> <a href = "/panden/panden.html"> Terug naar alle panden</a> </ol>  
+    </div>
+    <div class="col-6">  
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.4121803236535!2d4.307613876163773!3d52.072226169285415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b727063706bb%3A0x5cd0aad29a061118!2sLepelstraat%209%2C%202512%20CW%20Den%20Haag!5e0!3m2!1snl!2snl!4v1718698284705!5m2!1snl!2snl" 
+            style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!---->
+{% endblock %}
+<!-----//---SECTION-----> 
+
+<!----------SECTION11----->
+{% block section11 %}
+<div class="row foto_portrait">   
+    <img src="{% static 'img/panden/pand_barth_port_1.jpg' %}" alt=""> 
+    <img src="{% static 'img/panden/pand_barth_port_2.jpg' %}" alt=""> 
+    <img src="{% static 'img/panden/pand_barth_port_3.jpg' %}" alt=""> 
+    <img src="{% static 'img/panden/pand_barth_port_4.jpg' %}" alt=""> 
+</div>
+{% endblock %}
+<!-----//---SECTION----->   
+

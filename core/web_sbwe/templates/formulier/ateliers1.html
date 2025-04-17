@@ -1,0 +1,70 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------------------HEAD--------------------------------------------------------------------------------------------------------->
+{% block styles %}
+
+<style>
+/* -- ATELIERS -------mobiel----------------------------------------------------------------*/
+.atel-container{background-attachment: fixed;background-size: cover; opacity: 99%;   position: absolute;top: 0%;left:0%;transform: translateY(-8%);}       
+.atel-container img{width:100%;}
+
+.section-container{background-color: inherit;position: relative;margin: 13% 0 0 0;}
+.foto-container{background-color:purple;position: relative;margin: 0% 0 0 0;width:300px;}; /* wijdte in col- bepaalt */
+.foto-container img{width: 100%;}
+.foto{height:400px;}
+.tekst-container{background-color:inherit;position: relative;margin: 0% 0 0 0;};
+
+.atel-titel{font-size: 20px;font-weight: 750;text-align:center; padding: 5% 0 0% 0;}
+.atel-tekst{font-size:15px; background-color: inherit; width: 100%; padding: 2% 0% 0% 0%; text-align:center;}
+
+/* --// ATELIERS -------------------------------------------------------------------------*/
+
+.foto-container img{width:60%;clip-path: inset(10% 1% round 20px); }
+
+</style>
+{% endblock %}
+<!------------------------------------// HEAD------------------------------------------------------------------------------------------->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+
+<!--------BANNER----->
+{% block banner %}
+<div class="row">
+    <div class="col-12"> 
+        <div class="atel-container">    
+            <img src="{% static 'img/headers/header_bkverhuur.jpg' %}" alt="header-ateliers">       
+        </div> 
+    </div>
+</div>
+{% endblock %}
+<!-----// BANNER----->
+
+
+<!----------HEADER----->
+{% block header %}
+    <div class ="TxtCenter font-20B"  style= "padding: 5% 2% 2% 5%;"> Ateliers</div>
+{% endblock header %}
+<!-----//---HEADER----->
+
+
+<!----------SECTION1----->
+{% block section1 %}
+<!---->
+    {% for atel in atel_list %}
+    <div class="row">
+        <div class="col-5">
+            <div class = "foto-container">
+                <a href=" {{ atel.website }}" TARGET = "_blank"><img src="{{ atel.afbeelding.url }}" alt="in construction"></a> 
+            </div>
+        <div class="col-6 tekst-container">
+            <div class = "atel-titel"> <a href=" {{ atel.website }}" TARGET = "_blank"> {{ atel.titel }}  </a> </div>
+            <div class = "atel-tekst"> {{ atel.tekst }} </div>
+        </div>
+    </div>
+    {% endfor %}
+<!---->
+
+
+{% endblock %}
+<!-------// SECTION1----->
+
+

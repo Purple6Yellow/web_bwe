@@ -1,0 +1,60 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEADER----->
+{% block styles %}
+<style>
+
+
+
+</style>
+{% endblock %}
+<!--------HEADER----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+
+
+<!----------HEADER----->
+{% block header %}
+<div class="row">
+    <div class="col-12"> 
+        <div class ="font-20B TxtCenter"> Barthkapel programma</div>
+    </div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
+
+<!----------SECTION1----->
+{% block section1 %}
+<!------>
+{% for prog in prog_list %}
+<div class="row">
+    <div class="col-6">   
+        <div class= "prog-container">
+            <ul id = "prog" class="prog">
+                <li> 
+                    <a href="{% url 'Prog-Detail' prog.pk %}" TARGET = "_blank">
+                        <img src="{{ prog.image.url }}" alt="{{ prog.image_name }}">
+                    </a> 
+                </li> 
+            </ul>
+        </div>
+    </div>
+    <div class="col-6"> 
+        <div class= "prog-container">
+            <ul>
+                <li class = "prog"> 
+                    <br>  <br>
+                    <div class = "prog-titel"> <a href=" {{ prog.website }}" TARGET = "_blank"> {{ prog.titel }}  </a> </div>
+                    <div class = "prog-datum">  {{ prog.datum }}  </div>
+                    <div class = "prog-tijd">  {{ prog.start }} -  {{ prog.eind }}   </div>
+                </li> 
+            </ul>
+        </div>
+    </div>
+</div>
+{% empty %}
+    <hr>
+    <div class="prog-opmaak-geen, font-18">Programma nog niet bekend voor publiek</div>
+{% endfor %}
+<!------> 
+{% endblock %}
+<!-----//---SECTION----->

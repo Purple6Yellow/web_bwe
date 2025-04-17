@@ -1,0 +1,68 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+</style>
+{% endblock %}
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+<!--------BANNER----->
+{% block banner %}
+<div><img src="{% static 'img/headers/header_tuinhuis.jpg' %}" alt="Header tuinhuis"></div> 
+{% endblock %}
+<!-----//---BANNER--->
+<!----------SECTION10----->
+<!--leeg format-->
+{% block section10 %}
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Tuinhuis </div>
+        <a href="/panden/prinsegr.html" class="vorigeP">&#8882;</a>
+        <a href="/panden/rembrandt.html" class="volgendeP">&#8883;</a>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class ="pand_tekst">
+        In de kloostertuin bij de Barthkapel ziet de oplettende bezoeker een charmant huis van een verdieping, het staat recht tegenover de muur tussen de tuin 
+        en het hofje Floris van Dam. Aan de rand van de kloostertuin, in de schaduw van een grote kersenboom, staat dit enigszins verscholen tuinhuis. 
+        Samen met de Barthkapel kwam het in 1993 in bezit van SBWE. Een tijdlang werd het alleen als woonhuis gebruikt, maar sinds enkele jaren woont er 
+        een kunstenaar die er tevens een atelier heeft. 
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Een impressie</div>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-4 pand-container">   
+       <img src="{% static 'img/panden/pand_tuinh1.jpg' %}" alt=""> 
+    </div>
+    <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_tuinh2.jpg' %}" alt=""> 
+     </div>
+     <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_tuinh3.jpg' %}" alt=""> 
+     </div>
+</div>
+<!---->
+<div class="row pand_adres">
+    <div class="col-6">     
+        <ol> <strong> Adres </strong></ol>
+        <ol> Brouwersgracht 2P</ol>
+        <ol> 2512 ER Den Haag</ol>
+        <ol> <a href = "/panden/panden.html"> Terug naar alle panden</a> </ol>  
+    </div>
+    <div class="col-6">  
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.343575303207!2d4.3036926761638705!3d52.0734751691935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b72884e47297%3A0x4382c829e4306c03!2sBrouwersgracht%202P%2C%202512%20ER%20Den%20Haag!5e0!3m2!1snl!2snl!4v1718699769341!5m2!1snl!2snl" 
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!---->
+{% endblock %}
+<!-----//---SECTION----->   

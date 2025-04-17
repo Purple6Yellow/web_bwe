@@ -1,0 +1,40 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+
+</style>
+{% endblock %}
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+       
+<!--------BANNER----->
+{% block banner %}
+<div> <img src="{% static 'img/headers/header_bkbuiten.jpg' %}" alt="header-bkbuiten"></div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+<!----------SECTION1----->
+{% block section1 %}
+<div class="row" >
+        <div class="col-4 opmaak-contact">  
+                <ol class="font-20B TxtCenter"> Adres</ol>
+                <ol class="font-9 TxtCenter">  Brouwersgracht 2K, 2512 ER Den Haag </ol>
+        </div>
+    
+        <div class="col-4 opmaak-contact">  
+                <ol class="font-20B TxtCenter"> Email</ol>
+                <ol class = "font-9 TxtCenter"> <a style="color: #033a49e1;" href = "mailto:stichtingbwe@gmail.com">  stichtingbwe@gmail.com </a> </ol>
+        </div>
+    
+        <div class="col-4 opmaak-contact">  
+                <ol class="font-20B TxtCenter"> Telefoon</ol>
+                <ol class="font-9 TxtCenter">  06 14 18 70 96 </ol>
+        </div>
+    </div>
+
+
+{% endblock %}
+<!-----//---SECTION----->

@@ -1,0 +1,62 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEADER----->
+{% block styles %}
+<style>
+
+
+</style>
+{% endblock %}
+<!--------HEADER----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+
+<!--------BANNER----->
+{% block banner %}
+    <div>    
+        <img src="{% static 'img/headers/header_bkverhuur.jpg' %}" alt="header-home">  
+    </div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+<!----------HEADER----->
+{% block header %}
+<div class="row">
+    <div class="col-12"> 
+        <div class ="font-20B TxtCenter"> Kunstenaars </div>
+    </div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
+
+<!----------SECTION1----->
+{% block section1 %}
+<!------>
+{% for atel in atel_list %}
+<div class="row">
+    <div class="col-6">   
+        <div class= "prog-container">
+            <ul id = "prog" class="prog">
+                <li> 
+                    <a href="" TARGET = "_blank">
+                        <img src="{{ atel.afbeelding.url }}" alt="in construction">
+                    </a> 
+                </li> 
+            </ul>
+        </div>
+    </div>
+    <div class="col-6"> 
+        <div class= "prog-container">
+            <ul>
+                <li class = "prog"> 
+                    <br>  <br>
+                    <div class = "prog-titel"> <a href=" {{  atel.website }}" TARGET = "_blank"> {{ atel.titel }}  </a> </div>
+                    <div class = "prog-tekst">  {{ atel.tekst }}  </div>
+                </li> 
+            </ul>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!------> 
+{% endblock %}
+<!-----//---SECTION----->

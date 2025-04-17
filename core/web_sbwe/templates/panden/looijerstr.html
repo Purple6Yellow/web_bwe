@@ -1,0 +1,76 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+</style>
+{% endblock %}
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+<!--------BANNER----->
+{% block banner %}
+<div><img src="{% static 'img/headers/header_looij.jpg' %}" alt="Header Looijer"></div> 
+{% endblock %}
+<!-----//---BANNER--->
+<!----------SECTION10----->
+<!--leeg format-->
+{% block section10 %}
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Pakhuis Looijer  </div>
+        <a href="/panden/rembrandt.html" class="vorigeP">&#8882;</a>
+        <a href="/panden/brouwersgr.html" class="volgendeP">&#8883;</a>
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class ="pand_tekst">
+        Het pakhuis in de Looijerstraat werd in 1905 gebouwd voor de firma Joh. Blonk & Co, een machinale maalinrichting en groothandel in granen, meel, 
+        bloem en lijnkoeken. Een klein deel van het pakhuis werd gebruikt als fabrieksruimte, de rest voor opslag. 
+        Rond 1920 kwam het pakhuis in het bezit van de gebroeders Dinkhuijsen, een voor Hagenaars bekende naam waar het ging om lompen en oude metalen.
+        Na de Tweede Wereldoorlog werd het pakhuis gebruikt als magazijn door De Bijenkorf. Nadat de Bijenkorf het pand had verlaten raakte het pakhuis 
+        steeds meer in verval. In 1993 werd het pakhuis van de sloop gered doordat de Stichting Behoud Waardevol Erfgoed het van de gemeente kocht. 
+        Het was het eerste pand dat in bezit kwam van de stichting.
+        Momenteel is op de begane grond een architectenbureau gevestigd en op de vier verdiepingen daarboven zijn kunstenaarsateliers gehuisvest.
+    </div>
+</div>
+<!---->
+<div class="row">
+    <div class="col-12"> 
+        <div class ="pand_Htitel"> Een impressie</div>
+    </div>
+</div>
+<!---->
+<!---->
+<div class="row">
+    <div class="col-4 pand-container">   
+       <img src="{% static 'img/panden/pand_looij1.jpeg' %}" alt=""> 
+    </div>
+    <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_looij2.jpg' %}" alt=""> 
+     </div>
+     <div class="col-4 pand-container">   
+        <img src="{% static 'img/panden/pand_looij3.jpg' %}" alt=""> 
+     </div>
+</div>
+<!---->
+<div class="row pand_adres">
+    <div class="col-6">     
+        <ol> <strong> Adres </strong></ol>
+        <ol> Looijerstraat 70</ol>
+        <ol> 2512 DX Den Haag</ol>
+        <ol> <a href = "/panden/panden.html"> Terug naar alle panden</a> </ol>  
+    </div>
+    <div class="col-6">  
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.3815965801923!2d4.309200176163828!3d52.0727829692444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b726df7432b9%3A0x16f16b7d8193a548!2sLooijerstraat%2070%2C%202512%20DX%20Den%20Haag!5e0!3m2!1snl!2snl!4v1718693259684!5m2!1snl!2snl" 
+        style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!---->
+
+
+
+<!---->
+{% endblock %}
+<!-----//---SECTION----->   

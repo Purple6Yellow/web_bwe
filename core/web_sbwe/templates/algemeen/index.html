@@ -1,0 +1,132 @@
+{% extends 'algemeen/basis.html' %}
+{% load static %}
+<!--------HEAD----->
+{% block styles %}
+<style>
+
+
+
+</style>
+{% endblock %}
+<!--------HEAD----->
+<!---------------------------------------BODY------------------------------------------------------------------------------------------->
+
+
+<!--------BANNER----->
+{% block banner %}
+<div> <img src="{% static 'img/headers/bkbuiten.jpg' %}" alt="header-home"></div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+<!-----HEADER-------->
+{% block header %}
+<div class = "row">
+    <div class = "headerveld">
+        Waarborgen van oorspronkelijke stedelijke bebouwing in Den Haag en 
+        het stimuleren van de diversiteit van het gebruik van die bebouwing. <br> <br> Dat 
+        is waar Stichting Behoud Waardevol Erfgoed voor staat. 
+    </div> 
+</div>
+{% endblock %}
+<!----// -HEADER----->
+
+<!-----SECTION1-------->
+{% block section1 %}
+<div class = "row" style = "background-color:inherit;">
+    <div class = "col-6" style = "background-color: inherit; font-size: 28px; text-align: center; padding: 5% 0 0 0; "> 
+        <strong> Atelierruimte in Den Haag </strong>
+        <br> <br> 
+        Bent u op zoek naar een inspirerende werkplek in één van onze karakteristieke panden?
+        <br> <br> 
+        Schrijf u in op onze wachtlijst.
+        <br>
+        <button style="background-color:#f5f5dc; border-color: 1px solid #f5f5dc; width: 80%; height:100px; clip-path: inset(10% 1% round 20px);margin-top:10%">
+        <a href="{% url 'Wachtlijst' %}"> Schrijf je in </a> </button>
+    </div>
+
+    <div class = "col-6" style=" background-color:inherit;"> 
+        <img style = "width:100%; margin:0 0 -3% 0" src="{% static 'img/paginas/home.jpg' %}" alt="home"> 
+    </div>
+</div>
+{% endblock %}
+<!----// -SECTION----->
+
+<!-----SECTION2-------->
+{% block section2 %}
+<div class = "row" style = "background-color:inherit;">
+
+    <div class = "col-6" style=" background-color:inherit;"> 
+        <img style = "width:100%; margin:0 0 -3% 0" src="{% static 'img/paginas/reservering.jpg' %}" alt="home"> 
+    </div>
+
+
+    <div class = "col-6" style = "background-color: inherit; font-size: 28px; text-align: center; padding: 5% 0 0 0; "> 
+     <strong> Barthkapel reserveren </strong>
+     <br> <br> 
+     Bent u op zoek naar een inspirerende ruimte om een dagdeel te reserveren?
+     <br> <br> 
+     Reserveer de ruimte. 
+     <br>
+     <button style="background-color:#f5f5dc; border-color: 0px solid #f5f5dc;width: 100px; height:100px;clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);margin-top:10%"> 
+        <a href ="{% url 'Reservering' %}"> Reserveren </a> </button>
+    </div>
+ </div>
+{% endblock %}
+<!----// -SECTION----->
+<!-----SECTION3-------->
+{% block section3 %}
+<div class = "row" style = "background-color:inherit;">
+    <div class = "col-6" style = "background-color: inherit; font-size: 28px; text-align: center; padding: 5% 0 0 0; "> 
+     <strong>  Huurders  </strong>
+     <br> <br> 
+        Inspiratie?
+     <br> <br> 
+        Laat je inspireren
+     <br>
+     <button style="background-color:#f5f5dc; border-color: 1px solid #f5f5dc; width: 80%; height:100px; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+     margin-top:10%">
+         <a href="{% url 'Atelier1' %}"> Ateliers</a> </button>
+    </div>
+ 
+     <div class = "col-6" style=" background-color:inherit;"> 
+         <img style = "width:100%; margin:0 0 -3% 0"  src="{% static 'img/paginas/huurders.jpg' %}" alt="home"> 
+     </div>
+ </div>
+{% endblock %}
+<!----// -SECTION----->
+<!----------SECTION4----->
+{% block section4 %}
+<div class = "row" style = "background-color:inherit;">
+    <div class = "col-6"> 
+        <a href="" TARGET = "_blank">
+            <img style = "width:100%; margin:0 0 -3% 0"  src="{% static 'img/paginas/programma.jpg' %}" alt="in constructie">
+        </a> 
+    </div>
+    <div class = "col-6" style = "background-color: inherit; font-size: 28px; text-align: center; padding: 5% 0 0 0; "> 
+        <strong> Programma van de Barthkapel </strong>
+        <br> <br> 
+        Wilt u weten wat er te bekijken is in de Barthkapel? 
+        <br> <br> 
+        Bekijk de agenda van de Barthkapel - cultureel centrum 
+        <br>
+        <button style="background-color:#f5f5dc; border-color: 0px solid #f5f5dc;width: 100px; height:100px;clip-path: circle(40%);margin-top:10%">
+            <a href="/formulier/programma.html"> Programma </a> </button>
+    </div>
+ </div>
+{% endblock %}
+<!-----// SECTION----->
+
+
+
+<!----------SECTION5----->
+{% block section5 %}
+{% endblock %}
+<!-----// SECTION----->
+
+
+<!-----FOOTER-------->
+{% block footer %}
+
+ 
+{% endblock %}
+<!----// -FOOTER----->
