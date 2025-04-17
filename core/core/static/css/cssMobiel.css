@@ -5,6 +5,8 @@
 .banner_txtblock{color:#f5f5dc;width:40%;position:relative;opacity: 50%;top:0px;transform:translate(140%,-200%);z-index:20;font-size:22px;text-align: center;}
 .menublock{width:100%; height:100px;position:absolute;top:0%;right:0px;}
 
+.headerblock{background-color: inherit;border: 0px solid #182A3A;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
+.headerveld {width:90%;text-align:center;padding:2% 2% 2% 2%;}
 
 .sectionblock1{background-color:#425B6F;color:#D6BB80;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
 .sectionblock2{background-color:#D6BB80;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
@@ -33,18 +35,26 @@ a:hover, button a:hover{color:#A87544;}
 .menuMobiel{display:none;}
 /*LETTER */
 [class*="font-"]{font-family: "Roboto", sans-serif,"Gill Sans", "Gill Sans MT", "Calibri", Arial, "Helvetica", serif;
-    font-optical-sizing: auto;font-style: normal;font-variation-settings:"wdth" 100;color:yellow;}
+    font-optical-sizing: auto;font-style: normal;font-variation-settings:"wdth" 100;color:inherit;}
 body{font-size:28px;line-height: 1.4;}
+
 .font-20B{font-size: 36px; font-weight: 600;} 
 .pand_Htitel{font-size: 36px;font-weight:600;}
+.menu-container li{font-size:36px;}
+
+.pand_tekst{font-size: 20px;}
+.font-10{font-size:20px;color:pink;}
+ol,ul,li{font-size:20px;}
 
 .font-9 {font-size:16px;color:green;}
-.font-10{font-size:28px;color:pink;}
-.pand_tekst{font-size: 28px;}
-.menu-container li{font-size:36px;}
-ol,ul,li{font-size:20px;}
+
+
+
+
 /* // LETTER */
+
 /* // --- ALGEMEEN */
+.col-4,.col-30,.col-40{width:100%;}
 
 /*------------------------------ALGEMEEN VERSCHILLEND -------mobiel----------------------------------------------------*/
 .verbergenLap{display: flex;} 
@@ -59,8 +69,12 @@ ol,ul,li{font-size:20px;}
     .menu-container a{text-decoration: none;}
     .menu{background-color: inherit;margin: 2% 2% 2% 2%;}
     #menu-container{background-color:inherit;display:flex;overflow:auto;flex-direction: row; width:100%;margin: 0 0 0 0%;}   
+
+    .menu-container img{width:10%;position:absolute;left:85%;top:20%;}
     
-.menu-container img{width:7%;margin: 0 0 0 70%;} /*hamburger menu-icoon */
+    .logo_foot{padding: 0 0 0 35%;background-color:inherit;}
+    .logo_foot img{width:10%;margin:0% 5% 0% 5%;} /*logo footer */
+
 
 /*---// BASIS-------------------------------------------------------------------------------------------------------------*/
 
@@ -78,7 +92,13 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 .img-txt-home{display:none;}
 
 /*--// INDEX--------------------------------------------------------------------------------------------------------------*/
+ /*----FORMULIER RESERVERING/WACHTLIJST---------------------------Mobiel---------------------------------------------------*/
 
+ .form{margin: 1% 0 0 25%;background-color:inherit;}
+ .form2{margin:1% 0 0 2%;} /*lange tekst/vraag */
+ .form_box{margin: 1% 0 0 25%;background-color:inherit;}
+ .button_formulier{ width:10%;height:30px;margin: 0 0 2% 80%;clip-path: inset(0% 0% round 20px);}
+ /*--//  FORMULIER RESERVERING/WACHTLIJST-------------------------Mobiel----------------------------------------------------*/
 
 
 /*--UITLEG---------------------------------------------------------------------------------------------------------------*/
@@ -93,6 +113,6 @@ border-radius: 0%; ronding van de lijn
 */
 
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS */
+/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS > FORMULIEREN */ 
 
 }

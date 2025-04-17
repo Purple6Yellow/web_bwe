@@ -1,86 +1,101 @@
 {% extends 'algemeen/basis.html' %}
 {% load static %}
-<!--------HEADER----->
+<!--------HEAD----->
 {% block styles %}
 <style>
 
+
+
+
 </style>
 {% endblock %}
-<!--------HEADER----->
+<!--------HEAD----->
 <!---------------------------------------BODY------------------------------------------------------------------------------------------->
-
-<!--------BANNER----->
-{% block banner %}
-<div>   <img src="{% static 'img/headers/header_bkverhuur.jpg'  %}" alt="header_bkverhuur"> </div> 
-{% endblock %}
-<!-----//---BANNER--->
 <!--------BANNER TXT------->
 {% block banner_txt %} <em>Activiteiten moeten passen binnen de culturele doelstellingen van het Cultureel Centrum Barthkapel. </em>{% endblock %}  
 <!--------// BANNER TXT----->
 
-<!--------HEADER----->
-{% block header %}
+<!--------BANNER----->
+{% block banner %}
+<div> <img src="{% static 'img/headers/header_bkbuiten.jpg' %}" alt="header-bkbuiten">  </div> 
+{% endblock %}
+<!-----//---BANNER--->
+
+
+
+
+<!----------SECTION1----->
+{% block section10 %}
+<!---->
 <div class="row">
-    <p class="font-20B TxtCenter"> Barthkapel inrichting </p>
+    <div class="col-6">   
+        <img class = "foto1-sbwe" src="{% static 'img/paginas/bk_piano.jpg' %}" alt="">
+    </div>
+
+    <div class="col-6">     
+        <div class = "font-12 opmaak-sbwe">
+            <p class="TxtCenter"> <strong> Inventaris</strong> </p>
+            <ul>
+                <ol>  Er zijn <em>80 stoelen </em> beschikbaar.</ol>
+                <ol>  Er zijn <em>2 lange tafels</em> en <em> 2 statafels </em>beschikbaar.</ol>
+                <ol>  De piano is te huur (Blüthner).  </ol>
+                <ol>  Er is een ruime keuken aanwezig met inventatirs en een koelkast (inclusief vriesvak)</ol>
+                <ol>  <a href="/cc/voorwaarden.html"> <em> voorwaarden & annulering </em> </a> </ol>
+            </ul>
+        </div>
+    </div>
 </div>
 <!---->
 <div class="row">
-    <div class="col-4 bk-container">  
-        <a> <img src="{% static 'img/paginas/bk_piano.jpg' %}" alt="piano"> </a>
-        <ol class="font-20B TxtCenter"> Inventaris</ol>
-        <ol>  Er zijn <em>80 stoelen </em> beschikbaar.</ol>
-        <ol>  Er zijn <em>2 lange tafels</em> en <em> 2 statafels </em>beschikbaar.</ol>
-        <ol>  De piano is te huur (Blüthner).  </ol>
-        <ol>  Er is een ruime keuken aanwezig met inventatirs en een koelkast (inclusief vriesvak)</ol>
-        <ol>  <a href="/cc/voorwaarden.html"> <em> voorwaarden & annulering </em> </a> </ol>
+    <div class="col-6">     
+        <div class = "font-12 opmaak-sbwe">
+            <p class="TxtCenter"> <strong> Algemeen</strong> </p>
+            <ul>
+                <ol> Afmeting van de zaal is ongeveer <em>100 m2</em>.</ol>
+                <ol> Het huren van de Barthkapel is mogelijk tot uiterlijk 23:00 uur. </ol>
+                <ol> Versterkte muziek is niet toegestaan.  </ol>
+                <ol> Factuur wordt achteraf per e-mail verstuurd. </ol>
+                <ol>  Ruimte moet veegschoen worden achtergelaten.</ol>
+                <ol>  Stoelen terug op hun vaste plek.</ol>
+                <ol>  Vaatwas en keuken moeten schoon worden achtergelaten.  </ol>
+                <ol>  Aanrechtblad leeg en alle spullen terug in de kast. </ol>
+                <ol>  Vuilniszakken graag in de desbetreffende container op de brouwersgracht plaatsen. </ol>
+                <ol> <a href = "/cc/impressieBK.html"> <em> Geluidsfragement </em>  </a> <br> </ol>
+            </ul>
+        </div>
     </div>
 
-    <div class="col-4 bk-container">  
-        <a><img src="{% static 'img/paginas/bk_plattegrond.png' %}" alt=""> </a>      
-        <ol class="font-20B TxtCenter"> Algemeen</ol>
-        <ol>  Afmeting van de zaal is ongeveer <em>100 m2</em>.</ol>
-        <ol> Het huren van de Barthkapel is mogelijk tot uiterlijk 23:00 uur. </ol>
-        <ol> Versterkte muziek is niet toegestaan.  </ol>
-        <ol> Factuur wordt achteraf per e-mail verstuurd. </ol>
-        <ol> <a href = "/cc/impressieBK.html"> <em> Geluidsfragement </em>  </a> <br> </ol>
-    </div>
-
-    <div class="col-4 bk-container"> 
-        <a href="/panden/barthkapel.html"><img src="{% static 'img/paginas/bk_verhuur3.jpg' %}" alt="podiumzijde"> </a>
-        <ol class="font-20B TxtCenter"> Email</ol>
-        <ol><a style="color: #033a49e1;" href = "mailto:stichtingbwe@gmail.com?subject=Barthkapel Verhuur&body=">  stichtingbwe@gmail.com </a>  </ol>
-        <ol>  <a style = "color: inherit;" href = "/formulier/reservering.html"> <em> Aanvraagformulier </em> </a></ol>
-        <ol>  Reserveringen voor de Barthkapel graag via het aanvraagformulier </ol>
+    <div class="col-6">   
+        <img class = "foto1-sbwe" style="width:70%;" src="{% static 'img/paginas/bk_plattegrond.png' %}" alt="">
     </div>
 </div>
 <!---->
-{% endblock header %}
-<!-----//---HEADER--->
-
-<!-----SECTION1-------->
-{% block section1 %}
 <div class="row">
-    <div class="col-4 bk-container">  
-        <ol> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4904.6590711466215!2d4.30361597616389!3d52.073730769174716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7289a466b29%3A0x2e27e5a1e2e473ea!2sBrouwersgracht%202K%2C%202512%20ER%20Den%20Haag!5e0!3m2!1snl!2snl!4v1719780287797!5m2!1snl!2snl" 
-            style="border:0; width:100%;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </ol>
-    </div>
-
-    <div class="col-4 bk-container">  
-            <ol class="font-20B TxtCenter"> Barthkapel</ol>
-            <ol> Brouwersgracht 2K</ol>
-            <ol> 2512 ER Den Haag </ol>   
-            <ol> Kapel is bereikbaar vanaf de Brouwersgracht via de smalle steeg. </ol>
-            <ol> Deze leidt u naar de kloostertuin en de kapel.</ol>
-    </div>
-
-    <div class="col-4">  
-        <ol class="">  
-        <iframe src="https://www.google.com/maps/embed?pb=!4v1715773275253!6m8!1m7!1srRdZ4SnXUjJhk1rnW1Df2g!2m2!1d52.07367815163905!2d4.305508846694697!3f116.99734054729066!4f2.400498634234708!5f0.7820865974627469" 
-        style="border:0;width:100%;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </ol>
-    </div>
+    <div class="col-12">  
+        <div class="TxtCenter font-20B" style="background-color:inherit"> <strong> Bezetting kapel </strong> <br> </div>
+        <div class="TxtCenter font-12"> <strong> Vaste wekelijkse bezetting </strong> <br> </div>
+    </div>  
+</div>
+<!---->
+<div class="row">
+    <div class="col-12">   
+        <img src="{% static 'img/paginas/bk_weekschema.jpg' %}" alt="">
+    </div>  
+</div>
+<!---->
+<div class = "row">
+    <table>
+        <tr>
+            <td><div style="background-color:#033a49;width:50px; height:20px;"></div></td>
+            <td> Aanvraag mogelijk, wellicht beschikbaar</td>
+        </tr>
+        <tr>
+            <td><div style="background-color: #c7a11b; width:50px; height:20px;"> </div></td>
+            <td> Verhuurd, niet beschikbaar</td>
+        </tr>
+    </table>
 </div>
 {% endblock %}
-<!----// -SECTION----->
+<!-----//---SECTION----->
+
+
