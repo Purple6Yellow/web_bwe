@@ -3,13 +3,7 @@
 /*--LAPTOP ALGEMEEN------------------------Laptop---------------------------------------------------------------*/
 .verbergenLap{display:none;}
 .verbergenMob{display:inline-block;}
-/*--  LETTER--*/
-body{font-size:28px;line-height: 1.4;}
-.font-20B{font-size: 36px; font-weight: 600;} 
-.pand_Htitel{font-size: 36px;font-weight:600;}
-.font-10{font-size:28px;}
-.pand_tekst{font-size: 28px;}
-/*--// LETTER--*/
+
 /*----*/
 .row{display:inline-block;width:100%;}
 [class*="col-"]{float: left;padding:0%;}
@@ -18,9 +12,16 @@ body{font-size:28px;line-height: 1.4;}
 .col-12{width:100%;}
 .col-30{width:30%;}
 .col-40{width:40%;}
-
-/*----*/
-
+/*--  LETTER LAPTOP--*/
+.menu-container li{font-size:36px;}
+.font-20B{font-size: 36px; font-weight: 600;} 
+.pand_Htitel{font-size: 36px;font-weight:600;}
+body{font-size:28px;line-height: 1.4;}
+.pand_tekst{font-size: 28px;}
+.font-10{font-size:28px;}
+ol,ul,li{font-size:20px;}
+.font-9 {font-size:16px;color:green;}
+/*--// LETTER--*/
 
 /*--// LAPTOP ALGEMEEN---------------------Laptop-----------------------------------------------------------------*/
 
@@ -39,12 +40,11 @@ body{font-size:28px;line-height: 1.4;}
 /*--// BASIS------------------------------------------------------------------------------------------------------*/
 
 
-
 /*--BARTHKAPELverhuur----------------------Laptop-----------------------------------------------------------------*/
 .bk-container{background-color:inherit;text-align:center;}
 .bk-container img {width:96%;margin-left:2%;margin-right:2%;}
+.bk-container iframe {width:100%;height:400px;margin:-2% 0% -6% 0%;}
 /*--// BARTHKAPELverhuur----------------------Laptop--------------------------------------------------------------*/
-
 
 
 /*--PROGRAMMA & ATELIERS----------------------------Laptop--------------------------------------------------------*/

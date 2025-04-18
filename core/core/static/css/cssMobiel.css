@@ -30,35 +30,28 @@ ol, ul, li{color:inherit;}
 
 a:hover, button a:hover{color:#A87544;}
 .menu a:hover{color:#2B3E4F;}
-/* KLEUREN */
+/* // KLEUREN */
+/* DIVERS */
 .TxtCenter{text-align: center;}
 .menuMobiel{display:none;}
-/*LETTER */
 [class*="font-"]{font-family: "Roboto", sans-serif,"Gill Sans", "Gill Sans MT", "Calibri", Arial, "Helvetica", serif;
     font-optical-sizing: auto;font-style: normal;font-variation-settings:"wdth" 100;color:inherit;}
-body{font-size:28px;line-height: 1.4;}
-
-.font-20B{font-size: 36px; font-weight: 600;} 
-.pand_Htitel{font-size: 36px;font-weight:600;}
-.menu-container li{font-size:36px;}
-
-.pand_tekst{font-size: 20px;}
-.font-10{font-size:20px;color:pink;}
-ol,ul,li{font-size:20px;}
-
-.font-9 {font-size:16px;color:green;}
-
-
-
-
-/* // LETTER */
-
 /* // --- ALGEMEEN */
 .col-4,.col-30,.col-40{width:100%;}
 
 /*------------------------------ALGEMEEN VERSCHILLEND -------mobiel----------------------------------------------------*/
 .verbergenLap{display: flex;} 
 .verbergenMob{display:none;} /*Als scherm mobiel is, dan display niet zichtbaar */
+/*--  LETTER MOBIEL--*/
+.menu-container li{font-size:30px;}
+.font-20B{font-size: 30px; font-weight: 600;} 
+.pand_Htitel{font-size: 30px;font-weight:600;}
+body{font-size:16px;line-height: 1.4;}
+.pand_tekst{font-size: 16px;}
+.font-10{font-size:16px;}
+ol,ul,li{font-size:14px;}
+.font-9 {font-size:12px;color:green;}
+/*--// LETTER--*/
 /*-----------------------------//-ALGEMEEN VERSCHILLEND --------------------------------------------------------------*/
 
 /*---BASIS-------mobiel-------------------------------------------------------------------------------------------------*/
@@ -99,7 +92,11 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
  .form_box{margin: 1% 0 0 25%;background-color:inherit;}
  .button_formulier{ width:10%;height:30px;margin: 0 0 2% 80%;clip-path: inset(0% 0% round 20px);}
  /*--//  FORMULIER RESERVERING/WACHTLIJST-------------------------Mobiel----------------------------------------------------*/
-
+/*--BARTHKAPELverhuur----------------------Mobiel----------------------------------------------------------------*/
+.bk-container{background-color:inherit;text-align:center;}
+.bk-container img {width:100%;margin: 0 0 0 0;}
+.bk-container iframe {width:100%;}
+/*--// BARTHKAPELverhuur-------------------Mobiel----------------------------------------------------------------*/
 
 /*--UITLEG---------------------------------------------------------------------------------------------------------------*/
 /* 
@@ -113,6 +110,6 @@ border-radius: 0%; ronding van de lijn
 */
 
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS > FORMULIEREN */ 
+/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS > FORMULIEREN  > BKVERHUUR */ 
 
 }
