@@ -125,7 +125,7 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 /*--PANDEN----------------------------mobiel---------------------------------------------------------------------*/
 
 .pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
-.pand-container img {width:96%;margin: 0 2% 0 2%;}
+.pand-container img {width:100%;}
 
 /*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
 
