@@ -6,13 +6,17 @@
 .bannerblock{background-color: #4F6978;width:100%; height:300px;clip-path: inset(0% 0% round 20px);}
 
 /*----*/
-.row{display:inline-block;width:100%;}
-[class*="col-"]{float: left;padding:0%;}
+/*-- BREEDTE--*/
+
+.row{display:inline-block;width:100%;background-color: inherit;}
+[class*="col-"]{float:left}
 .col-4{width:33.33%;}
-.col-6{width:50%;}
+.col-6{width:45%;background-color:inherit;}
 .col-12{width:100%;}
 .col-30{width:30%;}
 .col-40{width:40%;}
+/*--// BREEDTE--*/
+
 /*--  LETTER LAPTOP--*/
 .menu-container li{font-size:36px;}
 .font-20B{font-size: 36px; font-weight: 600;} 
@@ -24,8 +28,6 @@ body{font-size:28px;line-height: 1.4;}
 .font-10{font-size:28px;}
 ol,ul,li{font-size:20px;}
 .font-9 {font-size:16px;color:green;}
-
-
 
 /*--// LETTER--*/
 
@@ -44,7 +46,9 @@ ol,ul,li{font-size:20px;}
 .logo_foot{padding: 0 0 0 15%;background-color:inherit;}
 .logo_foot img{width:10%;margin:0% 5% 0% 5%;} /*logo footer */
 /*--// BASIS------------------------------------------------------------------------------------------------------*/
-
+/*---- INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
+[class*="clip-"]{width: 100px; height: 100px;}
+/*--// INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
 
 /*--BARTHKAPELverhuur----------------------Laptop-----------------------------------------------------------------*/
 .bk-container{background-color:inherit;text-align:center;}
@@ -63,6 +67,7 @@ ol,ul,li{font-size:20px;}
 .foto1-sbwe{clip-path:inset(5% 5% round 50px);margin: 0 0 0 20%;}
 .opmaak-sbwe{padding:5% 5% 5% 5%;}
 /*--// OVERSBWE----------------------------Laptop--------------------------------------------------------------*/
+
 /*--PANDEN----------------------------Laptop-----------------------------------------------------------------*/
 .pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
 .pand-container img {width:96%;margin: 0 2% 0 2%;}
@@ -75,6 +80,7 @@ ol,ul,li{font-size:20px;}
 .foto_portrait {background-color: inherit;padding:1% 0 1% 2%;}
 .foto_portrait img{width:24%;clip-path: inset(0% 0% round 20px);}
 /*--// PANDEN-------------------------Laptop-----------------------------------------------------------------*/
+
 /*----FORMULIER RESERVERING/WACHTLIJST---------------------------Laptop---------------------------------------------------*/
 
 .form, .form2{margin: 1% 0 0 20%;background-color:inherit;}
@@ -84,4 +90,4 @@ ol,ul,li{font-size:20px;}
 }
 
 /* VOLGORDE
-Laptop algemeen > Basis > BKverhuur > Voorwaarden > Programma/Ateliers > Oversbwe > Panden > Formulier reservering/wachtlijst
+Laptop algemeen > Basis > INDEX > BKverhuur > Voorwaarden > Programma/Ateliers > Oversbwe > Panden > Formulier reservering/wachtlijst

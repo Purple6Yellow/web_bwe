@@ -48,13 +48,15 @@ a:hover, button a:hover{color:#A87544;}
 /*------------------------------ALGEMEEN VERSCHILLEND -------mobiel----------------------------------------------------*/
 .verbergenLap{display: flex;} 
 .verbergenMob{display:none;} /*Als scherm mobiel is, dan display niet zichtbaar */
-.col-4,.col-30,.col-40{width:100%;}
+
+[class*="col-"]{display: inline-block;text-align: center;}
+.col-4,.col-6,.col-12,.col-30,.col-40{width:100%;}  
 iframe{width: 100%;}
 /*--  LETTER MOBIEL--*/
-.menu-container li{font-size:30px;}
-.font-20B{font-size: 30px; font-weight: 600;} 
-.pand_Htitel{font-size: 30px;font-weight:600;}
-.prog-titel{font-size:30px;}
+.menu-container li{font-size:28px;}
+.font-20B{font-size: 28px; font-weight: 600;} 
+.pand_Htitel{font-size: 28px;font-weight:600;}
+.prog-titel{font-size:28px;}
 body{font-size:16px;line-height: 1.4;}
 .pand_tekst{font-size: 16px;}
 .prog-datum, .prog-tijd{font-size:16px;}
@@ -94,7 +96,15 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 .ind-container{background-attachment: fixed; background-size: cover;opacity: 80%; position:absolute;top: 0%;left:0%;transform:translate(0,0);}
 .ind-container img{width: 100%;}
 .img-txt-home{display:none;}
-
+[class*="clip-"]{width: 85px; height: 85px;margin: 3% 0 3% 0;}
+.clip-rechthoek{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
+    clip-path: inset(10% 1% round 20px);}
+.clip-rhom{background-color:#f5f5dc; border-color: 1px solid #f5f5dc; 
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%,0% 50%);}
+.clip-penta{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
+.clip-circle{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
+    clip-path: circle(40%);}
 /*--// INDEX--------------------------------------------------------------------------------------------------------------*/
 /*--PROGRAMMA & ATELIERS----------------------------Mobiel--------------------------------------------------------*/
 .prog {background-color: inherit;text-align: center; }
@@ -112,6 +122,13 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 .bk-container img {width:100%;margin: 0 0 0 0;}
 /*--// BARTHKAPELverhuur-------------------Mobiel----------------------------------------------------------------*/
 
+/*--PANDEN----------------------------mobiel---------------------------------------------------------------------*/
+
+.pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
+.pand-container img {width:96%;margin: 0 2% 0 2%;}
+
+/*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
+
 /*--UITLEG---------------------------------------------------------------------------------------------------------------*/
 /* 
 translate(0%, -20%); horizontaal versus verticaal
@@ -124,6 +141,6 @@ border-radius: 0%; ronding van de lijn
 */
 
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS/PROGRAMMA > FORMULIEREN  > BKVERHUUR > */ 
+/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS/PROGRAMMA > FORMULIEREN  > BKVERHUUR > PANDEN */ 
 
 }
