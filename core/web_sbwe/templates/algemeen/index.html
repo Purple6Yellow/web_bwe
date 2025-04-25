@@ -3,7 +3,8 @@
 <!--------HEAD----->
 {% block styles %}
 <style>
-img{width:100%;}
+
+
 </style>
 {% endblock %}
 <!--------HEAD----->
@@ -31,7 +32,7 @@ img{width:100%;}
 <!-----SECTION1-------->
 {% block section1 %}
 <div class = "row">
-    <div class = "col-8 style="padding: 0% 0 0% 0%;">
+    <div class = "col-6 box" >
         <strong> Atelierruimte in Den Haag </strong>
         <br> <br> 
         Bent u op zoek naar een inspirerende werkplek in één van onze karakteristieke panden?
@@ -42,8 +43,10 @@ img{width:100%;}
         <a href="{% url 'Wachtlijst' %}"> Schrijf je in </a> </button>
     </div>
 
-    <div class = "col-6" style=" background-color:inherit;"> 
-        <img style = "width:auto;" src="{% static 'img/paginas/home.jpg' %}" alt="home"> 
+    <div class = "col-6 boxre"> 
+        <a href="" TARGET = "_blank">
+            <img src="{% static 'img/paginas/home.jpg' %}" alt="in constructie">
+        </a> 
     </div>
 </div>
 {% endblock %}
@@ -53,12 +56,14 @@ img{width:100%;}
 {% block section2 %}
 <div class = "row" style = "background-color:inherit;">
 
-    <div class = "col-6" style=" background-color:inherit;"> 
-        <img style = "width:100%; margin:0 0 -10% 0" src="{% static 'img/paginas/reservering.jpg' %}" alt="home"> 
+    <div class = "col-6 boxli"> 
+        <a href="" TARGET = "_blank">
+            <img src="{% static 'img/paginas/reservering.jpg' %}" alt="in constructie">
+        </a> 
     </div>
 
 
-    <div class = "col-6" style = "padding: 5% 5% 5% 5%;"> 
+    <div class = "col-6 box"> 
      <strong> Barthkapel reserveren </strong>
      <br> <br> 
      Bent u op zoek naar een inspirerende ruimte om een dagdeel te reserveren?
@@ -74,7 +79,7 @@ img{width:100%;}
 <!-----SECTION3-------->
 {% block section3 %}
 <div class = "row" style = "background-color:inherit;">
-    <div class = "col-6" style = "background-color: inherit; padding: 5% 0 0 0; "> 
+    <div class = "col-6 box"> 
      <strong>  Huurders  </strong>
      <br> <br> 
         Inspiratie?
@@ -85,21 +90,23 @@ img{width:100%;}
          <a href="{% url 'Atelier1' %}"> Ateliers</a> </button>
     </div>
  
-     <div class = "col-6" style=" background-color:inherit;"> 
-         <img style = "width:100%; margin:0 0 -10% 0"  src="{% static 'img/paginas/huurders.jpg' %}" alt="home"> 
-     </div>
+    <div class = "col-6 boxre"> 
+        <a href="" TARGET = "_blank">
+            <img src="{% static 'img/paginas/huurders.jpg' %}" alt="in constructie">
+        </a> 
+    </div>
  </div>
 {% endblock %}
 <!----// -SECTION----->
 <!----------SECTION4----->
 {% block section4 %}
 <div class = "row" style = "background-color:inherit;">
-    <div class = "col-6"> 
+    <div class = "col-6 boxli"> 
         <a href="" TARGET = "_blank">
-            <img  style = "width:100%; margin:0 0 -10% 0" src="{% static 'img/paginas/programma.jpg' %}" alt="in constructie">
+            <img src="{% static 'img/paginas/programma.jpg' %}" alt="in constructie">
         </a> 
     </div>
-    <div class = "col-6" style = "background-color: inherit; padding: 5% 0 0 0; "> 
+    <div class = "col-6 box"> 
         <strong> Programma van de Barthkapel </strong>
         <br> <br> 
         Wilt u weten wat er te bekijken is in de Barthkapel? 

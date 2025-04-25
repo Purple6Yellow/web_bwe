@@ -4,7 +4,6 @@
 {% block styles %}
 <style>
 
-
 </style>
 {% endblock %}
 <!--------HEADER----->
@@ -37,15 +36,15 @@
     </div>
     <div class="col-6 prog-container"> 
         <div class = "prog"> 
-            <div class = "prog-titel"> <a href=" {{ prog.website }}" TARGET = "_blank"> {{ prog.titel }}  </a> </div>
-            <div class = "prog-datum">  {{ prog.datum }}  </div>
-            <div class = "prog-tijd">  {{ prog.start }} -  {{ prog.eind }}   </div>
+            <div class = "font-20B"> <a style = "color:#D6BB80;" {{ prog.website }} TARGET = "_blank"> {{ prog.titel }}  </a> </div>
+            <div class = "color1">  {{ prog.datum }}  </div>
+            <div class = "color1">  {{ prog.start }} -  {{ prog.eind }}   </div>
         </div> 
     </div>
 </div>
 {% empty %}
     <hr>
-    <div class="prog-opmaak-geen, font-18">Programma nog niet bekend voor publiek</div>
+    <div class="font-20B TxtCenter">Programma nog niet bekend voor publiek</div>
 {% endfor %}
 <!------> 
 {% endblock %}

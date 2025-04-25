@@ -9,12 +9,12 @@
 .headerveld {width:90%;text-align:center;padding:2% 2% 2% 2%;}
 .bannerblock{background-color: #4F6978;width:100%;height:10%;clip-path: inset(0% 0% round 20px);} 
 .bannerblock img{width:100%; margin: 0 0 -3% 0;}
-.sectionblock1{background-color:#425B6F;color:#D6BB80;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
-.sectionblock2{background-color:#D6BB80;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
-.sectionblock3{background-color:#182A3A;color:#A08348; width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
-.sectionblock4{background-color:#A08348; width:100%;height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
-.sectionblock5{background-color:#7A7E74;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
-.footerblock{background-color:#f5f5dc;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.sectionblock1{background-color:#425B6F;color:#D6BB80;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock2{background-color:#D6BB80;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock3{background-color:#182A3A;color:#A08348; width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock4{background-color:#A08348; width:100%;height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock5{background-color:#7A7E74;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.footerblock{background-color:#f5f5dc;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
 .headerblock{background-color: inherit;border: 0px solid #182A3A;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
 .headerveld {width:90%;text-align:center;padding:2% 2% 2% 2%;}
 .bannerblock img{width: 100%; height: 100%;}
@@ -34,6 +34,7 @@ a:hover, button a:hover{color:#A87544;}
 /* // KLEUREN */
 /* DIVERS */
 .TxtCenter{text-align: center;}
+.color1{color:#D6BB80;}
 .menuMobiel{display:none;}
 .vorigeP,.volgendeP {text-decoration: none;}
 .vorigeP {position:fixed; top: 50%; transform: translateY(-0%); left: 5%; }
@@ -46,7 +47,7 @@ a:hover, button a:hover{color:#A87544;}
 
 
 /*------------------------------ALGEMEEN VERSCHILLEND -------mobiel----------------------------------------------------*/
-.verbergenLap{display: flex;} 
+.verbergenLap{display:inline-block;} 
 .verbergenMob{display:none;} /*Als scherm mobiel is, dan display niet zichtbaar */
 
 [class*="col-"]{display: inline-block;text-align: center;}
@@ -96,7 +97,7 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 .ind-container{background-attachment: fixed; background-size: cover;opacity: 80%; position:absolute;top: 0%;left:0%;transform:translate(0,0);}
 .ind-container img{width: 100%;}
 .img-txt-home{display:none;}
-[class*="clip-"]{width: 85px; height: 85px;margin: 3% 0 3% 0;}
+[class*="clip-"]{width: 85px; height: 85px; margin: 3% 0 0 0}
 .clip-rechthoek{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: inset(10% 1% round 20px);}
 .clip-rhom{background-color:#f5f5dc; border-color: 1px solid #f5f5dc; 
@@ -105,11 +106,21 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
 .clip-circle{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: circle(40%);}
-/*--// INDEX--------------------------------------------------------------------------------------------------------------*/
+
+.box{text-align: center;padding:2% 2% 2% 2%;}
+.boxre img{width: 100%; margin:0 0 -10% 0%;}
+.boxli img {width:100%; margin:0 0 0% 0;}
+/*--// INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
+
+
 /*--PROGRAMMA & ATELIERS----------------------------Mobiel--------------------------------------------------------*/
 .prog {background-color: inherit;text-align: center; }
-.prog-container img{width:99%; clip-path: inset(0 0 round 20px);margin: 5% 0 0 0;} 
+.prog-container{background-color: inherit;padding:0% 0 2% 0%;}
+.prog-container img{width:99%; clip-path: inset(0 0 round 20px);margin: 0% 0 5% 0;} 
 /*--// PROGRAMMA & ATELIERS-------------------------Mobiel--------------------------------------------------------*/
+
+
+
 /*----FORMULIER RESERVERING/WACHTLIJST---------------------------Mobiel---------------------------------------------------*/
 
  .form{margin: 1% 0 0 25%;background-color:inherit;}

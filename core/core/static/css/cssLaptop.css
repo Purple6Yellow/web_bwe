@@ -48,6 +48,9 @@ ol,ul,li{font-size:20px;}
 /*--// BASIS------------------------------------------------------------------------------------------------------*/
 /*---- INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
 [class*="clip-"]{width: 100px; height: 100px;}
+.box{text-align: center;padding:2% 2% 2% 2%;}
+.boxre img{width: 100%; margin:0 0 -10% 25%;}
+.boxli img {width:100%; margin:0 0 -10% 0;}
 /*--// INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
 
 /*--BARTHKAPELverhuur----------------------Laptop-----------------------------------------------------------------*/
@@ -58,7 +61,7 @@ ol,ul,li{font-size:20px;}
 
 /*--PROGRAMMA & ATELIERS----------------------------Laptop--------------------------------------------------------*/
 .prog {background-color: inherit;padding:20% 20% 20% 0%;}
-.prog-container{background-color: inherit;padding:0 0 0 10%;}
+.prog-container{background-color: inherit;padding:5% 0 0 10%;}
 .prog-container img{width:70%;clip-path: inset(0% 0% round 20px);}
 /*--// PROGRAMMA & ATELIERS-------------------------Laptop--------------------------------------------------------*/
 
@@ -70,7 +73,7 @@ ol,ul,li{font-size:20px;}
 
 /*--PANDEN----------------------------Laptop-----------------------------------------------------------------*/
 .pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
-.pand-container img {width:96%;margin: 0 2% 0 2%;}
+.pand-container img {width:96%;margin: 1% 2% 1% 2%;}
 
 .pand_Htitel{width:100%; margin:1% 0% 0% 0%;text-align:center;}
 .pand_tekst{width:80%; margin:1% 10% 1% 10%;}
