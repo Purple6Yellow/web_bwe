@@ -15,7 +15,7 @@ path('divers/contact.html', views.contact),
 path('divers/oversbwe.html', views.oversbwe),
 # CC - PANDEN
 path('cc/voorwaarden.html', views.voorwaarden),
-path('cc/ccinrichting.html', views.inrichting),
+path('cc/ccinrichting.html', views.inrichting, name = "Inrichting"),
 path('panden/panden.html', views.panden),
 path('panden/rembrandt.html', views.rembrandt),
 path('panden/lepelstr.html', views.lepel),

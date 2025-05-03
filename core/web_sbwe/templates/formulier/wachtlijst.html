@@ -5,11 +5,17 @@
 <style>
 
 
+
 </style>
 {% endblock %}
 <!--------HEAD----->
 <!---------------------------------------BODY------------------------------------------------------------------------------------------->
 
+<!--------BANNER----->
+{% block banner %}
+<div>   <img src="{% static 'img/headers/header_bkverhuur.jpg'  %}" alt="header_bkverhuur"> </div> 
+{% endblock %}
+<!-----//---BANNER--->
 <!----------HEADER----->
 {% block header %}
 <div class = "row">
@@ -94,7 +100,7 @@
 </div> 
 <!---->
 <div class ="row">
-    <div class = "col-4 form2"> Kun u ons een indruk geven van uw recente (kunst)projecten, denk aan Instagram, website, Facebook en of een CV. </div>
+    <div class = "col-4 form2"> Kunt u ons een indruk geven van uw recente (kunst)projecten? <br> (bijv. via Instagram, website, Facebook of CV.) </div>
     <div class = "col-4 form_box">{{ wlijst_form.website }} </div>
 </div> 
 <!---->
@@ -105,7 +111,7 @@
 </div> 
 <!---->
 <div class ="row">
-    <input type ="submit" class = "button_formulier" value = "Submit">  
+    <input type ="submit" class = "button_formulier" value = "Verzenden">  
 </div> 
 <!---->
 

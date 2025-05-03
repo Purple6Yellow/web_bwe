@@ -4,11 +4,6 @@
 {% block styles %}
 <style>
 
-
-
-
-
-
 </style>
 {% endblock %}
 <!--------HEADER----->
@@ -22,20 +17,36 @@
 
 <!--------BANNER TXT------->
 {% block banner_txt %} <em>Activiteiten moeten passen binnen de culturele doelstellingen van het Cultureel Centrum Barthkapel. </em>{% endblock %}  
+
 <!--------// BANNER TXT----->
 
 <!----------HEADER----->
 {% block header %}
-<div class="row">
-    <div class="col-12"> 
-        <div> <a href="{% url 'Reservering' %}"> ← retour</a> </div>
-    </div>
-</div>
-{% endblock header %}
+{% endblock %}
 <!-----//---HEADER----->
 
-<!----------SECTION1----->
+<!-----SECTION-------->
 {% block section1 %}
+<div class = "row" style = "background-color:inherit;">
+
+    <div class = "col-6"> 
+        <a href="" TARGET = "_blank">
+            <img style = "width:25%; float:left; margin: 0 0 -10% 0" src="{% static 'img/paginas/reservering.jpg' %}" alt="in constructie">
+        </a> 
+    </div>
+
+    <div class = "col-6"> 
+     <strong> </strong>
+     <button class = "clip-rhom">
+        <a href ="{% url 'Reservering' %}"> Reserveren </a> </button>
+    </div>
+ </div>
+{% endblock %}
+<!----// -SECTION----->
+
+<!----------SECTION----->
+{% block section2 %}
+
 <div class="row">
     <div class="col-12 font-20B TxtCenter">
         <p> We verhuren onder een aantal voorwaarden: </p> 
@@ -75,7 +86,7 @@
 <!-----//---SECTION----->
 
 <!----------SECTION2----->
-{% block section2 %}
+{% block section3 %}
 <div class="row">
     <div class="col-12 font-20B TxtCenter">
         <p>  Annuleringsvoorwaarden. </p> 
@@ -104,10 +115,10 @@
 <!-----//---SECTION----->
 
 <!----------SECTION3----->
-{% block section3 %}
+{% block section4 %}
 
 <div class="row">
-    <div class="col-12 TxtCenter"> <strong> <em> Stichting Behoud Waardevol Erfgoed is niet aansprakelijk voor diefstal of schade aan eigendommen van huurders of bezoekers. </em></strong> </div>
+    <div class="col-12 TxtCenter"> <em> Stichting Behoud Waardevol Erfgoed is niet aansprakelijk voor diefstal of schade aan eigendommen van huurders of bezoekers. </em> </div>
 </div>
 
 {% endblock %}

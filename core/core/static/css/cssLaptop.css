@@ -7,7 +7,6 @@
 
 /*----*/
 /*-- BREEDTE--*/
-
 .row{display:inline-block;width:100%;background-color: inherit;}
 [class*="col-"]{float:left}
 .col-4{width:33.33%;}
@@ -26,10 +25,12 @@ body{font-size:28px;line-height: 1.4;}
 .pand_tekst{font-size: 28px;}
 .prog-datum, .prog-tijd{font-size:28px;}
 .font-10{font-size:28px;}
+.banner_txtblock{font-size:22px;}
 ol,ul,li{font-size:20px;}
-.font-9 {font-size:16px;color:green;}
-
+.font-9{font-size:16px;color:green;}
 /*--// LETTER--*/
+
+
 
 /*--// LAPTOP ALGEMEEN---------------------Laptop-----------------------------------------------------------------*/
 
@@ -43,7 +44,7 @@ ol,ul,li{font-size:20px;}
 .menu{background-color: inherit; padding: 0 0 5% 1%; margin: 1% 0% 1% 3%;z-index:10;}
 #menu-container{background-color:inherit;display:flex;overflow:auto;flex-direction: row; width:100%;margin: 0 0 0 0%;}   
 
-.logo_foot{padding: 0 0 0 15%;background-color:inherit;}
+.logo_foot{padding: 0 0 0 0%;background-color:inherit;align-items: center;}
 .logo_foot img{width:10%;margin:0% 5% 0% 5%;} /*logo footer */
 /*--// BASIS------------------------------------------------------------------------------------------------------*/
 /*---- INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
