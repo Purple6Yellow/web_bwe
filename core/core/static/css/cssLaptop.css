@@ -26,8 +26,10 @@ body{font-size:28px;line-height: 1.4;}
 .prog-datum, .prog-tijd{font-size:28px;}
 .font-10{font-size:28px;}
 .banner_txtblock{font-size:22px;}
+.form,.form2{font-size:22px;}
 ol,ul,li{font-size:20px;}
 .font-9{font-size:16px;color:green;}
+
 /*--// LETTER--*/
 
 
@@ -69,13 +71,10 @@ ol,ul,li{font-size:20px;}
 .prog-container{background-color: inherit;padding:5% 0 0 10%;}
 .prog-container img{width:70%;clip-path: inset(0% 0% round 20px);}
 /*--// PROGRAMMA & ATELIERS-------------------------Laptop--------------------------------------------------------*/
-
-
 /*--OVERSBWE----------------------------Laptop-----------------------------------------------------------------*/
 .foto1-sbwe{clip-path:inset(5% 5% round 50px);margin: 0 0 0 20%;}
 .opmaak-sbwe{padding:5% 5% 5% 5%;}
 /*--// OVERSBWE----------------------------Laptop--------------------------------------------------------------*/
-
 /*--PANDEN----------------------------Laptop-----------------------------------------------------------------*/
 .pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
 .pand-container img {width:96%;margin: 1% 2% 1% 2%;}
@@ -88,13 +87,13 @@ ol,ul,li{font-size:20px;}
 .foto_portrait {background-color: inherit;padding:1% 0 1% 2%;}
 .foto_portrait img{width:24%;clip-path: inset(0% 0% round 20px);}
 /*--// PANDEN-------------------------Laptop-----------------------------------------------------------------*/
-
 /*----FORMULIER RESERVERING/WACHTLIJST---------------------------Laptop---------------------------------------------------*/
-
-.form, .form2{margin: 1% 0 0 20%;background-color:inherit;}
-.form_box{margin: 1% 0 0 7%;background-color:inherit;}
-.button_formulier{ width:10%;height:30px;margin: 0 0 2% 80%;clip-path: inset(0% 0% round 20px);}
+.form, .form2{margin: 1% 0 0 20%;background-color:inherit;text-align: left;}
+.form_box{margin: 1% 0 0 0%;background-color:inherit;}
+.button_formulier{ width:auto;height:auto;margin: 0 0 2% 80%;clip-path: inset(0% 0% round 20px);}
 /*--//  FORMULIER RESERVERING/WACHTLIJST-------------------------Laptop---------------------------------------------------*/
+
+
 }
 
 /* VOLGORDE

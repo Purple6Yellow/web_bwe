@@ -24,7 +24,7 @@ body{color:#182A3A;background-color:#f5f5dc; font-family: "Gill Sans", "Gill San
 .font-20B{color:#182A3A;}
 a{color:#2B3E4F;text-decoration:none;}
 button a{color:#2B3E4F;text-decoration: none;}
-.button_formulier{color:white;background-color:#A87544;}
+.button_formulier{color:white;background-color:#A87544;border:2px solid #A87544;}
 .menu a {color:#f5f5dc;}
 ol, ul, li{color:inherit;}
 .vorigeP, .volgendeP {color:#A08348; font-size: 5em;}
@@ -57,7 +57,6 @@ iframe{width: 100%;}
 /*--// BREEDTE--*/
 /*--  LETTER MOBIEL--*/
 .menu-container li{font-size:28px;}
-
 .font-20B{font-size: 28px; font-weight: 600;} 
 .pand_Htitel{font-size: 28px;font-weight:600;}
 .prog-titel{font-size:28px;}
@@ -65,6 +64,7 @@ body{font-size:16px;line-height: 1.4;}
 .pand_tekst{font-size: 16px;}
 .prog-datum, .prog-tijd{font-size:16px;}
 .font-10{font-size:16px;}
+a{font-size:14px;}
 ol,ul,li{font-size:14px;color:yellow;}
 .font-9{font-size:12px;color:green;}
 .an-container li{font-size:12px;}
@@ -117,7 +117,7 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 .box{text-align: center;padding:2% 2% 2% 2%;}
 .boxre img{width: 100%; margin:0 0 -10% 0%;}
 .boxli img {width:100%; margin:0 0 0% 0;}
-/*--// INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
+/*--// INDEX --------------------------------------------------------------------------------------------*/
 
 
 /*--PROGRAMMA & ATELIERS----------------------------Mobiel--------------------------------------------------------*/
@@ -125,26 +125,22 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 .prog-container{background-color: inherit;padding:0% 0 2% 0%;}
 .prog-container img{width:99%; clip-path: inset(0 0 round 20px);margin: 0% 0 5% 0;} 
 /*--// PROGRAMMA & ATELIERS-------------------------Mobiel--------------------------------------------------------*/
-
  /*----FORMULIER RESERVERING/WACHTLIJST---------------------------Mobiel---------------------------------------------------*/
  .form{align-items:center;margin: 0% 0 0 0%;background-color:inherit;}
- .form2{margin:0% 0 0 0%;float:left;background-color:green;} /*lange tekst/vraag */
+ .form2{margin:0% 0 0 0%;text-align: left;background-color:inherit;} /*lange tekst/vraag */
  .form_box{align-items: center;margin: 0% 0 0 0%;background-color:inherit;}
  .button_formulier{ width: auto;height:auto;margin: 0 0 2% 80%;clip-path: inset(0% 0% round 20px);}
+
+ .link{width:20%;background-color: green;display: inline-block;}
  /*--//  FORMULIER RESERVERING/WACHTLIJST-------------------------Mobiel----------------------------------------------------*/
-
-
 
 /*--BARTHKAPELverhuur----------------------Mobiel----------------------------------------------------------------*/
 .bk-container{background-color:inherit;text-align:center;}
 .bk-container img {width:100%;margin: 0 0 0 0;}
-
-
 /*--// BARTHKAPELverhuur--------------mobiel---------------------------------------------------------------------*/
 /*--PANDEN----------------------------mobiel---------------------------------------------------------------------*/
 .pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
 .pand-container img {width:100%; clip-path: inset(0% 0% round 20px)}
-
 .foto_portrait {background-color: inherit;padding:1% 0 1% 2%;}
 .foto_portrait img{max-height: 400px; width:80%;margin: 0 0 0 10%; clip-path: inset(0% 0% round 20px);}
 /*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
