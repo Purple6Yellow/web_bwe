@@ -4,6 +4,7 @@
 {% block styles %}
 <style>
 
+
 </style>
 {% endblock %}
 <!--------HEADER----->
@@ -36,7 +37,7 @@
     </div>
     <div class="col-6 prog-container"> 
         <div class = "prog"> 
-            <div class = "font-20B"> <a style = "color:#D6BB80;" {{ prog.website }} TARGET = "_blank"> {{ prog.titel }}  </a> </div>
+            <div class = "font-20B color1"> <a href=" {{ prog.website }}" TARGET = "_blank"> {{ prog.titel }}  </a> </div>
             <div class = "color1">  {{ prog.datum }}  </div>
             <div class = "color1">  {{ prog.start }} -  {{ prog.eind }}   </div>
         </div> 

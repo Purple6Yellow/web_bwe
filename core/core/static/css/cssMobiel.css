@@ -5,7 +5,7 @@
 .menublock{width:100%; height:100px;position:absolute;top:0%;right:0px;}
 
 .headerblock{background-color: inherit;border: 0px solid #182A3A;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
-.headerveld {width:90%;text-align:center;padding:2% 2% 2% 2%;}
+.headerveld {width:100%;text-align:center;padding:2% 1% 2% 1%;}
 
 .bannerblock{background-color: #4F6978;width:100%;height:10%;clip-path: inset(0% 0% round 20px);} 
 .bannerblock img{width:100%; margin: 0 0 -3% 0; height: 100%;}
@@ -56,7 +56,7 @@ a:hover, button a:hover{color:#A87544;}
 iframe{width: 100%;}
 /*--// BREEDTE--*/
 /*--  LETTER MOBIEL--*/
-.menu-container li{font-size:28px;}
+.menu-container li{font-size:28px;color:yellow;}
 .font-20B{font-size: 28px; font-weight: 600;} 
 .pand_Htitel{font-size: 28px;font-weight:600;}
 .prog-titel{font-size:28px;}
@@ -64,9 +64,9 @@ body{font-size:16px;line-height: 1.4;}
 .pand_tekst{font-size: 16px;}
 .prog-datum, .prog-tijd{font-size:16px;}
 .font-10{font-size:16px;}
-a{font-size:14px;}
-ol,ul,li{font-size:14px;color:yellow;}
-.font-9{font-size:12px;color:green;}
+a{font-size:14px;color:orange;}
+ol,ul,li{font-size:14px;color: purple;}
+.font-9{font-size:12px;color:inherit;}
 .an-container li{font-size:12px;}
 .form,.form2{font-size:12px;}
 /*--// LETTER--*/
@@ -111,15 +111,28 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%,0% 50%);}
 .clip-penta{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
-.clip-circle{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
+.clip-circle{width:auto;background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: circle(40%);}
 
 .box{text-align: center;padding:2% 2% 2% 2%;}
 .boxre img{width: 100%; margin:0 0 -10% 0%;}
 .boxli img {width:100%; margin:0 0 0% 0;}
 /*--// INDEX --------------------------------------------------------------------------------------------*/
-
-
+/*--BARTHKAPELverhuur----------------------Mobiel----------------------------------------------------------------*/
+.bk-container{background-color:inherit;text-align:center;}
+.bk-container img {width:100%;margin: 0 0 0 0; clip-path: inset(0% 0% round 20px);}
+/*--// BARTHKAPELverhuur--------------mobiel---------------------------------------------------------------------*/
+/*--PANDEN----------------------------mobiel---------------------------------------------------------------------*/
+.pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
+.pand-container img {width:100%; clip-path: inset(0% 0% round 20px)}
+.foto_portrait {background-color: inherit;padding:1% 0 1% 2%;}
+.foto_portrait img{max-height: 400px; width:80%;margin: 0 0 0 10%; clip-path: inset(0% 0% round 20px);}
+/*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
+/*--VOORWAARDEN--------------------------mobiel------------------------------------------------------------------*/
+.an-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%;}
+.an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
+.an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
+/*--// VOORWAARDEN-----------------------mobiel------------------------------------------------------------------*/
 /*--PROGRAMMA & ATELIERS----------------------------Mobiel--------------------------------------------------------*/
 .prog {background-color: inherit;text-align: center; padding: 0 0 2% 0; }
 .prog-container{background-color: inherit;padding:0% 0 2% 0%;}
@@ -134,21 +147,6 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
  .link{width:20%;background-color: green;display: inline-block;}
  /*--//  FORMULIER RESERVERING/WACHTLIJST-------------------------Mobiel----------------------------------------------------*/
 
-/*--BARTHKAPELverhuur----------------------Mobiel----------------------------------------------------------------*/
-.bk-container{background-color:inherit;text-align:center;}
-.bk-container img {width:100%;margin: 0 0 0 0;}
-/*--// BARTHKAPELverhuur--------------mobiel---------------------------------------------------------------------*/
-/*--PANDEN----------------------------mobiel---------------------------------------------------------------------*/
-.pand-container{background-color:inherit;text-align:center;max-height:35%;min-height:35%;}
-.pand-container img {width:100%; clip-path: inset(0% 0% round 20px)}
-.foto_portrait {background-color: inherit;padding:1% 0 1% 2%;}
-.foto_portrait img{max-height: 400px; width:80%;margin: 0 0 0 10%; clip-path: inset(0% 0% round 20px);}
-/*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
-/*--VOORWAARDEN--------------------------mobiel------------------------------------------------------------------*/
-.an-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%;}
-.an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
-.an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
-/*--// VOORWAARDEN-----------------------mobiel------------------------------------------------------------------*/
 
 /*--UITLEG---------------------------------------------------------------------------------------------------------------*/
 /* 
@@ -162,6 +160,10 @@ border-radius: 0%; ronding van de lijn
 */
 
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > MENU > INDEX > ATELIERS/PROGRAMMA > FORMULIEREN  > BKVERHUUR > PANDEN > VOORWAARDEN */ 
+/* ALGEMEEN > BASIS > MENU > INDEX > 
+BKVERHUUR > PANDEN > VOORWAARDEN  > 
+ATELIERS/PROGRAMMA > FORMULIEREN
+
+*/ 
 
 }
