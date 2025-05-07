@@ -5,6 +5,8 @@
 <style>
 
 
+
+
 </style>
 {% endblock %}
 <!--------HEADER----->
@@ -26,7 +28,7 @@
 <!-----//---HEADER----->
 
 <!----------SECTION1----->
-{% block section1 %}
+{% block section2 %}
 <!------>
 {% for atel in atel_list %}
 <div class="row">
@@ -35,8 +37,8 @@
     </div>
     <div class="col-6 prog-container"> 
         <div class = "prog"> 
-            <div class = "font-20B color1"> <a href=" {{ atel.website }}" TARGET = "_blank"> {{ atel.titel }}  </a> </div>
-            <div>  {{ atel.tekst }}  </div>
+            <div class = "color1 font-20B"> <a href=" {{ atel.website }}" TARGET = "_blank"> {{ atel.titel }}  </a> </div>
+            <div class = "font-10" style="padding: 5% 5% 5% 5%;">  {{ atel.tekst }}  </div>
         </div> 
     </div>
 </div>

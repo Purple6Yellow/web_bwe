@@ -22,12 +22,15 @@
 
 <!----------HEADER----->
 {% block header %}
+{% if submitted %}
+{% else %}  
 <div class="row">
     <p class="font-20B TxtCenter"> Reserverings formulier </p>
     <div class = "TxtCenter" >
         Wilt u gebruikt maken van de Barthkapel? <br> Vul dan aub hieronder uw gegevens in. Wij laten zo spoedig mogelijk weten of het huren van de Barthkapel
         mogelijk is. <br> <br> Vriendelijke groet, <br> team SBWE </div>
 </div>
+{% endif %}
 {% endblock header %}
 <!-----//---HEADER----->
 <!----------SECTION----->

@@ -1,6 +1,9 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Wacht, Reserve
+import locale
+locale.setlocale(locale.LC_TIME, 'nl_NL.utf8')
+
 
 ########## INSCHRIJFFORMULIER #############
 class Form_WW (forms.ModelForm):
@@ -68,13 +71,17 @@ class Form_RS(forms.ModelForm):
             'activiteit':'',
             'Nawnodig':'',
             'akkoord': '',}
+        widgets = {
+            'datum': forms.DateInput(format='%d %B %Y', attrs = {'type': 'date'}),}
         
     def reservering_mail(self):
         print('invulling van email is gereed')
         #invulling van email - verzonden via views.py
         bedrijfsnaam = self.cleaned_data.get('bedrijfsnaam','niet van toepassing' )
         naam = self.cleaned_data.get('naam', 'Klant')
-        ####datum = self.cleaned_data.get('naam', 'Klant')
+        datum = self.cleaned_data.get('datum', '')
+        starttijd = self.cleaned_data.get('starttijd', '')
+        eindtijd = self.cleaned_data.get('eindtijd', '')
         activiteit = self.cleaned_data.get('activiteit', 'niet doorgegeven')
         gasten = self.cleaned_data.get('gasten', 'niet doorgegeven')
         email = self.cleaned_data.get('email', 'niet doorgegeven')
@@ -86,7 +93,7 @@ class Form_RS(forms.ModelForm):
             f"Naam: {naam}\n"
             f"Mijn emailadres: {email}\n\n"
 
-            ###f"Datum: {datum} van {starttijd} tot {eindtijd}\n"
+            f"Datum: {datum.strftime('%d %B %Y')} van {starttijd.strftime('%H:%M')} uur tot {eindtijd.strftime('%H:%M')} uur \n"
             f"Activiteit: {activiteit}\n"
             f"Aantal genodigden: {gasten}\n\n"
 

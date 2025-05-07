@@ -8,7 +8,7 @@
 .bannerblock img{width:100%; margin: 0 0 -3% 0; height: 100%;}
 .banner_txtblock{color:#f5f5dc;width:40%;position:relative;opacity:80%;top:0px;transform:translate(140%,-200%);z-index:20;text-align: center;}
 .sectionblock1{background-color:#425B6F;color:#D6BB80;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
-.sectionblock2{background-color:#D6BB80;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock2{background-color:#D6BB80;color:#425B6F;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
 .sectionblock3{background-color:#182A3A;color:#A08348; width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
 .sectionblock4{background-color:#A08348; width:100%;height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
 .sectionblock5{background-color:#7A7E74;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
@@ -31,8 +31,8 @@ a:hover, button a:hover{color:#A87544;}
 .color1{color:#D6BB80;}
 .menuMobiel{display:none;}
 .vorigeP,.volgendeP {text-decoration: none;z-index:50;}
-.vorigeP {position:fixed; top: 50%; transform: translateY(-0%); left: 5%;}
-.volgendeP {position: fixed; top: 50%; transform: translateY(-0%); right: 5%; transform: translateX(0); }
+.vorigeP {position:fixed; top: 50%; transform: translateY(-0%); left: 3%;}
+.volgendeP {position: fixed; top: 50%; transform: translateY(-0%); right: 3%; transform: translateX(0); }
 /* // DIVERS */
 /* LETTER ALGEMEEN */
 [class*="font-"]{font-family: "Roboto", sans-serif,"Gill Sans", "Gill Sans MT", "Calibri", Arial, "Helvetica", serif;
@@ -43,8 +43,7 @@ a:hover, button a:hover{color:#A87544;}
 
 /*------   ALGEMEEN VERSCHILLEND -------mobiel----------------------------------------------------*/
 .verbergenLap{display:inline-block;} 
-.verbergenMob{display:none;}
-.verbergenMob{display:none;} /*Als scherm mobiel is, dan display niet zichtbaar */
+.verbergenMob{display:none;}/*Als scherm mobiel is, dan display niet zichtbaar */
 /*-- BREEDTE--*/
 [class*="col-"]{display: inline-block;text-align: center;}
 .col-4,.col-6,.col-12,.col-30,.col-40{width:100%;}  
@@ -53,12 +52,9 @@ iframe{width: 100%;}
 /*  LETTER MOBIEL--*/
 .font-20B{font-size: 28px; font-weight: 600;} 
 .pand_Htitel{font-size: 28px;font-weight:600;}
-.prog-titel{font-size:28px;}
 body{font-size:16px;line-height: 1.4;}
 .pand_tekst{font-size: 16px;}
-.prog-datum, .prog-tijd{font-size:16px;}
 .font-10{font-size:16px;}
-a{font-size:14px;color:inherit}
 ol,ul,li{font-size:14px;color: inherit}
 .font-9{font-size:12px;color:inherit;}
 .an-container li{font-size:12px;}
@@ -105,6 +101,10 @@ li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0
 .boxre img{width: 100%; margin:0 0 -10% 0%;}
 .boxli img {width:100%; margin:0 0 0% 0;}
 /*--// INDEX --------------------------------------------------------------------------------------------*/
+/*--OVERSBWE----------------------------mobiel-----------------------------------------------------------------*/
+.opmaak-sbwe{padding:5% 5% 5% 5%;}
+.opmaak-sbwe img{clip-path: inset(0% 0% round 20px);width:80%;}
+/*--// OVERSBWE-------------------------mobiel-----------------------------------------------------------------*/
 /*--BARTHKAPELverhuur----------------------Mobiel----------------------------------------------------------------*/
 .bk-container{background-color:inherit;text-align:center;}
 .bk-container img {width:100%;margin: 0 0 0 0; clip-path: inset(0% 0% round 20px);}
@@ -145,7 +145,7 @@ border-radius: 0%; ronding van de lijn
 */
 /* // --UITLEG------------------------------------------------------------------------------------------------------------*/
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > MENU > INDEX > 
+/* ALGEMEEN > BASIS > MENU > INDEX > SBWE
 BKVERHUUR > PANDEN > VOORWAARDEN  > 
 ATELIERS/PROGRAMMA > FORMULIEREN
 */ 

@@ -4,7 +4,6 @@
 {% block styles %}
 <style>
 
-
 </style>
 {% endblock %}
 <!--------HEADER----->
@@ -26,7 +25,7 @@
 <!-----//---HEADER----->
 
 <!----------SECTION1----->
-{% block section1 %}
+{% block section2 %}
 <!------>
 {% for prog in prog_list %}
 <div class="row">
@@ -38,8 +37,8 @@
     <div class="col-6 prog-container"> 
         <div class = "prog"> 
             <div class = "font-20B color1"> <a href=" {{ prog.website }}" TARGET = "_blank"> {{ prog.titel }}  </a> </div>
-            <div class = "color1">  {{ prog.datum }}  </div>
-            <div class = "color1">  {{ prog.start }} -  {{ prog.eind }}   </div>
+            <div class = "font-10 color1" style="padding: 5% 5% 5% 5%;">  {{ prog.datum|date:"d F Y" }}  </div>
+            <div class = "font-10 color1" style="padding: 5% 5% 5% 5%;">  {{ prog.start }} -  {{ prog.eind }}   </div>
         </div> 
     </div>
 </div>

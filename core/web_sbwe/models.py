@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from PIL import Image
 
+
 # ATELIERS / HUURDERS #
 class Atel(models.Model):
   titel = models.CharField(max_length=200)
