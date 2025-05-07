@@ -8,13 +8,13 @@
     <title>Stichting Behoud Waardevol Erfgoed {% block title %}{% endblock title %}</title>   
     <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssMobiel.css' %}">     
     <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssLaptop.css' %}"> 
-    <!--fonts-->
+    <!--   fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--// fonts-->
     <style>
- 
+
  
     </style>
       {% block styles %}
@@ -39,28 +39,28 @@
     {% block section0 %}{% endblock %}
 </div>
 <!---->
-    <div class = "bannerblock">{% block banner %} {% endblock %}</div>
+<div class = "bannerblock">{% block banner %} {% endblock %}</div>
 <!---->
-    <div class = "banner_txtblock verbergenMob">{% block banner_txt %}{% endblock %} </div>
+<div class = "banner_txtblock verbergenMob">{% block banner_txt %}{% endblock %} </div>
 <!---->
-    <div class = "menublock">{% block menu %}
-        <header class = "row">
-            <div class="col-12 menuboven">   
-                    <div class= "menu-container">
-                    <ul id = "menu-container" class="menu">
-                            <li id="menu"  class = "verbergenLap"> <a><img src="{% static 'img/menulogo.png' %}" alt="logo">  </a> </li>
+<div class = "menublock">{% block menu %}
+    <header class = "row">
+        <div class="col-12 menuboven">   
+                <div class= "menu-container">
+                <ul id = "menu-container" class="menu">
+                        <li id="menu"  class = "verbergenLap"> <a><img src="{% static 'img/menulogo.png' %}" alt="logo">  </a> </li>
 
-                            <li class = "menu verbergenMob"> <a href="/algemeen/index.html">Home</a></li>
-                            <li class = "menu verbergenMob"> <a href="/Barthkapel.html">Barthkapel</a> </li>
-                            <li class = "menu verbergenMob"> <a href= "/panden/panden.html" > Panden</a></li> 
-                            <li class = "menu verbergenMob"> <a href="/formulier/ateliers.html" > Ateliers</a></li> 
-                            <li class = "menu verbergenMob"> <a href="/divers/oversbwe.html" > SBWE </a></li> 
-                            <li class = "menu verbergenMob"> <a href="/divers/contact.html">Contact</a></li>
-                    </ul>
-                    </div>
-            </div>
-        </header>
-    {% endblock %}</div>
+                        <li class = "menu verbergenMob"> <a href="/algemeen/index.html">Home</a></li>
+                        <li class = "menu verbergenMob"> <a href="/Barthkapel.html">Barthkapel</a> </li>
+                        <li class = "menu verbergenMob"> <a href= "/panden/panden.html" > Panden</a></li> 
+                        <li class = "menu verbergenMob"> <a href="/formulier/ateliers.html" > Ateliers</a></li> 
+                        <li class = "menu verbergenMob"> <a href="/divers/oversbwe.html" > SBWE </a></li> 
+                        <li class = "menu verbergenMob"> <a href="/divers/contact.html">Contact</a></li>
+                </ul>
+                </div>
+        </div>
+    </header>
+{% endblock %}</div>
 <!---->
 <div class = "headerblock">{% block header %}{% endblock header %}</div>
 <!---->
@@ -86,10 +86,9 @@
 <div>{% block footer_scripts %}{% endblock %}</div>
 <!---->
 <div class = "footerblock font-9">
-<div class="row">   '
-    <div class = "verbergenLap" style="width: 100%; padding: 0% 0% 0% 0%; background-color: inherit;text-align:center;">@ 2025 SBWE</div>
-
-    <div class = "verbergenMob col-30" style="padding: 1% 0% 0 1%;background-color:inherit;align-items: center;">@ 2025 Stichting Behoud Waardevol Erfgoed</div>
+<div class="row">
+  
+    <div class = "verbergenMob col-30" style="background-color:inherit;padding: 1%;" >@ 2025 Stichting Behoud Waardevol Erfgoed</div>
  
 
     <div class="col-40 logo_foot"> 
@@ -99,10 +98,18 @@
             target = "_blank"> <img src = "{% static 'img/basis/face_logo.jpg' %}" alt="Logo Facebook"></a> 
     </div>
 
-    <div class = "col-30 verbergenMob" style="padding: 1% 0% 0 2%;background-color:inherit;align-items: center;">email: stichtingbwe@gmail.com</div>
+    
 </div>
     {% block footer %}{% endblock %}
 </div>
 <!---->
 </body>
 </html>
+
+<!--
+footer wel of niet toevoegen
+<div class = "verbergenLap" style="width: 100%; padding: 0% 0% 0% 0%; background-color: inherit;text-align:center;">@ 2025 SBWE</div>
+<div class = "verbergenMob col-30" style="background-color:inherit;padding: 1%;">email: stichtingbwe@gmail.com</div>
+
+
+-->

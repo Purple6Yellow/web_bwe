@@ -7,5 +7,73 @@
 {% endblock %}
 <!--------HEAD----->
 <!---------------------------------------BODY------------------------------------------------------------------------------------------->
+<!--------BANNER----->
+{% block banner %}
+<div class="row">
+    <div class="col-12"> 
+        <div>   
+            <img src="{% static 'img/headers/header_bkverhuur.jpg'  %}" alt="header_bkverhuur">       
+        </div> 
+    </div>
+</div>
+{% endblock %}
+<!-----//---BANNER--->
+<!----------HEADER----->
+{% block header %}
+<div class="row">
+    <p class="font-20B TxtCenter"> Factuurgegevens </p>
+    <div class = "TxtCenter" >
+       Graag uw factuur naar een specifiek adres? Vul dit formulier in dan regelen wij dit. 
+        <br> <br> Vriendelijke groet, <br> team SBWE </div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
 
+<!----------SECTION----->
+{% block section2 %}
+<!----> 
+{% if submitted %}
+    <div class = "TxtCenter"> <br> <br> Bedankt voor de aanvraag! <br><br>
+        We laten zo spoedig mogelijk weten of uw aanvraag mogelijk is.<br><br><br>
+        Met vriendelijke groet,<br>     
+        Team SBWE<br><br> 
+    </div>
+{% else %}  
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Bedrijfsnaam: </div>
+    <div class = "col-4 form_box">{{ res_form.bedrijfsnaam }} </div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Voor & Achternaam: </div>
+    <div class = "col-4 form_box">{{ res_form.naam }}</div>
+</div>
+<!---->  
+<div class ="row">
+    <div class = "col-4 form">Adres:</div>
+    <div class = "col-4 form_box">{{ res_form.starttijd }}</div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Postcode: </div>
+    <div class = "col-4 form_box">{{ res_form.eindtijd }}</div>
+</div>
+<!----> 
+<div class ="row">
+    <div class = "col-4 form">Email-adres: </div>
+    <div class = "col-4 form_box">{{ res_form.gasten}}</div>
+</div> 
+<!----> 
+<div class="row">
+    <button type ="submit" name = "submitted" class = "button_formulier" value = "true"> Verstuur  </button>
+</div>
+<!-------sluiting formulier----> 
+</form>
+{% endif %}
+<!-------sluiting formulier----> 
+{% endblock %}
+<!-----//---SECTION----->
 
