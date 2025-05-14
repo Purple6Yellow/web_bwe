@@ -63,13 +63,13 @@ class Wacht(models.Model):
 # // INSCHRIJFFORMULIER / ATELIERS #
 # AANVRAAGFORMULIER / CC    #
 class Reserve(models.Model):
-  bedrijfsnaam = models.CharField('Bedrijfsnaam', default = 'indien van toepassing', max_length=200, blank=False, null =False)
+  bedrijfsnaam = models.CharField('Bedrijfsnaam', default = '', max_length=200, blank=False, null =False)
   naam = models.CharField('Voor & achternaam', max_length=200,  blank=False, null = False)
   email = models.EmailField('Email',  blank=False, null = True)
   datum = models.DateField(default=timezone.now, blank=False, null = True)
   starttijd = models.TimeField( blank=False, null = True)
   eindtijd = models.TimeField( blank=False, null = True) 
-  akkoord = models.BooleanField(default=False)
+  akkoord = models.BooleanField(default=False, blank = False)
   Nawnodig = models.BooleanField(default=False) 
   gasten = models.CharField(max_length=30,default = 'Onbekend',blank=False, null = True,
     choices=[

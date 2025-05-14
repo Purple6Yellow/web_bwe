@@ -132,6 +132,14 @@ def RS_Aanvraag (request):
                 server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
             print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
             #// email verzenden
+            # VOORWAARDEN GEACCEPT
+            if res_form.cleaned_data.get('akkoord'):
+                print('akkoord gegeven')
+            else:
+                print ('geen akkoord')
+                return HttpResponseRedirect('/formulier/reservering.html')
+            # // VOORWAARDEN GEACCEPT
+            # FACTUUR GEGEVENS
             if res_form.cleaned_data.get('Nawnodig'):
                 print('Ander formulier wordt geopend')
             else:
@@ -139,6 +147,7 @@ def RS_Aanvraag (request):
                 return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
             return redirect ('Factuurgevens')
             #// ander formulier openen? 
+            # // FACTUUR GEGEVENS
         else:
             print('formulier niet valide, niet helemaal ingevuld')
         print ('return actief')

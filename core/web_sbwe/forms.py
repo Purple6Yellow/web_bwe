@@ -15,6 +15,7 @@ class Form_WW (forms.ModelForm):
             'kvk': '',} 
         widgets = {
             'bedrijfsnaam':forms.TextInput(attrs={'class':'form-control rounded-3', 'placeholder':'optioneel', 'id': 'bedrijfsnaam',}),
+            'startdatum': forms.DateInput(attrs = {'class': 'datumpikker'}),  
             'kvk':forms.TextInput(attrs={'class':"form-control rounded", 'placeholder':'optioneel', 'id': 'kvk',}),
             'website':forms.TextInput(attrs={'class': "form-control rounded-5", "placeholder": "web adres of instagram adres", 'id': 'website', }),
         }
@@ -72,12 +73,20 @@ class Form_RS(forms.ModelForm):
             'Nawnodig':'',
             'akkoord': '',}
         widgets = {
-            'datum': forms.DateInput(format='%d %B %Y', attrs = {'type': 'date'}),}
+            'bedrijfsnaam':forms.TextInput(attrs={'class':'form-control rounded-3', 'placeholder':'optioneel',}),
+            'datum': forms.DateInput(attrs = {'class': 'datumpikker'}),  
+            'starttijd': forms.TextInput(attrs = {'class': 'tijdpikker'}),  
+            'eindtijd': forms.TextInput(attrs = {'class': 'tijdpikker'}),  
+        } 
+        # Input_format moet buiten de Meta worden overschreven
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['datum'].input_formats = ['%d %B %Y']
         
     def reservering_mail(self):
         print('invulling van email is gereed')
         #invulling van email - verzonden via views.py
-        bedrijfsnaam = self.cleaned_data.get('bedrijfsnaam','niet van toepassing' )
+        bedrijfsnaam = self.cleaned_data.get('bedrijfsnaam','' )
         naam = self.cleaned_data.get('naam', 'Klant')
         datum = self.cleaned_data.get('datum', '')
         starttijd = self.cleaned_data.get('starttijd', '')
@@ -87,6 +96,7 @@ class Form_RS(forms.ModelForm):
         email = self.cleaned_data.get('email', 'niet doorgegeven')
 
         return (
+            f"Afz: {naam} ({bedrijfsnaam}) \n"
             f"Beste SBWE, \n"
             f"Via het formulier op uw website stuur ik u mijn aanvraag voor het huren van de Barthkapel.\n\n"
             f"Bedrijfsnaam: {bedrijfsnaam}\n"

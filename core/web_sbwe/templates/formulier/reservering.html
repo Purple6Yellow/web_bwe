@@ -41,6 +41,7 @@
 {% block section2 %}
 <!----> 
 {% if submitted %}
+<a href="{% url 'Reservering' %}" class="font-9">&#8617; nieuwe reservering plaatsen </a>
     <div class = "TxtCenter"> <br> <br> Bedankt voor de aanvraag! <br><br>
         We laten zo spoedig mogelijk weten of uw aanvraag mogelijk is.<br><br><br>
         Met vriendelijke groet,<br>     
@@ -115,8 +116,8 @@
 <!-----//---SECTION----->
 <!-----SCRIPTS-------->
 {% block footer_scripts %}
-<!------- datum en time picker----------->
-<script src="{% static 'js/eigenontwerp/datumprikker.js' %}"></script>
+
+
 <!------- validatie formulier ---------->
 <script src="{% static 'js/eigenontwerp/validatie.js' %}"></script>
 {% endblock %}

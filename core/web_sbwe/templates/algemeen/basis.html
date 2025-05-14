@@ -19,7 +19,14 @@
     </style>
       {% block styles %}
       {% endblock %}
-    <script src = "{% static 'js/derden/jquery.js' %}" type= "text/javascript"></script>
+      <!-- datumprikker Flatpickr CSS -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+       <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+       <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/nl.js"></script> <!--locale: 'nl'-->
+       <script src="{% static 'js/eigenontwerp/datumprikker.js' %}"></script>
+      
+       <!-- algemeen -->
+       <script src = "{% static 'js/derden/jquery.js' %}" type= "text/javascript"></script>
 </head>
 <!------------------------------------>
 <body>

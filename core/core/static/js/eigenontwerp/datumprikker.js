@@ -1,14 +1,17 @@
-flatpickr("#datepicker", {
+flatpickr(".datumpikker", {
     defaultDate: "today",
     minDate: "today",
-    maxDate:"31.01.2026",
+    maxDate:"31.01.2027",
     altInput: true,
-
     enableTime: false,
-    dateFormat: "d-m-Y", 
+    //dateFormat: "d-m-Y", 
+    dateFormat: "d F Y", 
+    locale: "nl", 
+    AllowInput: true,
 });
 
-flatpickr(".timepicker",{
+
+flatpickr(".tijdpikker",{
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
@@ -19,4 +22,4 @@ flatpickr(".timepicker",{
     minuteIncrement: 15,
 });
 
-alert('datumprikker is geactiveerd')
+//alert('datumprikker is geactiveerd')
