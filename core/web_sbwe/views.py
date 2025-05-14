@@ -33,6 +33,8 @@ def contact(request):
     return render (request, 'divers/contact.html')
 def oversbwe(request):
     return render (request, 'divers/oversbwe.html')
+def privestat(request):
+    return render (request, 'divers/privestat.html')
 ### // ALGEMEEN ###
 ### CC  ###
 def voorwaarden(request):

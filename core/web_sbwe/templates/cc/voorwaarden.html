@@ -4,23 +4,11 @@
 {% block styles %}
 
 <style>
-
-.retour {font-size: 20px;}
-.retour:hover { background-color: #182A3A;}
-.retour {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.2s, transform 0.2s;
-  position:relative;top:0px;transform:translate(10%,-30%);
-  z-index:100;}
-
-.retour:hover {transform: translateX(-2px);}
-.retour:active {transform: translateX(0);}
+    /*--VOORWAARDEN-------------------------------Laptop--------------------------------------------------------------*/
+.an-container{background-color:inherit;width:60%;align-items: center;margin: 0 0 0 30%;}
+.an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
+.an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
+/*--// VOORWAARDEN----------------------------Laptop--------------------------------------------------------------*/
 
 </style>
 {% endblock %}
@@ -40,19 +28,11 @@
 <!----------HEADER----->
 {% block header %}
 <!---->
-<a href="/formulier/reservering.html" class="retour">&#128281;</a>
-<a href="/formulier/reservering.html" class="retour">&#11013; terug </a>
-<a href="/formulier/reservering.html" class="retour">&#10229;terug </a>
 <a href="/formulier/reservering.html" class="retour">&#8617; terug </a>
-<a href="/formulier/reservering.html" class="retour">&#8630; terug </a>
-<a href="/formulier/reservering.html" class="retour">&#171; terug </a>
-
-
-
 <!---->
 <div class="row">
-    <div class="col-12 font-20B TxtCenter">
-        <p> We verhuren onder een aantal voorwaarden: </p> 
+    <div class="col-12 font-20B headertitel">
+     We verhuren onder een aantal voorwaarden: 
     </div>
 </div>
 <!---->
@@ -127,7 +107,7 @@
 {% block section4 %}
 
 <div class="row">
-    <div class="col-12 TxtCenter font-9"> <em> Stichting Behoud Waardevol Erfgoed is niet aansprakelijk voor diefstal of schade aan eigendommen van huurders of bezoekers. </em> </div>
+    <div class="col-12 TxtCenter font-10"> <em> Stichting Behoud Waardevol Erfgoed is niet aansprakelijk voor diefstal of schade aan eigendommen van huurders of bezoekers. </em> </div>
 </div>
 
 {% endblock %}

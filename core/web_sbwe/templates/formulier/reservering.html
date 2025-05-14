@@ -30,6 +30,10 @@
         Wilt u gebruikt maken van de Barthkapel? <br> Vul dan aub hieronder uw gegevens in. Wij laten zo spoedig mogelijk weten of het huren van de Barthkapel
         mogelijk is. <br> <br> Vriendelijke groet, <br> team SBWE </div>
 </div>
+
+<a href="{% url 'Reservering' %}" class="font-9">&#8617; formulier verversen </a>
+<div class = "font-9" style="margin: 0 0 1% 0%;"><a href ="{% url 'Inrichting' %}"> &#8617; Meer informatie over Barthkapel </a> </div>
+
 {% endif %}
 {% endblock header %}
 <!-----//---HEADER----->
@@ -101,7 +105,7 @@
 </div> 
 <!---->
 <div class="row">
-    <button type ="submit" name = "submitted" class = "button_formulier" value = "true"> Verstuur  </button>
+    <button type ="submit" name = "submitted" class = "button_formulier" value = "true"> Verzenden </button>
 </div>
 <!-------sluiting formulier----> 
 </form>
@@ -109,27 +113,6 @@
 <!-------sluiting formulier----> 
 {% endblock %}
 <!-----//---SECTION----->
-
-<!-----SECTION-------->
-{% block section3 %}
-<div class = "row" style = "background-color:inherit;">
-    <div class = "link verbergenMob"> 
-        <a href="" TARGET = "_blank">
-            <img style = "width:100%; float:left; margin: 0 0 -10% 0" src="{% static 'img/paginas/reservering.jpg' %}" alt="in constructie">
-        </a> 
-    </div>
-
-    <div class = "link"> 
-        <button class = "clip-rhom"><a href ="{% url 'Reservering' %}"> verversen </a> </button>
-    </div>
-    <div> <br> </div>
-    <div class = "link"> 
-        <button class = "clip-rhom"><a href ="{% url 'Inrichting' %}"> Info & Inrichting </a> </button>
-    </div>
- </div>
-{% endblock %}
-<!----// -SECTION----->
-
 <!-----SCRIPTS-------->
 {% block footer_scripts %}
 <!------- datum en time picker----------->
@@ -138,5 +121,4 @@
 <script src="{% static 'js/eigenontwerp/validatie.js' %}"></script>
 {% endblock %}
 <!-----// SCRIPTS----->
-
 

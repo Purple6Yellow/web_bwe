@@ -13,6 +13,7 @@ path('algemeen/index.html',views.index),
 path('algemeen/menu.html',views.menu),
 path('divers/contact.html', views.contact),
 path('divers/oversbwe.html', views.oversbwe),
+path('divers/privestat.html', views.privestat),
 # CC - PANDEN
 path('cc/voorwaarden.html', views.voorwaarden),
 path('cc/ccinrichting.html', views.inrichting, name = "Inrichting"),
