@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Wacht, Reserve
+from .models import Wacht, Reserve, Factuur
 import locale
 locale.setlocale(locale.LC_TIME, 'nl_NL.utf8')
 
@@ -19,7 +19,15 @@ class Form_WW (forms.ModelForm):
             'kvk':forms.TextInput(attrs={'class':"form-control rounded", 'placeholder':'optioneel', 'id': 'kvk',}),
             'website':forms.TextInput(attrs={'class': "form-control rounded-5", "placeholder": "web adres of instagram adres", 'id': 'website', }),
         }
+        
+    def clean(self):
+        cleaned_data=super().clean()
+        akkoord = cleaned_data.get("akkoord")
 
+        if not akkoord:
+            raise forms.ValidationError("U moet akkoord gaan voordat u het formulier kunt verzenden. ")
+        return cleaned_data
+    
     def wachtlijst_mail(self):
         print('invulling van email is gereed')
         #invulling van email - verzonden via views.py
@@ -36,7 +44,9 @@ class Form_WW (forms.ModelForm):
         delen = self.cleaned_data.get('delen', 'niet doorgegeven')
         ##startdatum = self.cleaned_data.get('startdatum', 'niet doorgegeven')
         website = self.cleaned_data.get('website', 'niet doorgegeven')
+
         return (
+            f"Afz: {achternaam} ({bedrijfsnaam}) \n"
             f"Beste SBWE,\n"
             f"Via dit formulier laat ik weten graag op de wachtlijst voor een atelier ruimte te staan.\n"
             f"Dit zijn mijn gegevens:\n\n"
@@ -109,10 +119,21 @@ class Form_RS(forms.ModelForm):
 
             f"Ik heb de voorwaarden van de Barthkapel gelezen en ga akkoord."
             )
-
- 
-
-
+########## // AANVRAAGFORMULIER #############
+########## FACTUUR FORMULIER #############
+class Form_FT (forms.ModelForm):
+    class Meta:
+        model = Factuur
+        fields = '__all__'
+        labels = {}
+        widgets = {
+            'bedrijfsnaam':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Bedrijfsnaam'}),
+            'naam':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Voor en Achternaam'}),
+            'email':forms.EmailInput(attrs={'class':'form-control','placeholder':'Emailadres'}), 
+            'adres':forms.TextInput(attrs={'class':'form-control', 'id': 'adres','placeholder':'Adres'}),
+            'postcode':forms.TextInput(attrs={'class':'form-control', 'id': 'postcode' , 'placeholder':'Postcode'}),
+        }
+########## // FACTUUR FORMULIER #############
 
 
 

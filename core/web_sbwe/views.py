@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, HttpResponseRedirect, HttpRespons
 from django.db import models
 from django.views.generic import ListView, DetailView
 from .models import Atel, Prog
-from .forms import Form_WW, Form_RS
+from .forms import Form_WW, Form_RS, Form_FT
 ######## JSON Serialization_Image #########
 from django.conf import settings
 import os
@@ -114,9 +114,11 @@ def RS_Aanvraag (request):
     smtp_port = 587
     #// informatie # 
     submitted = False
+    succes = False
     if request.method =="POST":
         print('check-reservering')
         res_form = Form_RS(request.POST)
+        res_form.save() #opslaan in admin omgeving
         if res_form.is_valid():
             # Formulier is goed ingevuld
             print('formulier is valide / goed ingevuld')
@@ -137,7 +139,10 @@ def RS_Aanvraag (request):
                 print('akkoord gegeven')
             else:
                 print ('geen akkoord')
-                return HttpResponseRedirect('/formulier/reservering.html')
+                succes = True
+                print('succes veranderd naar true')
+                #return redirect('succes_url')
+                #return HttpResponseRedirect('/formulier/reservering.html')
             # // VOORWAARDEN GEACCEPT
             # FACTUUR GEGEVENS
             if res_form.cleaned_data.get('Nawnodig'):
@@ -150,7 +155,7 @@ def RS_Aanvraag (request):
             # // FACTUUR GEGEVENS
         else:
             print('formulier niet valide, niet helemaal ingevuld')
-        print ('return actief')
+        print ('pagina vernieuwd')
         return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
     else:
         print('pagina geopend, zonder een verzoek')
@@ -159,7 +164,14 @@ def RS_Aanvraag (request):
     print('formulier is ingediend > dankbericht verschijnt')
     return render(request, 'formulier/reservering.html', {'res_form':  res_form, 'submitted':submitted})
 ### // RESERVERING - BK AANVRAAG  ###
-
+###    FACTUUR - VERVOLG RESERVERING  ###
+def FT_Aanvraag(request):
+    InfoOpg = request.session.get('form_a_data', {}) # Haal gegevens uit de sessie
+    print("InfoOpg =")
+    print(InfoOpg)
+    fac_form = Form_FT(request.POST)
+    return render(request, 'formulier/factuur.html', {'fac_form':  fac_form })
+### // FACTUUR - VERVOLG RESERVERING  ###
 
 ### WACHTLIJST - INSCHRIJVING  ###
 def WW_Lijst (request):
@@ -173,13 +185,15 @@ def WW_Lijst (request):
     smtp_port = 587
     #// informatie # 
     submitted = False
+    print('submitted is False')
     if request.method =="POST":
         print('check-wachtlijst')
-        wlijst_form = Form_WW(request.POST)
+        wlijst_form = Form_WW(request.POST) 
         if wlijst_form.is_valid():
             # Formulier is goed ingevuld
-            print('formulier is valide / goed ingevuld')
-             # email verzenden oa. info uit forms.py
+            wlijst_form.save() #opslaan in admin omgeving
+            print('opgeslagen in admin omgeving')
+            # email verzenden oa. info uit forms.py
             bericht = wlijst_form.wachtlijst_mail()
             msg = MIMEText(bericht)
             msg['Subject'] = onderwerp
@@ -191,18 +205,24 @@ def WW_Lijst (request):
                 server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
             print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
             #// email verzenden
+            print('formulier is valide / goed ingevuld') 
         else:
             print('formulier niet valide, niet helemaal ingevuld')
-        print ('return actief')
         return HttpResponseRedirect('/formulier/wachtlijst.html?submitted=True')
     else:
-        print('pagina geopend, zonder een verzoek')
+        # print('pagina geopend, zonder te verzenden')
         wlijst_form = Form_WW() 
     submitted = 'submitted' in request.GET
     print('formulier is ingediend > dankbericht verschijnt')
     return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted})
 ### // WACHTLIJST - INSCHRIJVING  ###
 
+
+############## VERWIJDEREN
 ### // RS2 - FACTUUR  ###
 def RS_2_Aanvraag(request):
     return render (request, 'formulier/factuur.html')
+
+def succes_view(request):
+    return HttpResponse("Je formulier is succesvol verzonden!")
+

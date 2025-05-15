@@ -53,17 +53,17 @@ class Wacht(models.Model):
   startdatum = models.DateField(default=timezone.now, blank=False, null = True)
   website = models.URLField(blank = True, null = True)
   afbeelding = models.ImageField(upload_to='images/', null = True, blank = True)
-  akkoord = models.BooleanField(default=False)
+  akkoord = models.BooleanField(default=False, null= False, blank = False)
 
   def publish(self):
     self.save()
 
   def __str__(self):
-    return self.voornaam
+    return str(self.startdatum) + " - " + str(self.achternaam) + " (" + str(self.bedrijfsnaam)  +")"
 # // INSCHRIJFFORMULIER / ATELIERS #
 # AANVRAAGFORMULIER / CC    #
 class Reserve(models.Model):
-  bedrijfsnaam = models.CharField('Bedrijfsnaam', default = '', max_length=200, blank=False, null =False)
+  bedrijfsnaam = models.CharField('Bedrijfsnaam', max_length=200, blank=True, null =False)
   naam = models.CharField('Voor & achternaam', max_length=200,  blank=False, null = False)
   email = models.EmailField('Email',  blank=False, null = True)
   datum = models.DateField(default=timezone.now, blank=False, null = True)
@@ -83,7 +83,18 @@ class Reserve(models.Model):
     ('Les', 'Les'),
     ('Anders', 'Anders, geef toelichting'),])
 
-
   def __str__(self):
-    return str(self.datum) + " / " + str(self.bedrijfsnaam)  + " t.a.v." + str(self.naam)
+    return str(self.datum) + " - " + str(self.naam) + " (" + str(self.bedrijfsnaam)  +")"
 # // AANVRAAGFORMULIER / CC #
+# FACTUUR FORMULIER / CC    #
+class Factuur(models.Model):
+    bedrijfsnaam = models.CharField('Bedrijfsnaam', max_length=200, blank = True, null = True)
+    naam = models.CharField('Voor & achternaam', max_length=200, blank=False, null = True)
+    email = models.EmailField('Email', blank=False, null = True)   
+    adres = models.CharField('Adres', max_length=80, blank=False, null = True)
+    postcode = models.CharField('Postcode', max_length=20, blank=False, null = True)
+ 
+    def __str__(self):
+      # return self.bedrijfsnaam + ' | ' + self.naam + ' | '
+      return self.bedrijfsnaam
+# // FACTUUR FORMULIER / CC    #

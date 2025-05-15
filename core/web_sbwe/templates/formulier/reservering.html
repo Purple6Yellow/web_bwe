@@ -3,6 +3,19 @@
 <!--------HEADER----->
 {% block styles %}
 <style>
+.pop-up{
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #dff0d8;
+        border: 1px solid #3c763d;
+        padding: 20px;
+        z-index: 1000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
 
 </style>
 {% endblock %}
@@ -112,12 +125,22 @@
 </form>
 {% endif %}
 <!-------sluiting formulier----> 
+<div id="popup">Formulier succesvol verzonden!</div>
 {% endblock %}
 <!-----//---SECTION----->
 <!-----SCRIPTS-------->
 {% block footer_scripts %}
-
-
+<!------- datumprikker formulier ---------->
+ <script src="{% static 'js/eigenontwerp/datumprikker.js' %}"></script>
+ <!------- popup als akkoord niet is ingevuld  ---------->
+{% if succes %}
+    <script>
+        document.getElementById('popup').style.display = 'block';
+        setTimeout(() => {
+        document.getElementById('popup').style.display = 'none';
+        }, 3000); // sluit popup na 3 seconden
+    </script>
+{% endif %}
 <!------- validatie formulier ---------->
 <script src="{% static 'js/eigenontwerp/validatie.js' %}"></script>
 {% endblock %}
