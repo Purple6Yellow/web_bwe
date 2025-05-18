@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, redirect, HttpResponseRedirect, HttpResponse, get_object_or_404
 from django.db import models
 from django.views.generic import ListView, DetailView
-from .models import Atel, Prog
+from .models import Atel, Prog, Reserve
 from .forms import Form_WW, Form_RS, Form_FT
 ######## JSON Serialization_Image #########
 from django.conf import settings
@@ -14,8 +14,8 @@ from PIL import Image
 ######## mail verzenden #########
 import smtplib
 from email.mime.text import MIMEText
-
-
+######## converteren #########
+from datetime import datetime
 ###### NIET MEER NODIG???? #########
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
@@ -114,7 +114,7 @@ def RS_Aanvraag (request):
     smtp_port = 587
     #// informatie # 
     submitted = False
-    succes = False
+    VWaarde = False
     if request.method =="POST":
         print('check-reservering')
         res_form = Form_RS(request.POST)
@@ -122,40 +122,56 @@ def RS_Aanvraag (request):
         if res_form.is_valid():
             # Formulier is goed ingevuld
             print('formulier is valide / goed ingevuld')
-            # email verzenden oa. info uit forms.py
-            bericht = res_form.reservering_mail()
-            msg = MIMEText(bericht)
-            msg['Subject'] = onderwerp
-            msg['From'] = email_aanvrager
-            msg['To'] = email_ontvanger
-            with smtplib.SMTP(smtp_server, smtp_port) as server:
-                server.starttls()  # TLS gebruiken
-                server.login(email_ontvanger, app_password)
-                server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
-            print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
-            #// email verzenden
             # VOORWAARDEN GEACCEPT
             if res_form.cleaned_data.get('akkoord'):
                 print('akkoord gegeven')
+                # email verzenden oa. info uit forms.py
+                bericht = res_form.reservering_mail()
+                msg = MIMEText(bericht)
+                msg['Subject'] = onderwerp
+                msg['From'] = email_aanvrager
+                msg['To'] = email_ontvanger
+                with smtplib.SMTP(smtp_server, smtp_port) as server:
+                    server.starttls()  # TLS gebruiken
+                    server.login(email_ontvanger, app_password)
+                    server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
+                print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
+                #// email verzenden
+                # FACTUUR GEGEVENS
+                if res_form.cleaned_data.get('Nawnodig'):
+                    print('Ander formulier wordt geopend - factuur')
+                    fac_form=Form_FT()
+                    # nodig voor (auto) invullen factuur formulier 
+                    ophaal = res_form.cleaned_data
+                    # Converteer datum naar string (indien aanwezig)
+                    if 'datum' in ophaal:
+                        ophaal['datum'] = ophaal['datum'].isoformat()
+                        ophaal['starttijd'] = ophaal['starttijd'].isoformat()
+                        ophaal['eindtijd'] = ophaal['eindtijd'].isoformat()
+                    # // Converteer datum naar string (indien aanwezig)
+                    request.session['opgehaaldeG'] = ophaal
+                    print("Ingevulde data set:", request.session['opgehaaldeG'])
+                    # testen omdat database wel wordt opgeslagen, maar niet wordt opgehaald 
+                    print("SESSION KEY_RS_Aanvraag:", request.session.session_key) 
+                    request.session.modified = True
+                    request.session.save()
+                    # // testen omdat database wel wordt opgeslagen, maar niet wordt opgehaald 
+                    # // nodig voor (auto) invullen factuur formulier 
+                    #return render(request, 'formulier/factuur.html', {'fac_form':  fac_form})  
+                    return redirect ('Factuur') # via urls.py openen van ander view
+                else:
+                    print('geen ander formulier nodig > dankbericht verschijnt')
+                    return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
+                # // FACTUUR GEGEVENS
             else:
                 print ('geen akkoord')
-                succes = True
-                print('succes veranderd naar true')
-                #return redirect('succes_url')
+                VWaarde = True
+                print('VWaarde = True: Popup dat de voorwaarden niet zijn geaccepteerd')
                 #return HttpResponseRedirect('/formulier/reservering.html')
             # // VOORWAARDEN GEACCEPT
-            # FACTUUR GEGEVENS
-            if res_form.cleaned_data.get('Nawnodig'):
-                print('Ander formulier wordt geopend')
-            else:
-                print('geen ander formulier nodig > dankbericht verschijnt')
-                return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
-            return redirect ('Factuurgevens')
-            #// ander formulier openen? 
-            # // FACTUUR GEGEVENS
         else:
             print('formulier niet valide, niet helemaal ingevuld')
-        print ('pagina vernieuwd')
+            print ('pagina vernieuwd')
         return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
     else:
         print('pagina geopend, zonder een verzoek')
@@ -164,14 +180,34 @@ def RS_Aanvraag (request):
     print('formulier is ingediend > dankbericht verschijnt')
     return render(request, 'formulier/reservering.html', {'res_form':  res_form, 'submitted':submitted})
 ### // RESERVERING - BK AANVRAAG  ###
+
 ###    FACTUUR - VERVOLG RESERVERING  ###
 def FT_Aanvraag(request):
-    InfoOpg = request.session.get('form_a_data', {}) # Haal gegevens uit de sessie
-    print("InfoOpg =")
-    print(InfoOpg)
-    fac_form = Form_FT(request.POST)
-    return render(request, 'formulier/factuur.html', {'fac_form':  fac_form })
-### // FACTUUR - VERVOLG RESERVERING  ###
+    OpgehaaldeG = request.session.get('OpgehaaldeG', {}) # Haal gegevens uit de sessie. Is in reservering opgeslagen
+    # testen omdat database wel wordt opgeslagen, maar niet wordt opgehaald 
+    request.session['OpgehaaldeG'] = OpgehaaldeG
+    print("SESSION KEY_FT_Aanvraag:", request.session.session_key)
+    # testen omdat database wel wordt opgeslagen, maar niet wordt opgehaald 
+    print('Opgehaalde gegevens zijn: ')
+    print(OpgehaaldeG)
+    if 'datum' in OpgehaaldeG:
+        OpgehaaldeG['datum'] = datetime.fromisoformat(OpgehaaldeG['datum']).date()
+    if request.method == 'POST':
+        print('check-factuurgegevens')
+        fac_form = Form_FT(request.POST)
+        if fac_form.is_valid():
+            fac_form.save()
+            return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
+        else:
+            print('formulier error = ')
+            print(fac_form.errors)
+    else:
+        print('Pagina opgeladen, niet verzonden')
+        fac_form = Form_FT(initial = OpgehaaldeG)
+        context = {'fac_form': fac_form}
+    return render(request, 'formulier/factuur.html', context)
+
+
 
 ### WACHTLIJST - INSCHRIJVING  ###
 def WW_Lijst (request):
@@ -217,8 +253,26 @@ def WW_Lijst (request):
     return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted})
 ### // WACHTLIJST - INSCHRIJVING  ###
 
-
 ############## VERWIJDEREN
+###    FACTUUR - VERVOLG RESERVERING  ###
+def FT_Aanvraag2(request, bedrijfsnaam_id):
+    persoon = get_object_or_404(Reserve, pk = bedrijfsnaam_id)
+    if request.method == 'POST':
+        fac_form = Form_RS(request.POST, instance=persoon)
+        fac_form.save()
+        return redirect('klaar')
+    else:
+        fac_form = Form_RS(instance=persoon)
+    return render(request, 'formulier/factuur.html', {'fac_form':  fac_form })
+    # informatie / ophalen # 
+    email = request.POST.get('email')
+    fac_form = Reserve.objects.filter(email = email )
+    #fac_form = Form_RS(instance=klant)
+    
+### // FACTUUR - VERVOLG RESERVERING  ###
+
+
+
 ### // RS2 - FACTUUR  ###
 def RS_2_Aanvraag(request):
     return render (request, 'formulier/factuur.html')

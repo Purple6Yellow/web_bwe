@@ -16,24 +16,32 @@
 <div> <img src="{% static 'img/headers/header_bkbuiten.jpg' %}" alt="header-bkbuiten">  </div> 
 {% endblock %}
 <!-----//---BANNER--->
-
+<!-----HEADER-------->
+{% block header %}
+<div class = "row">
+    <div class="font-20B headertitel"> Informatie & Inrichting </div>
+    <div class = "headerveld">
+    </div> 
+</div>
+{% endblock %}
+<!----// -HEADER----->
 <!----------SECTION----->
 {% block section10 %}
 <!---->
 <div class="row">
     <div class="col-6 bk-container">   
         <img src="{% static 'img/paginas/bk_piano.jpg' %}" alt="">
+        <div style = "text-align: left; margin-left: 2%"> <a href="/cc/voorwaarden.html"> <em> voorwaarden & annulering </em> </a> </div>
     </div>
 
     <div class="col-6">     
         <div class = "font-12 an-container">
             <p class="TxtCenter"> <strong> Inventaris</strong> </p>
             <ul>
-                <li>  Er zijn <em>80 stoelen </em> beschikbaar.</li>
-                <li>  Er zijn <em>2 lange tafels</em> en <em> 2 statafels </em>beschikbaar.</li>
+                <li>  Er zijn 80 stoelen beschikbaar.</li>
+                <li>  Er zijn 2 lange tafels en 2 statafels beschikbaar.</li>
                 <li>  De piano is te huur (Blüthner).  </li>
-                <li>  Er is een ruime keuken aanwezig met inventatirs en een koelkast (inclusief vriesvak)</li>
-                <li>  <a href="/cc/voorwaarden.html"> <em> voorwaarden & annulering </em> </a> </li>
+                <li>  Er is een ruime keuken aanwezig met inventaris en een koelkast (inclusief vriesvak)</li>
             </ul>
         </div>
     </div>
@@ -44,46 +52,46 @@
         <div class = "font-12 an-container">
             <p class="TxtCenter"> <strong> Algemeen</strong> </p>
             <ul>
-                <li> Afmeting van de zaal is ongeveer <em>100 m2</em>.</li>
+                <li> Afmeting van de zaal is ongeveer 100 m2.</li>
                 <li>  Het huren van de Barthkapel is mogelijk tot uiterlijk 23:00 uur. </li>
                 <li>  Versterkte muziek is niet toegestaan.  </li>
                 <li>  Factuur wordt achteraf per e-mail verstuurd. </li>
-                <li>   Ruimte moet veegschoen worden achtergelaten.</li>
+                <li>  Ruimte moet veegscho0n worden achtergelaten.</li>
                 <li>  Stoelen terug op hun vaste plek.</li>
                 <li>  Vaatwas en keuken moeten schoon worden achtergelaten.  </li>
-                <li>   Aanrechtblad leeg en alle spullen terug in de kast. </li>
+                <li>  Aanrechtblad leeg en alle spullen terug in de kast. </li>
                     <li>  Vuilniszakken graag in de desbetreffende container op de brouwersgracht plaatsen. </li>
-                <ol> <a href = "/cc/impressieBK.html"> <em> Geluidsfragement </em>  </a> <br> </ol>
             </ul>
         </div>
     </div>
 
     <div class="col-6 bk-container">   
         <img style="width:100%;" src="{% static 'img/paginas/bk_plattegrond.png' %}" alt="">
+        <div style = "text-align: left; margin-left: 2%"><a href = "/cc/impressieBK.html"> <em> Geluidsfragement </em>  </a> </div>
     </div>
 </div>
 <!---->
 <div class="row">   
     <div class="col-12">  
-        <div class="TxtCenter font-20B" style="background-color:inherit"> <strong> Bezetting kapel </strong> <br> </div>
+        <div class="TxtCenter font-20B" style="background-color:inherit; margin-top:3%;"> <strong> Bezetting kapel </strong> <br> </div>
         <div class="TxtCenter font-12"> <strong> Vaste wekelijkse bezetting </strong> <br> </div>
     </div>  
 </div>
 <!---->
 <div class="row">
     <div class="col-12 bk-container">   
-        <img src="{% static 'img/paginas/bk_weekschema.jpg' %}" alt="">
+        <img src="{% static 'img/paginas/bk_weekschema.png' %}" alt="">
     </div>  
 </div>
 <!---->
 <div class = "row">
     <table>
         <tr>
-            <td><div style="background-color:#033a49;width:50px; height:20px;"></div></td>
+            <td><div style="background-color:#033a49;width:50px; height:20px;margin-left:3%;"></div></td>
             <td> Aanvraag mogelijk, wellicht beschikbaar</td>
         </tr>
         <tr>
-            <td><div style="background-color: #c7a11b; width:50px; height:20px;"> </div></td>
+            <td><div style="background-color: #c7a11b; width:50px; height:20px;margin-left:3%;"> </div></td>
             <td> Verhuurd, niet beschikbaar</td>
         </tr>
     </table>

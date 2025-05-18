@@ -2,16 +2,17 @@
 /* --- ALGEMEEN ----------------- ZELFDE OVERAL ----------------*/
 .sectionblock0{background-color:inherit;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
 .menublock{width:100%; height:100px;position:absolute;top:0%;right:0px;}
-.headerblock{background-color: inherit;border: 0px solid #182A3A;width:100%; height:100%;margin:-3% 0 -3% 0;clip-path: inset(0% 0% round 20px);}
+.headerblock{background-color: inherit;border: 0px solid #182A3A;width:100%; height:100%;margin:3% 0 0% 0;clip-path: inset(0% 0% round 20px);}
 .bannerblock{background-color:inherit;width:100%;height:5%;clip-path: inset(0% 0% round 20px);} 
 .bannerblock img{width:100%; margin: 0 0 -3% 0; height: 100%;}
-.banner_txtblock{color:#f5f5dc;width:40%;position:relative;opacity:80%;top:0px;transform:translate(140%,-200%);z-index:20;text-align: center;}
-.sectionblock1{background-color:#D6BB80;color:#425B6F;width:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
-.sectionblock2{background-color:#425B6F;color:#D6BB80;width:100%; height:auto;margin-top:3%;clip-path: inset(0% 0% round 20px);}
-.sectionblock3{background-color:#182A3A;color:#A08348; width:100%; height:auto;margin-top:3%;clip-path: inset(0% 0% round 20px);}
-.sectionblock4{background-color:#A08348;color:#182A3A; width:100%;height:auto;margin-top:3%;clip-path: inset(0% 0% round 20px);}
-.sectionblock5{background-color:#7A7E74;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
-.sectionblock6{background-color:#425B6F;color:#D6BB80;width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.banner_txtblock{width:80%;position:relative;opacity:80%;top:0px;transform:translate(0%,0%);z-index:20;text-align: left;margin:0 0 0 1%;}
+.sectionblock1{background-color:#D6BB80;color:#425B6F; width:100%; margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock2{background-color:#425B6F;color:#D6BB80; width:100%; margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock3{background-color:#7A7E74;color:#182A3A; width:100%; margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock4{background-color:#182A3A;color:#A08348; width:100%; height:auto;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock5{background-color:#A08348;color:#182A3A; width:100%; height:auto;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock6{background-color:#7A7E74;color:#182A3A; width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
+.sectionblock7{background-color:#425B6F;color:#D6BB80; width:100%; height:100%;margin-top:3%;clip-path: inset(0% 0% round 20px);}
 .footerblock{background-color:hsl(45, 77%, 88%);;width:100%; height:100%;margin-top:3%;padding: 1% 1% 1% 1%;clip-path: inset(0% 0% round 20px);}
 /* KLEUREN */
 body{color:#182A3A;background-color:#faf3e0; font-family: "Gill Sans", "Gill Sans MT", "Calibri", Arial, "Helvetica", sans-serif;}
@@ -107,7 +108,9 @@ ol,ul,li{font-size:14px;color: inherit}
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
 .clip-circle{width:auto;background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: circle(40%);}
-.box{padding: 2% 2% 2% 2%;}
+.clip-drie{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);}
+.box{text-align: center;padding:2% 2% 2% 2%;}
 .boxre img, .boxli img{width:100%;}
 .boxre img{margin:0 0 -2% 0;}
 /*--// INDEX----------------------mobiel------------------------------------------------------------------------------------*/
@@ -115,6 +118,11 @@ ol,ul,li{font-size:14px;color: inherit}
 .opmaak-sbwe{padding:5% 5% 5% 5%;}
 .opmaak-sbwe img{clip-path: inset(0% 0% round 20px);width:80%;}
 /*--// OVERSBWE-------------------------mobiel-----------------------------------------------------------------*/
+
+/*--CONTACT----------------------------Mobiel---------------------------------------------------------------------*/
+.contact-opmk{line-height: 2.0;padding:0 2% 0 2%;}
+.contact-verd{height:10%;}
+/*--// CONTACT-------------------------Mobiel---------------------------------------------------------------------*/
 /*--BARTHKAPELverhuur----------------------Mobiel----------------------------------------------------------------*/
 .bk-container{background-color:inherit;text-align:center;}
 .bk-container img {width:100%;margin: 0 0 0 0; clip-path: inset(0% 0% round 20px);}
@@ -125,7 +133,7 @@ ol,ul,li{font-size:14px;color: inherit}
 .foto_portrait {background-color: inherit;padding:1% 0 1% 2%;}
 .foto_portrait img{max-height: 400px; width:80%;margin: 0 0 0 10%; clip-path: inset(0% 0% round 20px);}
 /*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
-/*--VOORWAARDEN--------------------------mobiel------------------------------------------------------------------*/
+ /*--VOORWAARDEN--------------------------mobiel------------------------------------------------------------------*/
 .an-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%;}
 .an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
 .an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
@@ -155,7 +163,7 @@ border-radius: 0%; ronding van de lijn
 */
 /* // --UITLEG------------------------------------------------------------------------------------------------------------*/
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > MENU > INDEX > SBWE
+/* ALGEMEEN > BASIS > MENU > INDEX > SBWE > CONTACT
 BKVERHUUR > PANDEN > VOORWAARDEN  > 
 ATELIERS/PROGRAMMA > FORMULIEREN
 */ 

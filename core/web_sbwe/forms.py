@@ -83,7 +83,7 @@ class Form_RS(forms.ModelForm):
             'Nawnodig':'',
             'akkoord': '',}
         widgets = {
-            'bedrijfsnaam':forms.TextInput(attrs={'class':'form-control rounded-3', 'placeholder':'optioneel',}),
+            'bedrijfsnaam':forms.TextInput(attrs={'class':'form-control rounded-3', 'placeholder':'optioneel', 'id':'bedrijfsnaam' }),
             'datum': forms.DateInput(attrs = {'class': 'datumpikker'}),  
             'starttijd': forms.TextInput(attrs = {'class': 'tijdpikker'}),  
             'eindtijd': forms.TextInput(attrs = {'class': 'tijdpikker'}),  

@@ -17,7 +17,7 @@ path('divers/privestat.html', views.privestat),
 # CC - PANDEN
 path('cc/voorwaarden.html', views.voorwaarden),
 path('cc/ccinrichting.html', views.inrichting, name = "Inrichting"),
-path('panden/panden.html', views.panden),
+path('panden/panden.html', views.panden, name = "Panden"),
 path('panden/rembrandt.html', views.rembrandt),
 path('panden/lepelstr.html', views.lepel),
 path('panden/looijerstr.html', views.looij),
@@ -30,7 +30,10 @@ path('prog/<int:pk>/', DetailProg.as_view(), name = 'Prog-Detail'),
 
 path('formulier/wachtlijst.html/', views.WW_Lijst, name = 'Wachtlijst'),
 path('formulier/reservering.html/', views.RS_Aanvraag, name = 'Reservering'),
+
 path('formulier/factuur.html/', views.FT_Aanvraag, name = 'Factuur'),
+#path('formulier/factuur.html/<int:bedrijfsnaam_id>/', views.FT_Aanvraag, name = 'Factuur'),
+
 path('algemeen/index.html/', ProgTemplate1.as_view(), name = 'Programma_index'),
 path('formulier/programma.html/', ProgTemplate2.as_view(), name = 'Programma'),
 # ATELIERS / HUURDERS  #
@@ -41,6 +44,7 @@ path('basis/index.html/', AtelOverzicht2.as_view(), name = 'Atelier2'),
 path('succes/', views.succes_view, name='succes_url'),
 
 # VERWIJDEREN
+#path('formulier/factuur.html/', views.FT_Aanvraag, name = 'Factuur'),
 ##path('factuurgegevens.html/', views.Add_Factuur, name='Add-Factuur'),
 #path('formulier/reservering.html/', views.AanvraagForm, name = 'Add_Aanvraag'),
 #path('formulier/factuur.html/', views.RS_2_Aanvraag, name = "Factuurgevens"),

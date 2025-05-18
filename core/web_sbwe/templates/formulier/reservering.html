@@ -3,18 +3,16 @@
 <!--------HEADER----->
 {% block styles %}
 <style>
-.pop-up{
-        display: none;
-        position: fixed;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #dff0d8;
-        border: 1px solid #3c763d;
-        padding: 20px;
-        z-index: 1000;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+#popup{display:none;position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
 </style>
@@ -35,12 +33,15 @@
 
 <!----------HEADER----->
 {% block header %}
+<div id="popup">Bent u vergeten de voorwaarden te accepteren? </div>
 {% if submitted %}
 {% else %}  
+
 <div class="row">
-    <p class="font-20B TxtCenter"> Reserverings formulier </p>
+    <p class="font-20B TxtCenter">  Barthkapel huren? </p>
     <div class = "TxtCenter" >
-        Wilt u gebruikt maken van de Barthkapel? <br> Vul dan aub hieronder uw gegevens in. Wij laten zo spoedig mogelijk weten of het huren van de Barthkapel
+        U kunt uw gegevens achterlaten via het reserveringsformulier. <br>
+        Wij laten u zo spoedig mogelijk weten of het huren van de Barthkapel
         mogelijk is. <br> <br> Vriendelijke groet, <br> team SBWE </div>
 </div>
 
@@ -63,6 +64,10 @@
 {% else %}  
 <form action="" method="POST" enctype="multipart/form-data">
 {% csrf_token %}
+<!----> 
+<div class ="row">
+    <div class = "col-12">Reserveringsformulier: </div>
+</div>
 <!----> 
 <div class ="row">
     <div class = "col-4 form">Bedrijfsnaam: </div>
@@ -125,7 +130,6 @@
 </form>
 {% endif %}
 <!-------sluiting formulier----> 
-<div id="popup">Formulier succesvol verzonden!</div>
 {% endblock %}
 <!-----//---SECTION----->
 <!-----SCRIPTS-------->
@@ -133,7 +137,7 @@
 <!------- datumprikker formulier ---------->
  <script src="{% static 'js/eigenontwerp/datumprikker.js' %}"></script>
  <!------- popup als akkoord niet is ingevuld  ---------->
-{% if succes %}
+{% if vWaarde %}
     <script>
         document.getElementById('popup').style.display = 'block';
         setTimeout(() => {
@@ -141,8 +145,7 @@
         }, 3000); // sluit popup na 3 seconden
     </script>
 {% endif %}
-<!------- validatie formulier ---------->
-<script src="{% static 'js/eigenontwerp/validatie.js' %}"></script>
+
 {% endblock %}
 <!-----// SCRIPTS----->
 

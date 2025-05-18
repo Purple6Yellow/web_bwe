@@ -3,6 +3,13 @@
 <!--------HEAD----->
 {% block styles %}
 <style>
+/*---- INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
+[class*="clip-"]{width: 100px; height: 100px;}
+.boxre {background-color:green;z-index:100}
+
+.boxre img {width: 100%; margin:0 0 -20% 0%;}
+.boxli img {width:100%; margin:0 0 -10% 0;}
+/*--// INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
 
 </style>
 {% endblock %}
@@ -38,9 +45,9 @@
     <div class = "col-6 box"> 
      <strong> Barthkapel reserveren </strong>
      <br> <br> 
-     Bent u op zoek naar een inspirerende ruimte om een dagdeel te reserveren?
-     <br> <br> 
-     Reserveer de ruimte. 
+     Bent u op zoek naar een inspirerende ruimte voor een activiteit of evenement? 
+     De Barthkapel is centraal gelegen en toch ervaart u binnen een oase aan rust doordat de kapel is 
+     omgeven door een openbaar toegankelijke kloostertuin. 
      <br>
      <button class = "clip-rhom" id="btn-reservering" >
         <a href ="{% url 'Reservering' %}"> Reserveren </a> </button>
@@ -54,54 +61,74 @@
     <div class = "col-6 box"> 
         <strong> Programma van de Barthkapel </strong>
         <br> <br> 
+        Zang, muziek, dans, yoga, theater, kunst, vergaderingen, workshops en kerkdiensten. 
+        De Barthkapel wordt voor verschillende doeleinden verhuurd. Wilt u meer weten over komende evenementen in de Barthkapel?
         Wilt u weten wat er te bekijken is in de Barthkapel? 
-        <br> <br> 
-        Bekijk de agenda van de Barthkapel - cultureel centrum 
         <br>
         <button class = "clip-circle" id="btn-programma" >
             <a href="/formulier/programma.html"> Programma </a> </button>
     </div>
-        <div class = "col-6 boxre"> 
-                <img src="{% static 'img/paginas/programma.jpg' %}" alt="in constructie"> 
+    <div class = "col-6 boxre"> 
+        <img src="{% static 'img/paginas/programma.jpg' %}" alt="in constructie"> 
     </div>
  </div>
 {% endblock %}
 <!-----// SECTION----->
 <!-----SECTION-------->
 {% block section3 %}
-<div class = "row" style = "background-color:inherit;">
+<div class = "row">
     <div class = "col-6 boxli"> 
-        <img src="{% static 'img/paginas/huurders.jpg' %}" alt="in constructie">
+        <img src="{% static 'img/paginas/homepand.jpg' %}" alt="in constructie">
     </div>
     <div class = "col-6 box"> 
-     <strong>  Huurders  </strong>
+     <strong>  Panden  </strong>
      <br> <br> 
-        Inspiratie?
-     <br> <br> 
-        Laat je inspireren
-     <br>
-     <button class = "clip-penta" id="btn-kunstenaars">
-         <a href="{% url 'Atelier1' %}"> Ateliers</a> </button>
+        In de jaren negentig redt Stichting Behoud Waardevol Erfgoed meerdere panden van sloop. 
+        Enkele daarvan zijn nog steeds in beheer van de stichting zoals de 
+        pakhuizen in de Looijerstraat en de Rembrandtstraat. Ook de Barthkapel moest van de gemeente uit het straatbeeld verdwijnen, maar zal 
+        hoogstwaarschijnlijk in 2026 op de monumentenlijst komen te staan.
+    <br>
+     <button class = "clip-drie" id="btn-kunstenaars">
+         <a href="{% url 'Panden' %}"> <br><br> Gevels</a> </button>
     </div>
  </div>
 {% endblock %}
 <!----// -SECTION----->
 <!-----SECTION-------->
 {% block section4 %}
+<div class = "row" style = "background-color:inherit;">
+    <div class = "col-6 box"> 
+     <strong>  Huurders  </strong>
+     <br> <br> 
+     Naast enkele muziekruimtes, woningen en kantoorruimtes hebben de panden van SBWE voornamelijk een atelier bestemming. 
+     Huurders gebruiken de ateliers voor verschillende doeleinden, maar even belangrijk: ze hebben de panden in de loop der jaren
+     een karakteristieke uitstraling gegeven.
+     <br>
+     <button class = "clip-penta" id="btn-kunstenaars">
+         <a href="{% url 'Atelier1' %}"> Ateliers</a> </button>
+    </div>
+
+    <div class = "col-6 boxre"> 
+        <img src="{% static 'img/paginas/huurders.jpg' %}" alt="in constructie">
+    </div>
+ </div>
+{% endblock %}
+<!----// -SECTION----->
+<!-----SECTION-------->
+{% block section5 %}
 <div class = "row">
+    <div class = "col-6 boxli"> 
+        <img src="{% static 'img/paginas/home.jpg' %}" alt="in constructie">
+    </div>
     <div class = "col-6 box" >
         <strong> Atelierruimte in Den Haag </strong>
         <br> <br> 
         Bent u op zoek naar een inspirerende werkplek in één van onze karakteristieke panden?
-        <br> <br> 
+        <br><br>
         Schrijf u in op onze wachtlijst.
         <br>
         <button class = "clip-rechthoek" id="btn-wachtlijst">
         <a href="{% url 'Wachtlijst' %}"> Schrijf je in </a> </button>
-    </div>
-
-    <div class = "col-6 boxre"> 
-        <img src="{% static 'img/paginas/home.jpg' %}" alt="in constructie">
     </div>
 </div>
 {% endblock %}
@@ -109,7 +136,7 @@
 
 
 <!----------SECTION5----->
-{% block section5 %}
+{% block section6 %}
 {% endblock %}
 <!-----// SECTION----->
 
