@@ -45,6 +45,7 @@ ol,ul,li{font-size:20px;color:inherit; background-color:inherit;}
 /*--// BASIS------------------------------------------------------------------------------------------------------*/
 /*---- INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
 [class*="clip-"]{width: 100px; height: 100px;}
+.box{text-align: center;padding:2% 2% 2% 2%;margin: 0% 0 0 0;}
 .boxre img {width: 100%; margin:0 0 -20% 0%;}
 .boxli img {width:100%; margin:0 0 -10% 0;}
 /*--// INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
@@ -57,7 +58,7 @@ ol,ul,li{font-size:20px;color:inherit; background-color:inherit;}
 .bk-container iframe {width:100%;height:400px;margin:-2% 0% -6% 0%;}
 /*--// BARTHKAPELverhuur----------------------Laptop--------------------------------------------------------------*/
 /*--VOORWAARDEN-------------------------------Laptop---------------------------------------------------------*/
-.an-container{background-color:inherit;width:60%;align-items: center;margin: 0 0 0 20%;}
+.an-container{background-color:inherit;width:70%;align-items: center;margin: 0 0 0 15%; padding:0% 0 0 0%;}
 .an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
 .an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
 /*--// VOORWAARDEN----------------------------Laptop--------------------------------------------------------------*/

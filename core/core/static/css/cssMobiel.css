@@ -100,17 +100,17 @@ ol,ul,li{font-size:14px;color: inherit}
 .ind-container img{width: 100%;}
 .img-txt-home{display:none;}
 [class*="clip-"]{width: 92px; height: 92px; margin: 3% 0 0 0}
-.clip-rechthoek{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
-    clip-path: inset(10% 1% round 20px);}
-.clip-rhom{background-color:#f5f5dc; border-color: 1px solid #f5f5dc; 
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%,0% 50%);}
+.clip-rechthoek{background-color:#f5f5dc; border-color: 3px solid #A87544;  
+    clip-path: inset(10% 2% round 20px);}
+.clip-rhom{background-color:#f5f5dc; border-color: 3px solid #D6BB80; 
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%,0% 50%);width:100px;height: 100px;}
 .clip-penta{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
 .clip-circle{width:auto;background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: circle(40%);}
-.clip-drie{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);}
-.box{text-align: center;padding:2% 2% 2% 2%;}
+.clip-drie{background-color:#f5f5dc; border-color: 3px solid #747374;  
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);width: 50px;height:50px;}
+.box{text-align: center;padding:2% 2% 2% 2%;margin: 8% 0 0 0;}
 .boxre img, .boxli img{width:100%;}
 .boxre img{margin:0 0 -2% 0;}
 /*--// INDEX----------------------mobiel------------------------------------------------------------------------------------*/
@@ -134,7 +134,7 @@ ol,ul,li{font-size:14px;color: inherit}
 .foto_portrait img{max-height: 400px; width:80%;margin: 0 0 0 10%; clip-path: inset(0% 0% round 20px);}
 /*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
  /*--VOORWAARDEN--------------------------mobiel------------------------------------------------------------------*/
-.an-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%;}
+.an-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%; padding: 3% 0 0 0;}
 .an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
 .an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
 /*--// VOORWAARDEN-----------------------mobiel------------------------------------------------------------------*/
