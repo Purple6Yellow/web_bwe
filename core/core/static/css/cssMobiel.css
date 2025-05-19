@@ -137,6 +137,10 @@ ol,ul,li{font-size:14px;color: inherit}
 .an-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%; padding: 3% 0 0 0;}
 .an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
 .an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
+
+.an-container ul li ul li{padding:0 0 0 5%;line-height:2.0;list-style:none;text-align: left;} /* 2e opsommingsniveau */
+.an-container ul li ul li::before{content:"\27A4";position:absolute;left:20%;}
+
 /*--// VOORWAARDEN-----------------------mobiel------------------------------------------------------------------*/
 /*--PROGRAMMA & ATELIERS----------------------------Mobiel--------------------------------------------------------*/
 .prog {background-color: inherit;text-align: center; padding: 0 0 2% 0; }

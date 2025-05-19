@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import AtelOverzicht1, AtelOverzicht2, ProgTemplate1, ProgTemplate2,  DetailProg, WW_Lijst, RS_Aanvraag, RS_2_Aanvraag, succes_view
+from .views import AtelOverzicht1, AtelOverzicht2, ProgTemplate1, ProgTemplate2,  DetailProg, WW_Lijst, RS_Aanvraag, FT_Aanvraag, succes_view, controle
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -24,6 +24,8 @@ path('panden/looijerstr.html', views.looij),
 path('panden/brouwersgr.html', views.brouwer),
 path('panden/prinsegr.html', views.prins),
 path('panden/tuinhuis.html', views.tuinhuis),
+# HULP
+path('hulp/controle.html', views.controle, name = "controle"),
 
 # FORMULIER 
 path('prog/<int:pk>/', DetailProg.as_view(), name = 'Prog-Detail'),
