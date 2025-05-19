@@ -65,11 +65,11 @@ class Wacht(models.Model):
 class Reserve(models.Model):
   bedrijfsnaam = models.CharField('Bedrijfsnaam', max_length=200, blank=True, null =False)
   naam = models.CharField('Voor & achternaam', max_length=200,  blank=False, null = False)
-  email = models.EmailField('Email',  blank=False, null = True)
-  datum = models.DateField(default=timezone.now, blank=False, null = True)
-  starttijd = models.TimeField( blank=False, null = True)
-  eindtijd = models.TimeField( blank=False, null = True) 
-  akkoord = models.BooleanField(default=False, blank = False)
+  email = models.EmailField('Email',  blank=False, null = False)
+  datum = models.DateField(default=timezone.now, blank=False, null = False)
+  starttijd = models.TimeField( blank=False, null = False)
+  eindtijd = models.TimeField( blank=False, null = False) 
+  akkoord = models.BooleanField(default=False, blank = False, null= False)
   Nawnodig = models.BooleanField(default=False) 
   gasten = models.CharField(max_length=30,default = 'Onbekend',blank=False, null = True,
     choices=[

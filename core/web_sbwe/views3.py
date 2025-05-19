@@ -138,3 +138,48 @@ def FT_Aanvraag2(request, bedrijfsnaam_id):
 def RS_2_Aanvraag(request):
     return render (request, 'formulier/factuur.html')
 
+
+### WACHTLIJST - INSCHRIJVING  ###
+def WW_Lijst (request):
+    # informatie # 
+    onderwerp = "Inschrijving voor wachtlijst atelier ruimte"
+    bericht = ""
+    email_aanvrager = 'vikamper@hotmail.com'
+    email_ontvanger = "stichtingbwe@gmail.com"
+    app_password = 'ywhc koxx gxlt cghd'
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    #// informatie # 
+    submitted = False
+    popup = False
+    print('submitted is False')
+    if request.method =="POST":
+        print('check-wachtlijst')
+        wlijst_form = Form_WW(request.POST) 
+        if wlijst_form.is_valid():
+            # Formulier is goed ingevuld
+            wlijst_form.save() #opslaan in admin omgeving
+            print('opgeslagen in admin omgeving')
+            # email verzenden oa. info uit forms.py
+            bericht = wlijst_form.wachtlijst_mail()
+            msg = MIMEText(bericht)
+            msg['Subject'] = onderwerp
+            msg['From'] = email_aanvrager
+            msg['To'] = email_ontvanger
+            with smtplib.SMTP(smtp_server, smtp_port) as server:
+                server.starttls()  # TLS gebruiken
+                server.login(email_ontvanger, app_password)
+                server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
+            print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
+            #// email verzenden
+            print('formulier is valide / goed ingevuld') 
+        else:
+            print('formulier niet valide, niet helemaal ingevuld')
+        return HttpResponseRedirect('/formulier/wachtlijst.html?submitted=True')
+    else:
+        # print('pagina geopend, zonder te verzenden')
+        wlijst_form = Form_WW() 
+    submitted = 'submitted' in request.GET
+    print('formulier is ingediend > dankbericht verschijnt')
+    return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted})
+### // WACHTLIJST - INSCHRIJVING  ###

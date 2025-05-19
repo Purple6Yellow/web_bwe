@@ -150,7 +150,6 @@ def WW_Lijst (request):
     print('formulier is ingediend > dankbericht verschijnt')
     return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted})
 ### // WACHTLIJST - INSCHRIJVING  ###
-### RESERVERING - BK AANVRAAG  ###
 def RS_Aanvraag (request):
     # informatie # 
     onderwerp = "Aanvraag Barthkapel verhuur"
@@ -160,34 +159,80 @@ def RS_Aanvraag (request):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     #// informatie # 
-    # KLIK OP VERZENDEN
     submitted = False
+    VWaarde = False
     if request.method =="POST":
-        print('op button geklikt')
-        res_form = Form_RS(request.POST) #info ophalen
+        print('check-reservering')
+        res_form = Form_RS(request.POST)
         res_form.save() #opslaan in admin omgeving
-        # FORMULIER GOED INGEVULD
         if res_form.is_valid():
+            # Formulier is goed ingevuld
             print('formulier is valide / goed ingevuld')
-            print('is akkoord aangevinkt')
+            # // nodig voor (auto) invullen factuur formulier 
             # VOORWAARDEN GEACCEPT
             if res_form.cleaned_data.get('akkoord'):
                 print('akkoord gegeven')
-                pass
+                # Converteer datum naar string (indien aanwezig)
+                ophaal = res_form.cleaned_data
+                if 'datum' in ophaal:
+                    ophaal['datum'] = ophaal['datum'].isoformat()
+                    ophaal['starttijd'] = ophaal['starttijd'].isoformat()
+                    ophaal['eindtijd'] = ophaal['eindtijd'].isoformat()
+                # // Converteer datum naar string (indien aanwezig)
+                   # PAGINA LEZEN (GEGEVENS NIET VERLOREN)
+                   
+                # nodig voor (auto) invullen factuur formulier 
+                request.session['opgehaaldeG'] = ophaal #opslaan
+                print("Ingevulde data set:", request.session['opgehaaldeG'])
+                # testen omdat database wel wordt opgeslagen, maar niet wordt opgehaald 
+                print("uitgelezen", initial_data)
+                print("SESSION KEY_RS_Aanvraag:", request.session.session_key) 
+                request.session.modified = True
+                request.session.save()
+                # // testen omdat database wel wordt opgeslagen, maar niet wordt opgehaald 
+                # email verzenden oa. info uit forms.py
+                bericht = res_form.reservering_mail()
+                msg = MIMEText(bericht)
+                msg['Subject'] = onderwerp
+                msg['From'] = email_aanvrager
+                msg['To'] = email_ontvanger
+                with smtplib.SMTP(smtp_server, smtp_port) as server:
+                    server.starttls()  # TLS gebruiken
+                    server.login(email_ontvanger, app_password)
+                    server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
+                print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
+                #// email verzenden
+                # FACTUUR GEGEVENS
+                if res_form.cleaned_data.get('Nawnodig'):
+                    print('Ander formulier wordt geopend - factuur')
+                    fac_form=Form_FT()
+                    #return render(request, 'formulier/factuur.html', {'fac_form':  fac_form})  
+                    #return redirect ('Factuur') # via urls.py openen van ander view
+                    return redirect('factuur')
+                else:
+                    res_form = Form_RS(initial = initial_data)
+                    print('Pagina factuur.html niet nodig')
+                    #return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
+                return render(request, '/formulier/reserverings.html', {'res_form', res_form})
+                # // FACTUUR GEGEVENS
             else:
-                print('geen akkoord gegeven')
-                pass
-            return 
-            # VOORWAARDEN GEACCEPT
+                print ('geen akkoord')
+                VWaarde = True
+                print('VWaarde = True: Popup dat de voorwaarden niet zijn geaccepteerd')
+                #return HttpResponseRedirect('/formulier/reservering.html')
+            # // VOORWAARDEN GEACCEPT
         else:
-            pass
-        return
-        # // FORMULIER GOED INGEVULD
+            print('formulier niet valide, niet helemaal ingevuld')
+            print ('pagina vernieuwd')
+            ophaal = res_form.cleaned_data
+            initial_data = request.session.get('opgehaald')#uitlezen
+        return HttpResponseRedirect('/formulier/reservering.html?submitted=True')
     else:
-        print('niet op button geklikt')
-        pass
+        print('pagina geopend, zonder een verzoek')
+        res_form = Form_RS() 
+    submitted = 'submitted' in request.GET
+    print('formulier is ingediend > dankbericht verschijnt')
     return render(request, 'formulier/reservering.html', {'res_form':  res_form, 'submitted':submitted})
-    # // KLIK OP VERZENDEN
 ### // RESERVERING - BK AANVRAAG  ###
 
      
@@ -205,7 +250,4 @@ def succes_view(request):
 
 def FT_Aanvraag(request):
     return HttpResponse("Je formulier is succesvol verzonden!")
-
-
-
 

@@ -4,6 +4,7 @@
 .verbergenLap{display:none;}
 .verbergenMob{display:inline-block;}
 .bannerblock{background-color: #4F6978;width:100%; height:300px;clip-path: inset(0% 0% round 20px);}
+.headerblock{margin: 0% 0 0% 0;background-color:inherit;}
 /*----*/
 /*-- BREEDTE--*/
 .row{display:inline-block;width:100%;background-color: inherit;}
@@ -16,19 +17,23 @@
 iframe{width: 100%;height:400px;}
 /*--// BREEDTE--*/
 /*--  LETTER LAPTOP--*/
-.font-20B{font-size: 36px; font-weight: 600;} 
-.pand_Htitel{font-size: 36px;font-weight:600;}
-.menu a {font-size:28px;font-weight: 300;}
-body{font-size:28px;line-height: 1.8;}
-.pand_tekst{font-size: 28px;}
-.font-10{font-size:28px;}
-.banner_txtblock{font-size:22px;}
-.form,.form2{font-size:22px;}
-.an-container ol, .an-container ul,.an-container li{font-size:28px;}
-ol,ul,li{font-size:20px;color:inherit; background-color:inherit;}
-.retour {font-size: 16px;}
-.font-9 {font-size:16px;color:inherit;}
-.button_formulier{font-size:16px;}
+.font-20B{font-size: 34px; font-weight: 600;} 
+.pand_Htitel{font-size: 34px;font-weight:600;}
+.menu a {font-size:26px;font-weight: 300;}
+body{font-size:26px;line-height: 1.8;}
+.pand_tekst{font-size: 26px;}
+.font-10{font-size:26px;}
+.banner_txtblock{font-size:20px;}
+.form,.form2{font-size:20px;}
+.an-container ol, .an-container ul,.an-container li{font-size:26px;}
+ol,ul,li{font-size:18px;color:inherit; background-color:inherit;}
+.retour {font-size: 14px;}
+.font-9 {font-size:14px;color:inherit;}
+.button_formulier{font-size:14px;}
+.box-titel{font-size:20px;font-weight: 600;}
+.box-tekst{font-size:19px}
+[class*="clip-"]{font-size: 12px;}
+
 /*--// LETTER--*/
 /*--// LAPTOP ALGEMEEN---------------------Laptop-----------------------------------------------------------------*/
 /*--BASIS----------------------------------Laptop-G---------------------------------------------------------------*/
@@ -43,12 +48,14 @@ ol,ul,li{font-size:20px;color:inherit; background-color:inherit;}
 .logo_foot{padding: 0 0 0 0%;background-color:inherit;align-items: center;}
 .logo_foot img{width:10%;margin:0% 5% 0% 5%;} /*logo footer */
 /*--// BASIS------------------------------------------------------------------------------------------------------*/
-/*---- INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
-[class*="clip-"]{width: 100px; height: 100px;}
-.box{text-align: center;padding:2% 2% 2% 2%;margin: 0% 0 0 0;}
+/*---- INDEX --------------------------Laptop---------------------------------------------------------------------*/
+[class*="clip-"]{width: 80px; height: 80px; margin: 3% 0 0 0}
+.box{text-align: center;padding:1% 1% 1% 1%;margin: 0% 0 0 0;}
+.box-titel{margin:1% 1% 1% 1%;}
+.box-tekst{margin:3% 1% 1% 2%;} 
 .boxre img {width: 100%; margin:0 0 -20% 0%;}
 .boxli img {width:100%; margin:0 0 -10% 0;}
-/*--// INDEX ---------------------------------Laptop-G------------------------------------------------------------*/
+/*--// INDEX --------------------------Laptop---------------------------------------------------------------------*/
 /*--CONTACT----------------------------laptop---------------------------------------------------------------------*/
 .contact-verd{height:3%;}
 /*--// CONTACT-------------------------laptop---------------------------------------------------------------------*/
@@ -57,12 +64,17 @@ ol,ul,li{font-size:20px;color:inherit; background-color:inherit;}
 .bk-container img {width:96%;margin-left:2%;margin-right:2%;}
 .bk-container iframe {width:100%;height:400px;margin:-2% 0% -6% 0%;}
 /*--// BARTHKAPELverhuur----------------------Laptop--------------------------------------------------------------*/
-/*--VOORWAARDEN-------------------------------Laptop---------------------------------------------------------*/
+/*--VOORWAARDEN-------------------------------Laptop--------------------------------------------------------------*/
 .an-container{background-color:inherit;width:70%;align-items: center;margin: 0 0 0 15%; padding:0% 0 0 0%;}
 .an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
 .an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
 /*--// VOORWAARDEN----------------------------Laptop--------------------------------------------------------------*/
-
+/*--CC INRICHTING-------------------------------Laptop--------------------------------------------------------------*/
+.cc-container{background-color:inherit;width:90%;align-items: center;margin: 0 0 3% 5%; padding:6% 0 0 0%;}
+.cc-container-tekst{width:100%;text-align:left;margin:0 0 3% 3%;}
+.cc-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
+.cc-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
+/*--// CC INRICHTING----------------------------Laptop--------------------------------------------------------------*/
 
 /*--PROGRAMMA & ATELIERS----------------------Laptop--------------------------------------------------------------*/
 .prog-container{background-color: inherit;padding:5% 0 0 10%;}
@@ -92,7 +104,7 @@ ol,ul,li{font-size:20px;color:inherit; background-color:inherit;}
 }
 
 /* VOLGORDE
-ALGEMEEN_LAPTOP > BASIS > INDEX > CONTACT > BK VERHUUR> VOORWAARDEN > 
+ALGEMEEN_LAPTOP > BASIS > INDEX > CONTACT > BK VERHUUR> VOORWAARDEN > CCINRICHTING
 PROGRAMMA/ATELIERS > Panden > Formulier reservering/wachtlijst
 
 VOLGORDE */ 

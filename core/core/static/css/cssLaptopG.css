@@ -1,0 +1,27 @@
+@media only screen and (min-device-width: 1100px){
+/*--// LAPTOP ALGEMEEN---------------------Laptop G-----------------------------------------------------------------*/
+/*--  LETTER LAPTOP--*/
+.font-20B{font-size: 36px; font-weight: 600;} 
+.pand_Htitel{font-size: 36px;font-weight:600;}
+.menu a {font-size:28px;font-weight: 300;}
+body{font-size:28px;line-height: 1.8;}
+.pand_tekst{font-size: 28px;}
+.font-10{font-size:28px;}
+.banner_txtblock{font-size:22px;}
+.form,.form2{font-size:22px;}
+.an-container ol, .an-container ul,.an-container li{font-size:28px;}
+ol,ul,li{font-size:20px;color:inherit; background-color:inherit;}
+.retour {font-size: 16px;}
+.font-9 {font-size:16px;color:inherit;}
+.button_formulier{font-size:16px;}
+.box-titel{font-size:30px;font-weight: 600;}
+.box-tekst{font-size:28px} 
+/*--// LETTER--*/
+/*--// LAPTOP ALGEMEEN---------------------Laptop G-----------------------------------------------------------------*/
+/*---- INDEX --------------------------Laptop G---------------------------------------------------------------------*/
+[class*="clip-"]{width: 80px; height: 80px; margin: 3% 0 0 0}
+.clip-penta{width:60px;height: 60px;}
+.box{text-align: center;padding:2% 2% 2% 2%;margin: 0% 0 0 0;}
+.box-tekst{margin:3% 1% 1% 2%;} 
+/*--// INDEX --------------------------Laptop G---------------------------------------------------------------------*/
+}

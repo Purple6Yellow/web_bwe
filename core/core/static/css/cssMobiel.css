@@ -2,9 +2,9 @@
 /* --- ALGEMEEN ----------------- ZELFDE OVERAL ----------------*/
 .sectionblock0{background-color:inherit;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
 .menublock{width:100%; height:100px;position:absolute;top:0%;right:0px;}
-.headerblock{background-color: inherit;border: 0px solid #182A3A;width:100%; height:100%;margin:3% 0 0% 0;clip-path: inset(0% 0% round 20px);}
 .bannerblock{background-color:inherit;width:100%;height:5%;clip-path: inset(0% 0% round 20px);} 
 .bannerblock img{width:100%; margin: 0 0 -3% 0; height: 100%;}
+.headerblock{background-color:inherit;border: 0px solid #182A3A;width:100%; height:100%;margin:3% 0 0% 0;clip-path: inset(0% 0% round 20px);}
 .banner_txtblock{width:80%;position:relative;opacity:80%;top:0px;transform:translate(0%,0%);z-index:20;text-align: left;margin:0 0 0 1%;}
 .sectionblock1{background-color:#D6BB80;color:#425B6F; width:100%; margin-top:3%;clip-path: inset(0% 0% round 20px);}
 .sectionblock2{background-color:#425B6F;color:#D6BB80; width:100%; margin-top:3%;clip-path: inset(0% 0% round 20px);}
@@ -103,13 +103,13 @@ ol,ul,li{font-size:14px;color: inherit}
 .clip-rechthoek{background-color:#f5f5dc; border-color: 3px solid #A87544;  
     clip-path: inset(10% 2% round 20px);}
 .clip-rhom{background-color:#f5f5dc; border-color: 3px solid #D6BB80; 
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%,0% 50%);width:100px;height: 100px;}
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);}
 .clip-penta{background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
 .clip-circle{width:auto;background-color:#f5f5dc; border-color: 1px solid #f5f5dc;  
     clip-path: circle(40%);}
 .clip-drie{background-color:#f5f5dc; border-color: 3px solid #747374;  
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);width: 50px;height:50px;}
+    clip-path: polygon(0% 40%, 100% 40%, 50% 100%);}
 .box{text-align: center;padding:2% 2% 2% 2%;margin: 8% 0 0 0;}
 .boxre img, .boxli img{width:100%;}
 .boxre img{margin:0 0 -2% 0;}
@@ -133,14 +133,14 @@ ol,ul,li{font-size:14px;color: inherit}
 .foto_portrait {background-color: inherit;padding:1% 0 1% 2%;}
 .foto_portrait img{max-height: 400px; width:80%;margin: 0 0 0 10%; clip-path: inset(0% 0% round 20px);}
 /*--// PANDEN----------------------------mobiel------------------------------------------------------------------*/
- /*--VOORWAARDEN--------------------------mobiel------------------------------------------------------------------*/
-.an-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%; padding: 3% 0 0 0;}
+ /*--VOORWAARDEN (CCINRICHITNG)--------------------------mobiel------------------------------------------------------------------*/
+.an-container, .cc-container{background-color:inherit;width:100%;align-items: center;margin: 0 0 0 0%; padding: 3% 0 0 0;}
 .an-container li {padding:0;line-height:2.0;list-style:circle outside;text-align: left;}
 .an-container ol {padding:0;line-height:2.0;list-style: inside;text-align: left;}
-
 .an-container ul li ul li{padding:0 0 0 5%;line-height:2.0;list-style:none;text-align: left;} /* 2e opsommingsniveau */
 .an-container ul li ul li::before{content:"\27A4";position:absolute;left:20%;}
 
+.cc-container img {width:100%;margin: 0 0 0 0; clip-path: inset(0% 0% round 20px);}
 /*--// VOORWAARDEN-----------------------mobiel------------------------------------------------------------------*/
 /*--PROGRAMMA & ATELIERS----------------------------Mobiel--------------------------------------------------------*/
 .prog {background-color: inherit;text-align: center; padding: 0 0 2% 0; }
@@ -168,7 +168,7 @@ border-radius: 0%; ronding van de lijn
 /* // --UITLEG------------------------------------------------------------------------------------------------------------*/
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
 /* ALGEMEEN > BASIS > MENU > INDEX > SBWE > CONTACT
-BKVERHUUR > PANDEN > VOORWAARDEN  > 
+BKVERHUUR > PANDEN > VOORWAARDEN > CCINRICHTING > 
 ATELIERS/PROGRAMMA > FORMULIEREN
 */ 
 /* // --VOLGORDE-----------------------------------------------------------------------------------------------------------*/

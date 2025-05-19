@@ -2,6 +2,7 @@ document.getElementById('verzendknop').addEventListener('click', function() {
     // Hier komt de code die moet worden uitgevoerd wanneer op de knop wordt geklikt
     console.log('De verzendknop is geklikt!');
     alert('validatie.js is geactiveerd')
+    alert('U heeft niet alles volledig ingevuld. ')
 
     const A = document.getElementById('naam').value;
     const B = document.getElementById('bedrijfsnaam').value;
@@ -18,7 +19,7 @@ document.getElementById('verzendknop').addEventListener('click', function() {
     const vandaag1 =  (dag + "-" + maand + "-" + jaar )
     //alert (dag + "-" + maand + "-" + jaar )
     //alert (D)
-    //alert(vandaag1)
+    alert(vandaag1)
 
     //alert (A.length)
     if (A.length <= 3){

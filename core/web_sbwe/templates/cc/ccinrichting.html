@@ -3,6 +3,7 @@
 <!--------HEAD----->
 {% block styles %}
 <style>
+
 </style>
 {% endblock %}
 <!--------HEAD----->
@@ -29,30 +30,32 @@
 {% block section10 %}
 <!---->
 <div class="row">
-    <div class="col-6 bk-container">   
-        <img src="{% static 'img/paginas/bk_piano.jpg' %}" alt="">
-        <div style = "text-align: left; margin-left: 2%"> <a href="/cc/voorwaarden.html"> <em> Voorwaarden & Annulering </em> </a> </div>
+    <div class="col-6">
+           <div class="cc-container">
+                <img src="{% static 'img/paginas/bk_piano.jpg' %}" alt="">
+                <div style = "text-align: left; margin-left: 3%"> <a href="/cc/voorwaarden.html"> <em> Voorwaarden & Annulering </em> </a> </div>
+           </div>
     </div>
 
-    <div class="col-6">     
-        <div class = "font-12 an-container">
-            <p class="TxtCenter"> <strong> Inventaris</strong> </p>
-            <ul>
-                <li>  Er zijn 80 stoelen beschikbaar.</li>
-                <li>  Er zijn 2 lange tafels en 2 statafels beschikbaar.</li>
-                <li>  De piano is te huur (Blüthner).  </li>
-                <li>  Er is een ruime keuken aanwezig met inventaris en een koelkast (inclusief vriesvak).</li>
-            </ul>
-        </div>
+    <div class="col-6">
+           <div class="cc-container-tekst font-12">
+                <div class="TxtCenter"> <strong> Inventaris</strong> </div>
+                <ul>
+                    <li>  Er zijn 80 stoelen beschikbaar.</li>
+                    <li>  Er zijn 2 lange tafels en 2 statafels beschikbaar.</li>
+                    <li>  De piano is te huur (Blüthner).  </li>
+                    <li>  Er is een ruime keuken aanwezig met inventaris en een koelkast (inclusief vriesvak).</li>
+                </ul>
+           </div>
     </div>
 </div>
 <!---->
 <div class="row">
     <div class="col-6">     
-        <div class = "font-12 an-container">
-            <p class="TxtCenter"> <strong> Algemeen</strong> </p>
+        <div class = "font-12 cc-container-tekst">
+            <div class="TxtCenter"> <strong> Algemeen</strong> </div>
             <ul>
-                <li>  Oppervlakte van de zaal is ongeveer 100 m2.</li>
+                <li>  Oppervlakte van de zaal is ongeveer 140 m2.</li>
                 <li>  Het huren van de Barthkapel is mogelijk tot uiterlijk 23:00 uur. </li>
                 <li>  Versterkte muziek is niet toegestaan.  </li>
                 <li>  Factuur wordt achteraf per e-mail verstuurd. </li>
@@ -60,14 +63,16 @@
                 <li>  Stoelen terug op hun vaste plek.</li>
                 <li>  Vaatwas en keuken moeten schoon worden achtergelaten.  </li>
                 <li>  Aanrechtblad leeg en alle spullen terug in de kast. </li>
-                    <li>  Vuilniszakken graag in de desbetreffende container op de brouwersgracht plaatsen. </li>
+                <li>  Vuilniszakken in de desbetreffende container op de brouwersgracht plaatsen. </li>
             </ul>
         </div>
     </div>
 
-    <div class="col-6 bk-container">   
-        <img style="width:100%;" src="{% static 'img/paginas/bk_plattegrond.png' %}" alt="">
-        <div style = "text-align: left; margin-left: 2%"><a href = "/cc/impressieBK.html"> <em> Geluidsfragement </em>  </a> </div>
+    <div class="col-6">
+        <div class="cc-container">   
+            <img style="width:100%;" src="{% static 'img/paginas/bk_plattegrond.png' %}" alt="">
+            <div style = "text-align: left; margin-left: 4%"><a href = "/cc/impressieBK.html"> <em> Geluidsfragment </em>  </a> </div>
+        </div>
     </div>
 </div>
 <!---->
@@ -79,7 +84,7 @@
 </div>
 <!---->
 <div class="row">
-    <div class="col-12 bk-container">   
+    <div class="col-12 cc-container">   
         <img src="{% static 'img/paginas/bk_weekschema.png' %}" alt="">
     </div>  
 </div>

@@ -20,12 +20,15 @@
 <!-----//---BANNER--->
 <!----------HEADER----->
 {% block header %}
+{% if submitted %}
+{% else %}  
 <div class="row">
     <p class="font-20B TxtCenter"> Factuurgegevens </p>
     <div class = "TxtCenter" >
        Graag uw factuur naar een specifiek adres? Vul dit formulier in dan regelen wij dit. 
         <br> <br> Vriendelijke groet, <br> team SBWE </div>
 </div>
+{% endif %}  
 {% endblock header %}
 <!-----//---HEADER----->
 

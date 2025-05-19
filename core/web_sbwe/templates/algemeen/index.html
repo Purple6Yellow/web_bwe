@@ -4,7 +4,6 @@
 {% block styles %}
 <style>
 
-
 </style>
 {% endblock %}
 <!--------HEAD----->
@@ -22,28 +21,28 @@
 <div class = "row">
     <div class="font-20B headertitel"> Stichting Behoud Waardevol Erfgoed </div>
     <div class = "headerveld">
-        Waarborgen van oorspronkelijke stedelijke bebouwing in Den Haag en 
-        het stimuleren van de diversiteit van het gebruik van die bebouwing.
+        SBWE waarborgt de oorspronkelijke stedelijke bebouwing in Den Haag en 
+        stimuleert de diversiteit van het gebruik van die bebouwing.
     </div> 
 </div>
 {% endblock %}
 <!----// -HEADER----->
 <!-----SECTION1-------->
 {% block section1 %}
-<div class = "row" style = "background-color:inherit;">
+<div class = "row">
 
     <div class = "col-6 boxli"> 
         <img src="{% static 'img/paginas/reservering.jpg' %}" alt="in constructie">
     </div>
 
     <div class = "col-6 box"> 
-     <strong> Barthkapel reserveren </strong>
-     <br> <br> 
-     Bent u op zoek naar een inspirerende ruimte voor een activiteit of evenement? 
-     De Barthkapel is centraal gelegen en toch ervaart u hier een oase aan rust doordat de kapel is 
-     omgeven door een openbaar toegankelijke kloostertuin. 
-     <br>
-     <button class = "clip-rhom" id="btn-reservering" >
+        <div class = "box-titel"> Barthkapel reserveren </div>
+        <div class = "box-tekst">    
+        Bent u op zoek naar een inspirerende ruimte voor een activiteit of evenement? 
+        De Barthkapel is centraal gelegen en toch ervaart u hier een oase aan rust doordat de kapel is 
+        omgeven door een openbaar toegankelijke kloostertuin.
+        </div>
+        <button class = "clip-rhom" id="btn-reservering" >
         <a href ="{% url 'Reservering' %}"> Reserveren </a> </button>
     </div>
  </div>
@@ -51,15 +50,15 @@
 <!----// -SECTION----->
 <!----------SECTION----->
 {% block section2 %}
-<div class = "row" style = "background-color:inherit;">
+<div class = "row">
     <div class = "col-6 box"> 
-        <strong> Programma van de Barthkapel </strong>
-        <br> <br> 
+        <div class = "box-titel"> Programma van de Barthkapel </div>
+        <div class = "box-tekst">  
         Zang, muziek, dans, yoga, theater, kunst, vergaderingen, workshops en kerkdiensten. 
         De Barthkapel wordt voor verschillende doeleinden verhuurd. Wilt u meer weten over komende evenementen in de Barthkapel?
-        <br>
+        </div>
         <button class = "clip-circle" id="btn-programma" >
-            <a href="/formulier/programma.html"> Programma </a> </button>
+        <a href="/formulier/programma.html"> Programma </a> </button>
     </div>
     <div class = "col-6 boxre"> 
         <img src="{% static 'img/paginas/programma.jpg' %}" alt="in constructie"> 
@@ -74,30 +73,29 @@
         <img src="{% static 'img/paginas/homepand.jpg' %}" alt="in constructie">
     </div>
     <div class = "col-6 box"> 
-     <strong>  Panden  </strong>
-     <br> <br> 
-        In de jaren negentig redt SBWE meerdere panden van sloop. 
+        <div class = "box-titel"> Panden</div>
+        <div class = "box-tekst">  
+        In de jaren negentig redt SBWE meerdere panden van de sloop. 
         Enkele daarvan zijn nog steeds in beheer van de stichting zoals de 
         pakhuizen in de Looijerstraat en de Rembrandtstraat.
-    <br>
-     <button class = "clip-drie" id="btn-kunstenaars">
-         <a href="{% url 'Panden' %}">  Panden </a> </button>
+        </div>
+        <button class = "clip-drie" id="btn-kunstenaars">
+        <a href="{% url 'Panden' %}">  <br>Panden </a> </button>
     </div>
  </div>
 {% endblock %}
 <!----// -SECTION----->
 <!-----SECTION-------->
 {% block section4 %}
-<div class = "row" style = "background-color:inherit;">
-    <div class = "col-6 box"> 
-     <strong>  Huurders  </strong>
-     <br> <br> 
-     Naast enkele woningen, muziek- en kantoorruimtes hebben de panden van SBWE voornamelijk een atelier bestemming. 
-     Huurders gebruiken de ateliers voor verschillende doeleinden, maar even belangrijk: ze hebben de panden in de loop der jaren
-     een karakteristieke uitstraling gegeven.
-     <br>
-     <button class = "clip-penta" id="btn-kunstenaars">
-         <a href="{% url 'Atelier1' %}"> Ateliers</a> </button>
+<div class = "row">
+   <div class = "col-6 box"> 
+        <div class = "box-titel"> Huurders</div>
+        <div class = "box-tekst">  
+        Naast enkele woningen, muziek- en kantoorruimtes hebben de panden van SBWE voornamelijk een atelierbestemming. 
+        De huurders en SBWE hebben de panden in de loop der jaren een karakteristieke invulling en uitstraling gegeven. 
+        </div>
+        <button class = "clip-penta" id="btn-kunstenaars">
+        <a href="{% url 'Atelier1' %}"> Ateliers</a> </button>
     </div>
 
     <div class = "col-6 boxre"> 
@@ -112,13 +110,13 @@
     <div class = "col-6 boxli"> 
         <img src="{% static 'img/paginas/home.jpg' %}" alt="in constructie">
     </div>
-    <div class = "col-6 box" >
-        <strong> Atelierruimte in Den Haag </strong>
-        <br> <br> 
+   <div class = "col-6 box"> 
+        <div class = "box-titel"> Atelierruimte in Den Haag</div>
+        <div class = "box-tekst">  
         Bent u op zoek naar een inspirerende werkplek in één van onze karakteristieke panden?
         <br><br>
         Schrijf u in op onze wachtlijst.
-        <br>
+        </div>
         <button class = "clip-rechthoek" id="btn-wachtlijst">
         <a href="{% url 'Wachtlijst' %}"> Schrijf je in </a> </button>
     </div>

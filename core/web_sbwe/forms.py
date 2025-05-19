@@ -94,7 +94,7 @@ class Form_RS(forms.ModelForm):
         self.fields['datum'].input_formats = ['%d %B %Y']
         
     def reservering_mail(self):
-        print('invulling van email is gereed')
+        print('forms.py gebruikt voor invulling van e-mail')
         #invulling van email - verzonden via views.py
         bedrijfsnaam = self.cleaned_data.get('bedrijfsnaam','' )
         naam = self.cleaned_data.get('naam', 'Klant')
@@ -113,7 +113,8 @@ class Form_RS(forms.ModelForm):
             f"Naam: {naam}\n"
             f"Mijn emailadres: {email}\n\n"
 
-            f"Datum: {datum.strftime('%d %B %Y')} van {starttijd.strftime('%H:%M')} uur tot {eindtijd.strftime('%H:%M')} uur \n"
+            #f"Datum: {datum.strftime('%d %B %Y')} van {starttijd.strftime('%H:%M')} uur tot {eindtijd.strftime('%H:%M')} uur \n"
+            f"Datum: {datum} van {starttijd} uur tot {eindtijd} uur \n"
             f"Activiteit: {activiteit}\n"
             f"Aantal genodigden: {gasten}\n\n"
 
