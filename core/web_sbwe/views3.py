@@ -183,3 +183,71 @@ def WW_Lijst (request):
     print('formulier is ingediend > dankbericht verschijnt')
     return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted})
 ### // WACHTLIJST - INSCHRIJVING  ###
+
+
+### WACHTLIJST - INSCHRIJVING  ###
+def WW_Lijst (request):
+   # informatie # 
+    onderwerp = "Inschrijving voor wachtlijst atelier ruimte"
+    bericht = ""
+    email_aanvrager = 'vikamper@hotmail.com'
+    email_ontvanger = "stichtingbwe@gmail.com"
+    app_password = 'ywhc koxx gxlt cghd' #naam app wachtwoord: wachtlijst
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    #// informatie # 
+    submitted = False
+    popup = False
+    if request.method =="POST":
+        print('op WLijst_button geklikt')
+        wlijst_form = Form_WW(request.POST) #info ophalen
+        # FORMULIER GOED INGEVULD
+        if wlijst_form.is_valid():
+            print('Wlijst_formulier is valide / goed ingevuld')
+            print('is akkoord aangevinkt?')
+            #   VOORWAARDEN GEACCEPT
+            if wlijst_form.cleaned_data.get('akkoord'):
+                print('yes, akkoord is aangevinkt')
+                print('voorbereiding sturen e-mail & data verzendbaar maken ')
+                ## Converteer datum naar string (indien aanwezig)
+                ophalen_wlijst = wlijst_form.cleaned_data
+                if 'datum' in ophalen_wlijst:
+                    ophalen_wlijst['startdatum'] = ophalen_wlijst['startdatum'].isoformat()
+                # // Converteer datum naar string (indien aanwezig)
+                    # email verzenden oa. info uit forms.py
+                    bericht = wlijst_form.wachtlijst_mail()
+                    msg = MIMEText(bericht)
+                    msg['Subject'] = onderwerp
+                    msg['From'] = email_aanvrager
+                    msg['To'] = email_ontvanger
+                    with smtplib.SMTP(smtp_server, smtp_port) as server:
+                        server.starttls()  # TLS gebruiken
+                        server.login(email_ontvanger, app_password)
+                        server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
+                    print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
+                    #// email verzenden
+                else:
+                    print('fout met converteren van datum naar string')
+            else:
+                print('NOPE, geen akkoord gegeven')
+                print('pop-up actief via javascript')
+                popup = True
+                return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted}) # formulier blijft gevuld :)
+            # // VOORWAARDEN GEACCEPT
+            return HttpResponseRedirect('/formulier/wachtlijst.html?submitted=True') #incl melding bij submitted.
+        else:
+            print('Wlijst_formulier is niet goed ingevuld')
+            return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted}) # formulier blijft gevuld :)
+        # return HttpResponse("Formulier is niet goed ingevuld!")  
+        # // FORMULIER GOED INGEVULD
+    else:
+        print('niet op wlijst_button geklikt')
+        print('hier moet ik gegevens gaan onthouden om naar pagina = voorwaarde heen en terug te gaan??')
+        wlijst_form = Form_WW() 
+    # ALLES OKE - AFRONDEN
+    wlijst_form.save()#opslaan in admin omgeving
+    submitted = 'submitted' in request.GET
+    print('formulier is ingediend > dankbericht verschijnt')
+    return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted})
+    # // KLIK OP VERZENDEN
+### // WACHTLIJST - INSCHRIJVING  ###   

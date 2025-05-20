@@ -3,18 +3,6 @@
 <!--------HEADER----->
 {% block styles %}
 <style>
-#popup{display:none;position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #dff0d8;
-    border: 1px solid #3c763d;
-    padding: 20px;
-    z-index: 1000;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
 </style>
 {% endblock %}
 <!--------HEADER----->
@@ -47,19 +35,17 @@
         Wij laten u zo spoedig mogelijk weten of het huren van de Barthkapel
         mogelijk is.
 </div>
-<!---->
-<div class="font-9" class= "retour" style = "padding:-3% 0 0% 0;background-color:inherit;"> <a href="{% url 'Reservering' %}">&#8617; formulier verversen </a></div>
-<div class="font-9" class= "retour" style = "padding:-3% 0 -2% 0;background-color:inherit;"><a href ="{% url 'Inrichting' %}"> &#8617; Meer informatie over de Barthkapel </a> </div>
-<!---->
 {% endif %}
 {% endblock header %}
 <!-----//---HEADER----->
 
 <!----------SECTION----->
 {% block section1 %}
-staat hier wat??
-{% if popup %}
-    Bent u de voorwaarden vergeten??
+{% if submitted %}
+{% else %}
+    {% if popup %}
+        Bent u de voorwaarden vergeten??
+    {% endif %}
 {% endif %}
 {% endblock %}
 <!--//--------SECTION----->

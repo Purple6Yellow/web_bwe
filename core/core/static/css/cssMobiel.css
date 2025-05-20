@@ -75,6 +75,8 @@ ol,ul,li{font-size:14px;color: inherit}
 .an-container li{font-size:12px;}
 .form,.form2{font-size:12px;}
 .button_formulier{font-size:12px;}
+.box-titel{font-size:26px;font-weight: 600;}
+.box-tekst{font-size:16px} 
 /*  // LETTER--*/
 /*  //-ALGEMEEN VERSCHILLEND --------------------------------------------------------------*/
 /*---BASIS-------mobiel-------------------------------------------------------------------------------------------------*/
@@ -110,7 +112,9 @@ ol,ul,li{font-size:14px;color: inherit}
     clip-path: circle(40%);}
 .clip-drie{background-color:#f5f5dc; border-color: 3px solid #747374;  
     clip-path: polygon(0% 40%, 100% 40%, 50% 100%);}
-.box{text-align: center;padding:2% 2% 2% 2%;margin: 8% 0 0 0;}
+.box{text-align: center;padding:1% 1% 1% 1%;margin: 0% 0 0 0;}
+.box-titel{margin:1% 1% 1% 1%;}
+.box-tekst{margin:3% 1% 1% 2%;} 
 .boxre img, .boxli img{width:100%;}
 .boxre img{margin:0 0 -2% 0;}
 /*--// INDEX----------------------mobiel------------------------------------------------------------------------------------*/
@@ -152,6 +156,17 @@ ol,ul,li{font-size:14px;color: inherit}
 .form2{margin:0% 0 0 2%;text-align: left;background-color:inherit;} /*lange tekst/vraag */
 .form_box{align-items: center;margin: 0% 0 0 0%;background-color:inherit;}
 .button_formulier{ width: auto;height:auto;margin: 0 0 2% 70%;clip-path: inset(0% 0% round 20px);}
+
+#popup{display:none;position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);}
 /*--//  FORMULIER RESERVERING/WACHTLIJST-------------------------Mobiel--------------------------------------------*/
 
 
@@ -169,7 +184,7 @@ border-radius: 0%; ronding van de lijn
 /*--VOLGORDE---------------------------------------------------------------------------------------------------------------*/
 /* ALGEMEEN > BASIS > MENU > INDEX > SBWE > CONTACT
 BKVERHUUR > PANDEN > VOORWAARDEN > CCINRICHTING > 
-ATELIERS/PROGRAMMA > FORMULIEREN
+ATELIERS/PROGRAMMA > FORMULIEREN 
 */ 
 /* // --VOLGORDE-----------------------------------------------------------------------------------------------------------*/
 

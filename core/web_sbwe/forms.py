@@ -23,10 +23,15 @@ class Form_WW (forms.ModelForm):
     def clean(self):
         cleaned_data=super().clean()
         akkoord = cleaned_data.get("akkoord")
-
         if not akkoord:
             raise forms.ValidationError("U moet akkoord gaan voordat u het formulier kunt verzenden. ")
         return cleaned_data
+
+
+    # DATUM FORMAAT Input_format moet buiten de Meta worden overschreven
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['startdatum'].input_formats = ['%d %B %Y']
     
     def wachtlijst_mail(self):
         print('invulling van email is gereed')
@@ -39,10 +44,10 @@ class Form_WW (forms.ModelForm):
         email = self.cleaned_data.get('email', 'niet doorgegeven')
         telefoon = self.cleaned_data.get('telefoon', 'niet doorgegeven')
         werk = self.cleaned_data.get('werk', 'niet doorgegeven')
-        vierkantem = self.cleaned_data.get('vierkantem', 'niet doorgegeven')
+        vierkantm = self.cleaned_data.get('vierkantem', 'niet doorgegeven')
         voorziening = self.cleaned_data.get('voorziening', 'niet doorgegeven')
         delen = self.cleaned_data.get('delen', 'niet doorgegeven')
-        ##startdatum = self.cleaned_data.get('startdatum', 'niet doorgegeven')
+        startdatum = self.cleaned_data.get('startdatum', 'niet doorgegeven')
         website = self.cleaned_data.get('website', 'niet doorgegeven')
 
         return (
@@ -58,10 +63,10 @@ class Form_WW (forms.ModelForm):
 
             ###f"Datum: {datum} van {starttijd} tot {eindtijd}\n"
             f"Ik maak dit soort dingen: {werk}\n"
-            f"Ik heb het volgende aantal m2 minimaal nodig: {vierkantem}\n"
+            f"Ik heb het volgende aantal m2 minimaal nodig: {vierkantm}\n"
             f"De volgende voorzieningen heb ik nodig: {voorziening}\n"
             f"Ik wil mijn atelier graag: {delen}\n"
-            ##f"Ik zoek een ruimte per: {startdatum}\n"
+            f"Ik zoek een ruimte per: {startdatum}\n"
             f"-----------------: {website}\n\n"
             f"Ik heb de voorwaarden ""privacy"" gelezen en ga akkoord."
         )

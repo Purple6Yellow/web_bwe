@@ -21,7 +21,7 @@ class Atel(models.Model):
 class Inschrijf(models.Model):
   voornaam = models.CharField('voornaam', max_length=50,  blank=False, null = True)
   achternaam = models.CharField('achternaam', max_length=50,  blank=False, null = True)
-  email = models.EmailField('email',unique=True,   blank=False, null = True)
+  email = models.EmailField('email',unique=False,   blank=False, null = True)
   telefoon = models.CharField('telefoon', max_length=30, blank = False, null = True)
 
   bedrijfsnaam = models.CharField('bedrijfsnaam', max_length=50, blank=False, null = True)

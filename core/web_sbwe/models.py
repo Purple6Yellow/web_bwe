@@ -38,14 +38,14 @@ class Prog(models.Model):
 class Wacht(models.Model):
   voornaam = models.CharField('voornaam', max_length=50,  blank=False, null = True)
   achternaam = models.CharField('achternaam', max_length=50,  blank=False, null = True)
-  email = models.EmailField('email',unique=True,   blank=False, null = True)
+  email = models.EmailField('email',unique=False,   blank=False, null = True)
   telefoon = models.CharField('telefoon', max_length=30, blank = False, null = True)
 
   bedrijfsnaam = models.CharField('bedrijfsnaam', max_length=50, blank=False, null = True)
   kvk = models.IntegerField()
 
   werk = models.CharField(blank = True, null = True, max_length=20,)
-  vierkantem = models.CharField(max_length = 5, blank =False, null = True, 
+  vierkantm = models.CharField(max_length = 5, blank =False, null = True, 
       choices =[('30m2', '30m2'), ('50m2','50m2'),('100m2','100m2'),('150m2','150m2'),])
   voorziening = models.CharField(blank = True, null = True, max_length=20,)
   delen = models.CharField(max_length = 20, blank =False, null = True, 
@@ -65,10 +65,10 @@ class Wacht(models.Model):
 class Reserve(models.Model):
   bedrijfsnaam = models.CharField('Bedrijfsnaam', max_length=200, blank=True, null =False)
   naam = models.CharField('Voor & achternaam', max_length=200,  blank=False, null = False)
-  email = models.EmailField('Email',  blank=False, null = False)
+  email = models.EmailField('Email',  blank=False, null = True)
   datum = models.DateField(default=timezone.now, blank=False, null = False)
-  starttijd = models.TimeField( blank=False, null = False)
-  eindtijd = models.TimeField( blank=False, null = False) 
+  starttijd = models.TimeField(default=timezone.now, blank=False, null = False)
+  eindtijd = models.TimeField(default =timezone.now , blank=False, null = False) 
   akkoord = models.BooleanField(default=False, blank = False, null= False)
   Nawnodig = models.BooleanField(default=False) 
   gasten = models.CharField(max_length=30,default = 'Onbekend',blank=False, null = True,

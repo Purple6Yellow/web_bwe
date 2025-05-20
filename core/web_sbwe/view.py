@@ -105,12 +105,12 @@ class ProgTemplate2(ProgBlog):
 class DetailProg(DetailView):
     model = Prog
     template_name = 'formulier/programma_detail.html'
-
 ### // PROGRAMMA #######
+
 
 ### WACHTLIJST - INSCHRIJVING  ###
 def WW_Lijst (request):
-   # informatie # 
+    # informatie # 
     onderwerp = "Inschrijving voor wachtlijst atelier ruimte"
     bericht = ""
     email_aanvrager = 'vikamper@hotmail.com'
@@ -119,61 +119,63 @@ def WW_Lijst (request):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     #// informatie # 
+    # KLIK OP VERZENDEN
     submitted = False
     popup = False
     if request.method =="POST":
-        print('op WLijst_button geklikt')
+        print('op WLijst_button geklikt methode = POST')
         wlijst_form = Form_WW(request.POST) #info ophalen
-        wlijst_form.save()#opslaan in admin omgeving
-        # FORMULIER GOED INGEVULD
+         # FORMULIER GOED INGEVULD
         if wlijst_form.is_valid():
-            print('Wlijst_formulier is valide / goed ingevuld')
-            print('is akkoord aangevinkt?')
+            wlijst_form.save() #opslaan in admin omgeving
+            print('wl formulier is valide / goed ingevuld')
+            print('door verplicht veld en geen errors, weten we dat akkoord is aangevinkt?')
+            ## Converteer datum naar string (indien aanwezig)
+            ophalen_wlijst = wlijst_form.cleaned_data
+            if 'startdatum' in ophalen_wlijst:
+                ophalen_wlijst['startdatum'] = ophalen_wlijst['startdatum'].isoformat()
+                # email verzenden oa. info uit forms.py
+                bericht = wlijst_form.wachtlijst_mail()
+                msg = MIMEText(bericht)
+                msg['Subject'] = onderwerp
+                msg['From'] = email_aanvrager
+                msg['To'] = email_ontvanger
+                with smtplib.SMTP(smtp_server, smtp_port) as server:
+                    server.starttls()  # TLS gebruiken
+                    server.login(email_ontvanger, app_password)
+                    server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
+                    print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
+                #// email verzenden
+            else:
+                print('fout met converteren van datum naar string')
+            # geen speciale / andere return
+            # // Converteer datum naar string (indien aanwezig)
+        else:
+            print('wl formulier is niet goed ingevuld')
+            print("foutmelding = : ", wlijst_form.errors)
             #   VOORWAARDEN GEACCEPT
             if wlijst_form.cleaned_data.get('akkoord'):
                 print('yes, akkoord is aangevinkt')
                 print('voorbereiding sturen e-mail & data verzendbaar maken ')
-                ## Converteer datum naar string (indien aanwezig)
-                ophalen_wlijst = wlijst_form.cleaned_data
-                if 'datum' in ophalen_wlijst:
-                    ophalen_wlijst['startdatum'] = ophalen_wlijst['startdatum'].isoformat()
-                # // Converteer datum naar string (indien aanwezig)
-                    # email verzenden oa. info uit forms.py
-                    bericht = wlijst_form.wachtlijst_mail()
-                    msg = MIMEText(bericht)
-                    msg['Subject'] = onderwerp
-                    msg['From'] = email_aanvrager
-                    msg['To'] = email_ontvanger
-                    with smtplib.SMTP(smtp_server, smtp_port) as server:
-                        server.starttls()  # TLS gebruiken
-                        server.login(email_ontvanger, app_password)
-                        server.sendmail(email_aanvrager, email_ontvanger, msg.as_string())
-                    print ('email reservering van ' +  email_aanvrager  + ' wordt verzonden!')
-                    #// email verzenden
-                else:
-                    print('fout met converteren van datum naar string')
+                pass
             else:
                 print('NOPE, geen akkoord gegeven')
                 print('pop-up actief via javascript')
-                popup = True
-                return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted}) # formulier blijft gevuld :)
-            # // VOORWAARDEN GEACCEPT
-            return HttpResponseRedirect('/formulier/wachtlijst.html?submitted=True') #incl melding bij submitted.
-        else:
-            print('Wlijst_formulier is niet goed ingevuld')
-            pass
-        return HttpResponse("Je formulier is succesvol verzonden!")  
-        # // FORMULIER GOED INGEVULD
-    else:
-        print('niet op wlijst_button geklikt')
-        print('hier moet ik gegevens gaan onthouden om naar pagina = voorwaarde heen en terug te gaan??')
-        wlijst_form = Form_WW() 
-    # ALLES OKE - AFRONDEN
+                popup = False
+            return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted}) # formulier blijft gevuld :)
+            # //  VOORWAARDEN GEACCEPT
+        return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted}) #formulier - ingevuld!?
+        # return HttpResponseRedirect('/formulier/wachtlijst.html?submitted=True') #incl melding bij submitted.
+        ##// FORMULIER GOED INGEVULD
+    else: 
+        print('method is geen POST')  
+        wlijst_form = Form_WW()
+        pass
+    # // KLIK OP VERZENDEN
     submitted = 'submitted' in request.GET
     print('formulier is ingediend > dankbericht verschijnt')
-    return render(request, 'formulier/wachtlijst.html', {'wlijst_form':  wlijst_form, 'submitted':submitted})
-    # // KLIK OP VERZENDEN
-### // WACHTLIJST - INSCHRIJVING  ###           
+### // WACHTLIJST - INSCHRIJVING  ###
+        
         
 
 ### RESERVERING - BK AANVRAAG  ###
@@ -237,8 +239,8 @@ def RS_Aanvraag (request):
             return HttpResponseRedirect('/formulier/reservering.html?submitted=True') #incl melding bij submitted.
         else:
             print('formulier is niet goed ingevuld')
-            pass
-        return HttpResponse("Je formulier is succesvol verzonden!")
+            print("Foutmelding is: ", res_form.errors)
+        return render(request, 'formulier/reservering.html', {'res_form':  res_form, 'submitted':submitted}) # formulier blijft gevuld :)
         # // FORMULIER GOED INGEVULD
     else:
         print('niet op button geklikt')
